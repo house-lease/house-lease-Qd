@@ -1,0 +1,23 @@
+<!-- 自定义组件 -->
+<view>
+<searcher></searcher>
+</view>
+
+<!-- 轮播图 -->
+<swiper indicator-dots="true" autoplay="true" interval="3000" duration="500">
+  <swiper-item>
+  <navigator>
+   <image src="{{images[0]}}"  height="150"  /> 
+  </navigator>
+    </swiper-item>
+  <swiper-item>
+   <navigator>
+   <image src="{{images[1]}}"  height="150"  /> 
+  </navigator> 
+  </swiper-item>
+</swiper>
+<view class="container">
+     <!-- 分割线 -->
+  <view class="divLine"></view>
+</view>
+

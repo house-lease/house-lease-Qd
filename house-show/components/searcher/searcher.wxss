@@ -1,0 +1,36 @@
+/* 头部搜索框样式 */
+.zhu{
+  width: 80%;
+  border: 1px solid rgba(192,192,192);
+  margin-left:40rpx;
+  padding: 20rpx;
+  box-shadow: 0rpx 5rpx 5rpx 5rpx rgba(192,192,192);
+}
+.weiZhi,.souSuo{
+  display: inline-block;
+}
+.weiZhi{
+  font-size: 24rpx;
+  padding-right: 40rpx;
+  border-right: 1px solid rgba(192,192,192);
+}
+/* 下拉图标 */
+.xiaLa,.souSuoImg{
+  width: 30rpx;
+  height: 30rpx;
+}
+.xiaLa{
+  position: absolute;
+  top: 32rpx;
+  left: 115rpx;
+}
+.souSuoImg{
+  position: absolute;
+  top: 32rpx;
+  right: 115rpx;
+}
+.souSuo{
+  color: rgba(192,192,192);
+  font-size: 24rpx;
+  margin-left: 40rpx;
+}

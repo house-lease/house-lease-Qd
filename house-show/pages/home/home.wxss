@@ -1,0 +1,24 @@
+/* 清除内外边距 */
+view,input,form,image{
+  padding: 0px;
+  margin: 0px;
+}
+/* 横着的分割View样式 */
+/*分割线样式*/
+.divLine{
+  margin-top: 20rpx;
+  background:rgba(192,192,192) ;
+  width: 100%;
+  height: 5rpx;
+ }
+
+/* 设置轮播图 */
+swiper{
+  width: 86%;
+  margin-left: 40rpx; 
+  margin-top: 20rpx;
+}
+image{
+  width: 100%;
+}
+
