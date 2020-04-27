@@ -18,6 +18,12 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+  // 单击搜索触发的事件
+  open:function(){
+   wx.navigateTo({
+     url: '/pages/select/select',
+   })
+}
   }
+
 })

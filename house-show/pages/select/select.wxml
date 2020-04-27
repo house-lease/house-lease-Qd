@@ -1,0 +1,8 @@
+ <view>
+ <image class="souSuoImg" src="/pages/image/ss.png"></image>
+  <input class="input_"  confirm-type='search'  placeholder="想住哪里?" 
+         bindinput="handleSearcher"> 
+  </input>
+ </view>
+
+

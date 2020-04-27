@@ -2,7 +2,7 @@
 <view class="zhu">
 <view class="weiZhi">
 北京
-<image class="xiaLa" src="/pages/image/下拉.png"/>
+<image class="xiaLa" src="/pages/image/xl.png"/>
 </view> 
-<view class="souSuo"> <image class="souSuoImg" src="/pages/image/搜索.png"/>你想住哪里？</view>
+<view class="souSuo" bindtap="open" > <image class="souSuoImg" src="/pages/image/ss.png"/>你想住哪里？</view>
 </view>
