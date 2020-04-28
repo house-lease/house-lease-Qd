@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/consult/consult",
     "pages/home/home",
     "pages/select/select",
     "pages/index/index",
