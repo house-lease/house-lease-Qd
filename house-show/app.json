@@ -1,7 +1,8 @@
 {
   "pages":[
-    "pages/consult/consult",
     "pages/home/home",
+    "pages/consult/consult",
+    
     "pages/select/select",
     "pages/index/index",
     "pages/logs/logs"
@@ -20,6 +21,10 @@
       "pagePath": "pages/index/index",
       "text": "收藏"
     },{
+      "pagePath": "pages/consult/consult",
+      "text": "消息"
+    }
+    ,{
       "pagePath": "pages/logs/logs",
       "text": "我的"
     }
