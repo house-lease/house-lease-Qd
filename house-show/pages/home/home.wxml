@@ -46,16 +46,17 @@
 <view class="t4">价格<image class="i4" src="/pages/image/xl.png"></image></view>
 </view>
 
+<!-- 房屋列表 -->
 <view wx:for="{{houses}}" wx:key="id" wx:for-index="idx" wx:for-item="value">
-<view class="lists">
+<view class="lists" bindtap="look" data-id="{{value.id}}">
   <view class="tu">
   <image src="{{value.image}}"></image>
   </view>
   <view class="message">
-   <view>{{value.houseName}}</view>
-   <view>{{value.houseType}}</view>
-   <view>{{value.price}}</view>
-   <view>{{value.address}} </view>
+   <view class="houseName">{{value.houseName}}</view>
+   <view class="houseType" >{{value.houseType}}</view>
+   <view class="address">{{value.address}} </view>
+   <view class="price">{{value.price}}<text>/月</text></view>
   </view>
 </view>
 </view>
