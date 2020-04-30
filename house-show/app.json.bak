@@ -1,9 +1,13 @@
 {
   "pages":[
     "pages/home/home",
+<<<<<<< HEAD
     "pages/consult/consult",
-
+    
+=======
     "pages/personalCenter/personalCenter",
+    "pages/consult/consult",
+>>>>>>> fa7285b8d1052aa22bcec980c9a2d44b55e8ef8f
     "pages/select/select",
     "pages/index/index",
     "pages/logs/logs"
@@ -23,13 +27,15 @@
       "pagePath": "pages/index/index",
       "text": "收藏"
     },{
-
+<<<<<<< HEAD
       "pagePath": "pages/consult/consult",
       "text": "消息"
     }
     ,{
-      
+      "pagePath": "pages/logs/logs",
+=======
       "pagePath": "pages/personalCenter/personalCenter",
+>>>>>>> fa7285b8d1052aa22bcec980c9a2d44b55e8ef8f
       "text": "我的"
     }
     ]

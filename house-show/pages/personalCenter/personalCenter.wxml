@@ -1,0 +1,15 @@
+<!--pages/personalCenter/personalCenter.wxml-->
+<view id="top">
+  <image src="http://img.mp.sohu.com/q_mini,c_zoom,w_640/upload/20170731/4c79a1758a3a4c0c92c26f8e21dbd888_th.jpg" />
+  <text id="phone">187****3860</text>
+  <text id="personalMessage">点击查看个人信息</text>
+</view>
+
+<view id="middle">
+      <text id="money">我的钱包</text>
+      <text id="cookies">浏览记录</text>
+      <text id="bill">我的订单</text>
+      <text id="feedback">反馈意见</text>
+      <text id="linksys">客服电话</text>
+      <text id="aboutUs">关于我们</text>
+</view>

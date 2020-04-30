@@ -1,4 +1,4 @@
-// pages/consult/consult.js
+// pages/personalCenter/personalCenter.js
 Page({
 
   /**
@@ -6,7 +6,6 @@ Page({
    */
   data: {
 
-    userName:"我的萌啊"
   },
 
   /**
