@@ -1,11 +1,11 @@
-// pages/consult/consult.js
+// pages/personalCenter/personalCenter.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+
   },
 
   /**
