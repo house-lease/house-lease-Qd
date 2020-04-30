@@ -3,7 +3,6 @@
 <view>
 <searcher></searcher>
 </view>
-
 <!-- 轮播图 -->
 <view class="lunBo">
 <swiper indicator-dots="true" autoplay="true" interval="3000" duration="500">
