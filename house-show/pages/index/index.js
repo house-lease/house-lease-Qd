@@ -3,7 +3,11 @@
 const app = getApp()
 
 Page({
-  data: {
+  data: {    onLoad: function(options) {
+    this.setData({
+      title: options.title
+    })
+  },
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,

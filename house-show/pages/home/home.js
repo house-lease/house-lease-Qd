@@ -15,7 +15,7 @@ Page({
       houseType:"整租",
       price:"1000",
       address:"商丘",
-      image:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588043426099&di=4e34b9d49a73a122e052c5a09eb68ea6&imgtype=0&src=http%3A%2F%2Fhiphotos.baidu.com%2Fnuomi%2Fpic%2Fitem%2Fd31b0ef41bd5ad6ed985964c8acb39dbb6fd3c13.jpg"
+      image:"http://img5.imgtn.bdimg.com/it/u=1733752116,2589388407&fm=11&gp=0.jpg"
     },
     {
       id:"2",  
@@ -23,7 +23,7 @@ Page({
     houseType:"整租",
     price:"1000",
     address:"商丘",
-    image:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588043426099&di=4e34b9d49a73a122e052c5a09eb68ea6&imgtype=0&src=http%3A%2F%2Fhiphotos.baidu.com%2Fnuomi%2Fpic%2Fitem%2Fd31b0ef41bd5ad6ed985964c8acb39dbb6fd3c13.jpg"
+    image:"http://img5.imgtn.bdimg.com/it/u=1733752116,2589388407&fm=11&gp=0.jpg"
     },
     {
     id:"3",  
@@ -31,7 +31,7 @@ Page({
     houseType:"整租",
     price:"1000",
     address:"商丘",
-    image:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588043426099&di=4e34b9d49a73a122e052c5a09eb68ea6&imgtype=0&src=http%3A%2F%2Fhiphotos.baidu.com%2Fnuomi%2Fpic%2Fitem%2Fd31b0ef41bd5ad6ed985964c8acb39dbb6fd3c13.jpg"
+    image:"http://img5.imgtn.bdimg.com/it/u=1733752116,2589388407&fm=11&gp=0.jpg"
     },
     {
     id:"4",
@@ -39,14 +39,10 @@ Page({
     houseType:"整租",
     price:"1000",
     address:"商丘",
-    image:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588043426099&di=4e34b9d49a73a122e052c5a09eb68ea6&imgtype=0&src=http%3A%2F%2Fhiphotos.baidu.com%2Fnuomi%2Fpic%2Fitem%2Fd31b0ef41bd5ad6ed985964c8acb39dbb6fd3c13.jpg"
+    image:"http://img5.imgtn.bdimg.com/it/u=1733752116,2589388407&fm=11&gp=0.jpg"
     }
   ]
-  },
-  // 自动有方法
-  look:function(e){
-    console.info(e.currentTarget.dataset.id);
-
+      
   },
 
   /**

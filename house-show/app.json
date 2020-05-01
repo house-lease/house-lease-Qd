@@ -1,12 +1,10 @@
 {
   "pages":[
-    "pages/search/search",
     "pages/home/home",
-    "pages/consult/consult",
-    "pages/personalCenter/personalCenter",
     "pages/select/select",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/particulars/particulars"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -15,7 +13,6 @@
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
-
     "list": [{
       "pagePath": "pages/home/home",
       "text": "主页"
@@ -23,13 +20,7 @@
       "pagePath": "pages/index/index",
       "text": "收藏"
     },{
-
-      "pagePath": "pages/consult/consult",
-      "text": "消息"
-    }
-    ,{
-      
-      "pagePath": "pages/personalCenter/personalCenter",
+      "pagePath": "pages/logs/logs",
       "text": "我的"
     }
     ]
