@@ -1,4 +1,4 @@
-// pages/select/select.js
+// pages/like/likes.js
 Page({
 
   /**
@@ -7,11 +7,7 @@ Page({
   data: {
 
   },
-  handleSearcher(e){
-    var value = e.detail.value;
-    console.info(value);
-}
-,
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -19,7 +15,7 @@ Page({
 
   },
 
-  /**   
+  /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {

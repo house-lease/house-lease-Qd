@@ -1,17 +1,42 @@
-// pages/select/select.js
+// pages/search/search.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    address:"郑州",
+    images:['https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588043426099&di=4e34b9d49a73a122e052c5a09eb68ea6&imgtype=0&src=http%3A%2F%2Fhiphotos.baidu.com%2Fnuomi%2Fpic%2Fitem%2Fd31b0ef41bd5ad6ed985964c8acb39dbb6fd3c13.jpg'
+  ],
+houses:[
+  {
+    id:1,
+    name:"老王的家",
+    address:"商丘市梁园区",
+    money:1000,
+    type:"整租",
+    num:3
   },
-  handleSearcher(e){
-    var value = e.detail.value;
-    console.info(value);
-}
-,
+  {
+    id:2,
+    name:"老张的家",
+    address:"商丘市睢阳区",
+    money:2000,
+    type:"合租",
+    num:4
+  },
+  {
+    id:3,
+    name:"老李的家",
+    address:"商丘市新区",
+    money:1500,
+    type:"整租",
+    num:2
+  }
+
+]
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -19,7 +44,7 @@ Page({
 
   },
 
-  /**   
+  /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
