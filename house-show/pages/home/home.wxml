@@ -1,8 +1,19 @@
+
+
 <view class="main">
+<view class="pa">
+<view class="weizhi_">
+<view class="weiZhi">
+{{address}}
+<image class="xiaLa" src="/pages/image/xl.png"/>
+</view> 
+</view>
 <!-- 自定义组件 -->
 <view>
 <searcher></searcher>
 </view>
+</view>
+
 <!-- 轮播图 -->
 <view class="lunBo">
 <swiper indicator-dots="true" autoplay="true" interval="3000" duration="500">

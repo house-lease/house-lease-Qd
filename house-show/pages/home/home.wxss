@@ -1,3 +1,5 @@
+
+
 /* 清除内外边距 */
 view,input,form,image{
   padding: 0px;
@@ -5,6 +7,43 @@ view,input,form,image{
 }
 .main{
   background:rgba(192,192,192,0.1);
+}
+
+/* 位置样式 */
+.pa::after{
+  content:" ";
+  display:block;
+  clear:both;
+}
+.pa{
+  margin-bottom: 10rpx;
+}
+.weiZhi,.souSuo{
+  display: inline-block;
+}
+.weiZhi{
+  font-size: 24rpx;
+  padding-right: 40rpx;
+
+}
+/* 下拉图标 */
+.xiaLa,.souSuoImg{
+  width: 30rpx;
+  height: 30rpx;
+}
+.xiaLa{
+  position: absolute;
+  top: 32rpx;
+  left: 115rpx;
+}
+.weizhi_{
+  float: left;
+  margin-left: 40rpx;
+  border: 1px solid rgba(192,192,192);
+  border-right: none;
+  /* margin-left:40rpx; */
+  padding: 20rpx;
+  box-shadow: 0rpx 5rpx 5rpx 0rpx rgba(192,192,192);
 }
 /* 横着的分割View样式 */
 /*分割线样式*/

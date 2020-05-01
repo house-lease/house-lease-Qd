@@ -1,6 +1,15 @@
 <!-- 自定义组件 -->
+<view class="pa">
+<view class="weizhi_">
+<view class="weiZhi">
+{{address}}
+<image class="xiaLa" src="/pages/image/xl.png"/>
+</view> 
+</view>
+<!-- 自定义组件 -->
 <view>
 <searcher></searcher>
+</view>
 </view>
 <view class="container">
   <view class="Split"></view>
