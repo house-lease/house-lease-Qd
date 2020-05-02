@@ -4,7 +4,7 @@
 <view class="pa">
 <view class="weizhi_">
 <view class="weiZhi">
-{{address}}
+{{address_}}
 <image class="xiaLa" src="/pages/image/xl.png"/>
 </view> 
 </view>
@@ -61,11 +61,11 @@
 <view wx:for="{{houses}}" wx:key="id" wx:for-index="idx" wx:for-item="value">
 <view class="lists" bindtap="look" data-id="{{value.id}}">
   <view class="tu">
-  <image src="{{value.image}}"></image>
+  <image src="{{value.houseImages[0].imageUrl}}"></image>
   </view>
   <view class="message">
    <view class="houseName">{{value.houseName}}</view>
-   <view class="houseType" >{{value.houseType}}</view>
+   <view class="houseType" >{{value.houseLeaseName}} | {{value.houseTypeName}}</view>
    <view class="address">{{value.address}} </view>
    <view class="price">{{value.price}}<text>/月</text></view>
   </view>
