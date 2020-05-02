@@ -1,0 +1,158 @@
+/*头部*/
+.head {
+  /* border: 1px red solid; */
+  margin: 40rpx;
+}
+.own{
+  margin: 50rpx;
+}
+.serviceMoney {
+  /* border: 1px red solid; */
+  font-size: 12px;
+  color: red;
+}
+.ll{
+  font-size: 38rpx;
+  color: #666;
+  margin-bottom: 15rpx;
+}
+.Staging{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.downPayment{
+  
+}
+.deferred{
+  width: 220rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #F7F8FA;
+  text-align: center;
+  border-radius:50px 50px 50px 50px;
+  font-size: 13px;
+  /* border: 1px red solid; */
+}
+.deferred image{
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 20rpx;
+}
+
+.downPayment, .residue{
+  font-size: 12px;
+  margin-bottom: 10rpx;
+  background-color: #FFFFFF;
+  border: 1px solid #F0F0F0;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+.downPayment image, .residue image{
+  width: 30rpx;
+  height: 30rpx;
+  align-items: center;
+  margin-left: 10rpx;
+}
+.money1{
+  margin-left: 120rpx;
+}
+.stages{
+  margin-left: 20rpx;
+  color:  rgb(40, 216, 157);
+  font-size: 10px;
+  background-color: rgba(175, 225, 208, 0.604);
+}
+.residue{
+  font-size: 12px;
+  margin-bottom: 30rpx;
+}
+.money2{
+  margin-left: 40rpx;
+}
+
+.payment{
+  font-size: 12px;
+  margin-bottom: 20rpx;
+  border-bottom: solid 1px #F0F0F0;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+.money3{
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 350rpx;
+}
+
+
+.text1 {
+  font-size: 26rpx;
+  margin-bottom: 40rpx;
+  color: #333;
+}
+
+/*押金说明*/
+.pledge{
+  margin-bottom: 20rpx;
+  color: rgb(104, 94, 94);
+}
+
+.pledgeExplain{
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: -60rpx;
+}
+
+.Explain1{
+  margin-bottom: -100rpx;
+  font-size: 28rpx;
+  padding-bottom: 10rpx;
+}
+
+
+/*服务费说明*/
+.serviceCharge{
+  margin-top: 60rpx;
+  color: rgb(104, 94, 94);
+}
+
+.serviceChargeExplain{
+  font-weight: 300;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: -50rpx;
+}
+.Explain2{
+  font-size: 28rpx;
+}
+
+/*维修金说明*/
+.maintain{
+  font-weight: 300;
+
+  font-size: 14px;
+  margin-top: 40rpx;
+}
+.maintainGold{
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: -20px;
+  color: #666;  
+
+}
+.Explain3{
+  word-break: keep-all;word-wrap: break-word;white-space: pre-line;
+  font-size: 12px;
+}
+/* 图片*/
+.tp{
+  margin: 25rpx;
+}
+.consult{
+    width: 280px;
+    height: 45px;
+}

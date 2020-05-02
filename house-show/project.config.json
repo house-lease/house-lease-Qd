@@ -17,7 +17,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.11.0",
-	"appid": "wx38fff06132aaab9d",
+	"appid": "wx5b2004d8a2aa0530",
 	"projectname": "house-show",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -34,13 +34,28 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"gamePlugin": {
 			"current": -1,
 			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/paymentMethod/paymentMethod",
+					"pathName": "pages/paymentMethod/paymentMethod",
+					"scene": null
+				}
+			]
 		}
 	}
 }

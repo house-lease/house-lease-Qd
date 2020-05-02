@@ -1,0 +1,67 @@
+  <!-- 付款方式页面-->
+
+  <view class="head">
+  	<view class="Staging">
+  		<view class="ll">
+  			<text>分期付付款计划</text>
+  		</view>
+  		<view class="deferred">
+  			<text>分期付</text><image src="../image/arrow_down.png"/>
+  		</view>
+  	</view>
+  	<view class="serviceMoney">免缴手续费：￥4444起</view>
+
+
+  </view>
+  <view class="own">
+  	<view class="downPayment">
+  		首付款 (含押金,服务维修费)
+  		<text class="money1">￥8888</text>
+			<image src="../image/arrow_down.png"/>
+  	</view>
+  	<view class="residue">
+  		剩余期支付 (含服务维修费)
+  		<text class="stages">共18期</text>
+  		<text class="money2">￥8888/期</text>
+				<image src="../image/arrow_down.png"/>
+  	</view>
+  	<view class="payment">
+  		年总支付
+  		<text class="money3">￥500000</text>
+  	</view>
+  	<view class="text1">
+  		<text>
+          *上述付款详情以及活动优惠信息仅供参考，以实际付款计划表
+          展示为准，如签约两年需一次性付清。
+        </text>
+  	</view>
+
+  	<view class="pledge">
+  		<view class="pledgeExplain">押金说明</view>
+  		<text class="Explain1">
+  			为该付款方式一个月租金，租赁关系终止时，蛋壳租客
+  			依约返还了租赁物、缴清全部款项等，且并无其它不履
+  			行合同义务情形的，蛋壳应返还押金或已扣除损害赔偿
+  			后的余额。
+ 				</text>
+  	</view>
+
+  	<view class="serviceCharge">
+  		<view class="serviceChargeExplain">服务费说明</view>
+  		<text class="Explain2">
+  			展示为准，如签约两年需一次性付清。展示为准，如签约两年需一次性付清。
+  	</text>
+  	</view>
+
+  	<view class="maintain">
+  		<view class="maintainGold">维修金说明</view>
+  		<text class="Explain3">
+  			仅需支付房屋月租价格的1%，便可超值享受主体维修、
+  			电器维修、水暖维修、电路维修、灯具维修、橱柜维
+  			修、锁具维修（具体维修内容以房屋租赁合同为准）。
+    </text>
+  	</view>
+  </view>
+  <view class="tp">
+  	<image class="consult" src="/pages/image/consult.png"></image>
+  </view>

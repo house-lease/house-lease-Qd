@@ -6,6 +6,7 @@
     "pages/consult/consult",
     "pages/personalCenter/personalCenter",
     "pages/select/select",
+    "pages/paymentMethod/paymentMethod",
     "pages/index/index",
     "pages/logs/logs"
   ],
