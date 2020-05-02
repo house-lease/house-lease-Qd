@@ -1,0 +1,22 @@
+/* 清除内外边距 */
+view,input,form,image{
+  padding: 0px;
+  margin: 0px;
+}
+/* 搜索框样式 */
+.input_{
+  margin-left: 10%;
+  padding-left: 60rpx;
+  border: 1px solid rgba(192,192,192);
+  height: 70rpx;
+  width: 74%;
+  border-radius: 40rpx;
+}
+/* 搜索图标 */
+.souSuoImg{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 25rpx;
+  left: 100rpx;
+}

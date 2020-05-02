@@ -1,0 +1,4 @@
+<!-- 地理位置下拉按钮 -->
+<view class="zhu">
+<view class="souSuo" bindtap="open" > <image class="souSuoImg" src="/pages/image/ss.png"/>你想住哪里？</view>
+</view>

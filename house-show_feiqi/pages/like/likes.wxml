@@ -1,0 +1,33 @@
+<!--pages/like/likes.wxml-->
+<view class="like">
+<image mode="aspectFit"  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587982931805&di=4a66a16468c13adc342943483d4e318b&imgtype=0&src=http%3A%2F%2Fs9.rr.itc.cn%2Fr%2FwapChange%2F201611_28_15%2Fa9wm6z386312800635.jpeg">
+</image>
+<view><text class="h3">平房村 金泽家园A区 朝南-主卧</text></view>
+<view><text class="text">合租|3室1厅· 12㎡·8/15层</text></view>
+<view><text class="text">距3号线平房村站1500米</text></view>
+<view><text class="textmoney">￥2430/月</text></view>
+</view>
+<view class="like">
+<image mode="aspectFit"  src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2574185899,1972574351&fm=26&gp=0.jpg">
+</image>
+<view><text class="h3">平房村 金泽家园A区 朝南-主卧</text></view>
+<view><text class="text">合租|3室1厅· 12㎡·8/15层</text></view>
+<view><text class="text">距3号线平房村站1500米</text></view>
+<view><text class="textmoney">￥2430/月</text></view>
+</view>
+<view class="like">
+<image mode="aspectFit"  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587982931805&di=4a66a16468c13adc342943483d4e318b&imgtype=0&src=http%3A%2F%2Fs9.rr.itc.cn%2Fr%2FwapChange%2F201611_28_15%2Fa9wm6z386312800635.jpeg">
+</image>
+<view><text class="h3">平房村 金泽家园A区 朝南-主卧</text></view>
+<view><text class="text">合租|3室1厅· 12㎡·8/15层</text></view>
+<view><text class="text">距3号线平房村站1500米</text></view>
+<view><text class="textmoney">￥2430/月</text></view>
+</view>
+<view class="like">
+<image mode="aspectFit"  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587982931805&di=4a66a16468c13adc342943483d4e318b&imgtype=0&src=http%3A%2F%2Fs9.rr.itc.cn%2Fr%2FwapChange%2F201611_28_15%2Fa9wm6z386312800635.jpeg">
+</image>
+<view><text class="h3">平房村 金泽家园A区 朝南-主卧</text></view>
+<view><text class="text">合租|3室1厅· 12㎡·8/15层</text></view>
+<view><text class="text">距3号线平房村站1500米</text></view>
+<view><text class="textmoney">￥2430/月</text></view>
+</view>
