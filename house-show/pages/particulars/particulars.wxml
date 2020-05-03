@@ -103,8 +103,7 @@
       		<view class="ping-jia">
       			<text class="tenantName">房屋租凭</text>
       			<textarea class="contexts">
-								啊三节打卡收到了吗迅速次你去凤凰搜星快v能否Qnow购物，那时看到
-								了哈删掉犬瘟热了那是常年气温
+								......
 					</textarea>
       		</view>
       	</view>
@@ -112,14 +111,29 @@
 
       <!-- 底部-->
       <view class="bottom">
-      	<view>
-      		<image src="/pages/image/shoucang.png" class="shouc"></image>
-      		<view class="shou">收藏</view>
+      	<!-- 收藏-->
+      	<view class="shouCang">
+      		<image src="/pages/image/shoucang.png" />
+      		<text>收藏</text>
       	</view>
-      	<view>
-      		<image src="/pages/image/fenxinag.png" class="fenx"></image>
-      		<view class="fen">分享</view>
+      	<!-- 分享-->
+      	<view class="fenxiang">
+      		<image src="/pages/image/fenxinag.png" />
+      		<text>分享</text>
       	</view>
-				<view><button size="mini">咨询</button></view>
-					<view><button size="mini">付款</button></view>
+      	<!-- 咨询 -->
+      	<view class="zixun">
+					<button size="mini">咨询</button>
+      		<!-- <button>
+      			<cover-image class="s-icon" src="/pages/image/zixun.png" />
+      		</button> -->
+      	</view>
+      	<!-- 付款-->
+      	<view class="fukuan">
+				<button size="mini">付款</button>
+					
+      		<!-- <button class="fbtn">
+      			<cover-image class="s-icon" src="/pages/image/fukuan.png" />
+      		</button> -->
+      	</view>
       </view>

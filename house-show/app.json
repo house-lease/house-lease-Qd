@@ -10,6 +10,7 @@
     "pages/paymentMethod/paymentMethod",
     "pages/index/index",
     "pages/logs/logs"
+
     
   ],
   "window":{
