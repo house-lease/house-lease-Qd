@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/particulars/particulars",
     "pages/home/home",
+    "pages/particulars/particulars",
     "pages/like/likes",
     "pages/search/search",
     "pages/consult/consult",
