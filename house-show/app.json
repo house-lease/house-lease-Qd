@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/particulars/particulars",
     "pages/home/home",
     "pages/like/likes",
     "pages/search/search",
@@ -9,6 +10,7 @@
     "pages/paymentMethod/paymentMethod",
     "pages/index/index",
     "pages/logs/logs"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",

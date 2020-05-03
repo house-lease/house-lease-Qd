@@ -16,10 +16,19 @@ Page({
   
   ]
   },
-  // 自动有方法
+  // 点击查询方法
   look:function(e){
     console.info(e.currentTarget.dataset.id);
-
+    var this_ = this;
+    wx.request({
+      url: 'http://localhost:8080/house/house/queryByHouseId', 
+      data: {
+       houseId:e.currentTarget.dataset.id
+      },
+      success(res) {
+        console.info(res.data);
+      }
+    })
   },
    // 定义一个函数：作用是查询所有的房屋信息，返回的结果是json格式
    getHouseList: function(){

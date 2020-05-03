@@ -1,0 +1,125 @@
+      <!--房屋详情页面-->
+
+      <view wx:for="{{houses}}" wx:key="id" wx:for-index="idx" wx:for-item="houses">
+      	<!-- 轮播图 -->
+      	<view class="swiperContainer">
+      		<swiper bindchange="swiperChange" autoplay="true" duration="{{duration}}" interval="{{interval}}" circular="true" style="385rpx">
+      			<view wx:for="{{houses.images}}" wx:key="*this" wx:for-index="idx" wx:for-item="value">
+      				<swiper-item>
+      					<image src="{{value}}" class="slide-image" class='img' />
+      				</swiper-item>
+      			</view>
+      		</swiper>
+      		<!-- 图片数量-->
+      		<view class="imageCount">{{current+1}}/{{houses.images.length}}</view>
+      	</view>
+
+      	<view class="particulars">
+      		<view>
+      			<text class="price" >{{houses.price}}</text>元/月
+      		</view>
+      		<view class="wo">
+      			<text class="jia">我温馨的小家</text>
+      		</view>
+      		<view>
+      			<text class="houseType">{{houses.houseType}}|可住5人</text>
+      			<image class="phoneImage" src="/pages/image/phone.png"></image>咨询
+      		</view>
+
+      		<view class="message">
+      			<text>84m²</text>
+      			<text>11层</text>
+      			<text>一年起</text>
+      		</view>
+      		<view class="messageList">
+      			<text>面积</text>
+      			<text>楼层</text>
+      			<text>起租</text>
+      		</view>
+      	</view>
+      </view>
+
+      <view>
+      	<!-- 分割线 -->
+      	<view class="divLine"></view>
+      	<view class="intro">
+      		<text class="jianjie">房屋简介</text>
+      		<view class="furniture-stype">
+      			<image src="/pages/image/dianshi.png" />
+      			<image src="/pages/image/bingxiang.png" />
+      			<image src="/pages/image/kongtiao.png" />
+      			<image src="/pages/image/kuandai.png" />
+      		</view>
+      		<view class="jianjietext">
+      			<text>电视</text>
+      			<text>冰箱</text>
+      			<text>空调</text>
+      			<text>宽带</text>
+      		</view>
+      		<view class="furniture-stype">
+      			<image src="/pages/image/xiyiji.png" />
+      			<image src="/pages/image/shafa.png" />
+      			<image src="/pages/image/nuanqi.png" />
+      			<image src="/pages/image/chuang.png"></image>
+      		</view>
+      		<view class="jianjietext">
+      			<text class="xiyiji">洗衣机</text>
+      			<text class="shafa">沙发</text>
+      			<text>暖气</text>
+      			<text>床</text>
+      		</view>
+      	</view>
+      </view>
+      <!-- 分割线 -->
+      <view class="divLine"></view>
+
+      <!-- 房屋位置地图显示-->
+      <view class="location">
+      	<image src="/pages/image/ditu.png"></image>
+      </view>
+
+      <!-- 分割线 -->
+      <view class="divLine"></view>
+      <!-- 租客评价-->
+      <view class="estimate">
+      	<view class="first">
+      		<view><text class="zkpj">租客评价</text></view>
+      		<view class="pingjia">
+      			<image src="/pages/image/pingjia.png" class="pjtx" />
+      			<view class="grade">5.0</view>
+      		</view>
+      		<view>
+      			<text class="pingjias">查看更多评价</text>
+      		</view>
+      	</view>
+
+      	<!-- 分割线 -->
+      	<view class="divLine"></view>
+      	<!-- 评价内容-->
+      	<view class="userpingjia">
+      		<view class="estimateContext">
+      			<image src="/pages/image/touxiang.png" class="tx" />
+      		</view>
+      		<view class="ping-jia">
+      			<text class="tenantName">房屋租凭</text>
+      			<textarea class="contexts">
+								啊三节打卡收到了吗迅速次你去凤凰搜星快v能否Qnow购物，那时看到
+								了哈删掉犬瘟热了那是常年气温
+					</textarea>
+      		</view>
+      	</view>
+      </view>
+
+      <!-- 底部-->
+      <view class="bottom">
+      	<view>
+      		<image src="/pages/image/shoucang.png" class="shouc"></image>
+      		<view class="shou">收藏</view>
+      	</view>
+      	<view>
+      		<image src="/pages/image/fenxinag.png" class="fenx"></image>
+      		<view class="fen">分享</view>
+      	</view>
+				<view><button size="mini">咨询</button></view>
+					<view><button size="mini">付款</button></view>
+      </view>
