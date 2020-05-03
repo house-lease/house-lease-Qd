@@ -1,0 +1,19 @@
+<!--pages/photoAlbum/photoAlbum.wxml-->
+<view >
+<button size='mini' bindtap="click1" class="btn">卧室</button>
+<button size='mini' bindtap="click2" class="btn">卫生间</button>
+<button size='mini' bindtap="click3" class="btn">客厅</button>
+</view>
+
+<view hidden="{{bedroomhidden}}" class="swiper"  wx:for="{{bedroomphotos}}">
+<image src="{{item}}" mode="scaleToFill"/>
+</view>
+
+<view hidden="{{toilethidden}}" class="swiper"  wx:for="{{toiletphotos}}">
+<image src="{{item}}" mode="scaleToFill"/>
+</view>
+
+<view hidden="{{saloonhidden}}" class="swiper"  wx:for="{{saloonphotos}}">
+<image src="{{item}}" mode="scaleToFill"/>
+</view>
+
