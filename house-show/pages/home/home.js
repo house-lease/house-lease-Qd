@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+      user:{},
       address_:"郑州",
       houseName:"",
       price:"",
@@ -56,6 +57,17 @@ Page({
   onLoad: function (options) {
     // 调用查询房屋的信息
     this.getHouseList();
+    // var this_=this;
+    // wx.getStorage({
+    //   key: 'ticket',
+    //   success:function(res){
+    //     console.info(res.data)
+    //       this_.setData({
+    //         user:res.data
+    //       })
+    //       console.info(this_.data.user)
+    //   }
+    // })
   },
 
   /**

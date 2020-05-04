@@ -2,7 +2,7 @@
   "pages":[
     "pages/home/home",
     "pages/particulars/particulars",
-  
+    
     "pages/photoAlbum/photoAlbum",
     "pages/like/likes",
     "pages/search/search",

@@ -107,7 +107,9 @@ text {
 .jianjie {
   font-weight: 600;
 }
-
+.intro{
+  margin-top: 40rpx;
+}
 .intro image {
   width: 100rpx;
   height: 100rpx;
@@ -118,6 +120,7 @@ text {
   display: block;
   text-align: center;
   padding-left: 0;
+  margin-bottom: 20rpx;
 }
 
 .furniture-stype,
@@ -221,11 +224,9 @@ text {
 .bottom {
   width: 100%;
   height: 140rpx;
-  position: relative;
-  left: 0;
-  right: 0;
-  top: 0;
-  background-color: D7d7d7;
+  position: fixed;
+ bottom: 0rpx;
+  background-color:white;
   font-size: 30rpx;
   display: flex;
   justify-content: space-around;

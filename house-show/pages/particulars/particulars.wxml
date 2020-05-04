@@ -77,38 +77,6 @@
       <view class="location">
       	<image src="/pages/image/ditu.png"></image>
       </view>
-
-      <!-- 分割线 -->
-      <view class="divLine"></view>
-      <!-- 租客评价-->
-      <view class="estimate">
-      	<view class="first">
-      		<view><text class="zkpj">租客评价</text></view>
-      		<view class="pingjia">
-      			<image src="/pages/image/pingjia.png" class="pjtx" />
-      			<view class="grade">5.0</view>
-      		</view>
-      		<view>
-      			<text class="pingjias">查看更多评价</text>
-      		</view>
-      	</view>
-
-      	<!-- 分割线 -->
-      	<view class="divLine"></view>
-      	<!-- 评价内容-->
-      	<view class="userpingjia">
-      		<view class="estimateContext">
-      			<image src="/pages/image/touxiang.png" class="tx" />
-      		</view>
-      		<view class="ping-jia">
-      			<text class="tenantName">房屋租凭</text>
-      			<textarea class="contexts">
-								......
-					</textarea>
-      		</view>
-      	</view>
-      </view>
-
       <!-- 底部-->
       <view class="bottom">
       	<!-- 收藏-->
@@ -131,9 +99,5 @@
       	<!-- 付款-->
       	<view class="fukuan">
 				<button size="mini">付款</button>
-					
-      		<!-- <button class="fbtn">
-      			<cover-image class="s-icon" src="/pages/image/fukuan.png" />
-      		</button> -->
       	</view>
       </view>

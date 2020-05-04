@@ -1,8 +1,9 @@
 <!--pages/personalCenter/personalCenter.wxml-->
 <view id="top">
-  <image src="http://img.mp.sohu.com/q_mini,c_zoom,w_640/upload/20170731/4c79a1758a3a4c0c92c26f8e21dbd888_th.jpg" />
-  <text id="phone">187****3860</text>
+  <image src="{{user.imageUrl}}" />
+  <text id="phone">{{user.nickname}}</text>
   <text id="personalMessage">点击查看个人信息</text>
+  <button bindtap="login">登录</button>
 </view>
 
 <view id="middle">
