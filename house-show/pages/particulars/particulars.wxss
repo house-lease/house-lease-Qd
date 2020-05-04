@@ -109,17 +109,20 @@ text {
 }
 
 .intro image {
-  width: 100rpx;
-  height: 100rpx;
+  width: 70rpx;
+  height: 70rpx;
 }
 
 /* 房屋简介*/
 .jianjie {
   display: block;
+  margin-top: 40rpx;
   text-align: center;
   padding-left: 0;
 }
-
+.furniture-stype{
+  margin-top: 40rpx;
+}
 .furniture-stype,
 .jianjietext {
   display: flex;
@@ -127,105 +130,26 @@ text {
 }
 
 .jianjietext text {
+  font-size: 12px;
   padding: 20rpx;
   display: inline-block;
   text-align: center;
-  width: 120rpx;
+  width: 100rpx;
 }
 
 /* 房屋位置*/
 .location {
   margin: 20rpx;
-}
-
-/* 租客评价*/
-.estimate {
-  margin: 0;
-  padding: 0;
-}
-
-.zkpj {
-  font-weight: 800;
-  padding-left: 0;
-  display: inline;
-  text-align: center;
-  font-size: 50rpx;
-}
-
-.pingjia {
-  width: 100rpx;
-  height: 80rpx;
-  margin-top: 50rpx;
-  margin-bottom: 0;
-}
-
-.pingjia .grade {
-  margin-left: 160rpx;
-  margin-top: -100rpx;
-}
-
-.pingjia,
-.pjtx {
-  width: 100rpx;
-  height: 100rpx;
-  font-weight: 900;
-  font-size: 50rpx;
-}
-
-.pingjia image {
-  width: 150rpx;
-  height: 150rpx;
-}
-
-.pingjias {
-  margin-top: -20rpx;
-  margin-left: 400rpx;
-  font-size: 36rpx;
-  font-weight: 900;
-}
-
-.estimateContext {
-  margin-top: 20rpx;
-  margin-left: 20rpx;
-  width: 120rpx;
-  height: 120rpx;
-}
-
-.tx {
-  width: 120rpx;
-  height: 120rpx;
-  padding: 0rpx;
-}
-
-.ping-jia {
-  margin-top: -50rpx;
-}
-
-.tenantName {
-  display: inline-block;
-  font-size: 14px;
-  padding: 0rpx;
-  margin-left: 160rpx;
-}
-
-.contexts {
-  font-size: 12px;
-  margin: 30rpx;
-  margin-left: 80rpx;
-  height: 100rpx;
-  font-size: 36rpx;
-  line-height: initial;
-  font-weight: 500;
+  margin-bottom: 180rpx;
 }
 
 .bottom {
+  bottom: 0;
+  position: fixed;
+  padding-top: 30rpx;
   width: 100%;
   height: 140rpx;
-  position: relative;
-  left: 0;
-  right: 0;
-  top: 0;
-  background-color: D7d7d7;
+  background-color: #fff;
   font-size: 30rpx;
   display: flex;
   justify-content: space-around;
@@ -236,21 +160,22 @@ text {
   height: 60rpx;
 }
 .shouCang, .fenxiang{
+  padding-top: 30rpx;
   width: 80rpx;
   height: 80rpx;
 }
 .bottom text{
   padding-left: 0;
 }
+
 button[size='mini'] {
-  /* width: auto; */
+  margin-top: 40rpx;
+  width: 100%;
   padding: 0 0.75em;
-  line-height: 2;
-  /* font-size: 1300rpx; */
+  line-height: 4;
   background-color: #169AD4;
   color: #fff;
-  font-weight: 100;
-  width: 100rpx;
+  font-weight: 300;
   }
   
 
