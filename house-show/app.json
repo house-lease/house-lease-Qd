@@ -2,6 +2,7 @@
   "pages":[
     "pages/particulars/particulars",
     "pages/home/home",
+    "pages/photoAlbum/photoAlbum",
     "pages/like/likes",
     "pages/search/search",
     "pages/consult/consult",
@@ -10,6 +11,7 @@
     "pages/paymentMethod/paymentMethod",
     "pages/index/index",
     "pages/logs/logs"
+
     
   ],
   "window":{

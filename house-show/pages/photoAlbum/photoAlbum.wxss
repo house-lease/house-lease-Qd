@@ -1,0 +1,15 @@
+page{
+  height: 100%;
+}
+.btn{
+  margin-left: 55px;
+  font-weight: 400;
+}
+.swiper{
+  margin-bottom: 10px;
+  display:flex;          
+  justify-content: center;
+}
+.swiper image{
+  width: 100%; 
+}

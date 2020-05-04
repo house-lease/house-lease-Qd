@@ -1,5 +1,4 @@
 
-
 <view class="main">
 <view class="pa">
 <view class="weizhi_">
@@ -33,15 +32,15 @@
 <!-- 条件按钮 -->
 <view class="anNiu">
   <view class="heZu">
-  <image class="he" src="/pages/image/hz.png"></image>
+  <image class="he" src="/pages/image/he.png"></image>
   <view class="t">合租</view>
   </view>
   <view class="zhengZu">
-  <image  class="he" src="/pages/image/zz.png"></image>
+  <image  class="he" src="/pages/image/zu.png"></image>
   <view class="t" >整租</view>
   </view>
   <view class="paiHang">
-  <image class="he" src="/pages/image/ph.png"></image>
+  <image class="he" src="/pages/image/p.png"></image>
   <view  class="t" >排行</view>
   </view>
 </view>
@@ -56,6 +55,8 @@
 <view class="t3">位置<image class="i3" src="/pages/image/xl.png"></image></view>
 <view class="t4">价格<image class="i4" src="/pages/image/xl.png"></image></view>
 </view>
+
+
 
 <!-- 房屋列表 -->
 <view wx:for="{{houses}}" wx:key="id" wx:for-index="idx" wx:for-item="value">

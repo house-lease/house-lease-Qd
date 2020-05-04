@@ -100,6 +100,7 @@ image{
 /* 条件筛选导航栏 */
 .tiaoJian{
   margin-top: 20rpx;
+  margin-bottom: 10rpx;
 }
 .tiaoJian::after{
   content:" ";
