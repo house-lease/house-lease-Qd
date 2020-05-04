@@ -1,0 +1,49 @@
+
+/* 清除内外边距 */
+view,image{
+  padding: 0px;
+  margin: 0px;
+}
+
+/*消息框*/
+.one{
+  clear: both;
+  height: 80px;
+  border-bottom:  #F5F5F5 solid 1px ;  
+}
+
+/*头像*/
+image{
+  margin: 8px;
+  border-radius: 8px;
+  width: 60px;
+  height: 60px;
+  float: left;
+}
+
+/*用户名*/
+.username{
+  width: 60%;
+  float: left;
+  height: 20px;
+  margin-top: 10px;
+}
+
+/*消息内容*/
+.information{
+  line-height: 50px;
+  font-size: 14px;
+  color: gray;
+}
+
+/*时间*/
+.Time{
+  float: right;
+  padding-top: 10px;
+  padding-right: 10px;
+  font-size: 13px;
+  color: gray;
+}
+
+
+

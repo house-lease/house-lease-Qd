@@ -1,0 +1,19 @@
+<!--消息页面-->
+<view class="message">
+
+  <view class="one"  wx:for="{{user}}" wx:for-index="key" wx:for-item="value" wx:key="id">
+      <view class="picture">
+         <image src="{{user[key].image}}"/>
+         </view>
+      <view  class="username">
+          <text class="name">{{user[key].name}}</text>
+      </view>  
+      <view>
+            <view class="Time"> 
+                    <text class="time">{{user[key].time}}</text>
+            </view>
+          <text class="information">{{user[key].information}}</text>
+      </view> 
+  </view>
+  
+</view>
