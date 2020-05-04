@@ -92,9 +92,6 @@
       	<!-- 咨询 -->
       	<view class="zixun">
 					<button size="mini">咨询</button>
-      		<!-- <button>
-      			<cover-image class="s-icon" src="/pages/image/zixun.png" />
-      		</button> -->
       	</view>
       	<!-- 付款-->
       	<view class="fukuan">
