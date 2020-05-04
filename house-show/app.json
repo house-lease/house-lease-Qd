@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/home/home",
+    "pages/photoAlbum/photoAlbum",
     "pages/particulars/particulars",
     "pages/like/likes",
     "pages/search/search",
