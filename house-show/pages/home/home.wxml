@@ -56,6 +56,8 @@
 <view class="t4">价格<image class="i4" src="/pages/image/xl.png"></image></view>
 </view>
 
+
+
 <!-- 房屋列表 -->
 <view wx:for="{{houses}}" wx:key="id" wx:for-index="idx" wx:for-item="value">
 <view class="lists" bindtap="look" data-id="{{value.id}}">

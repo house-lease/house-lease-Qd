@@ -26,7 +26,7 @@ Page({
        houseId:e.currentTarget.dataset.id
       },
       success(res) {
-        console.info(res.data);
+        console.info(res.data.data);
       }
     })
   },
@@ -44,7 +44,7 @@ Page({
       success(res) {
         console.info(res.data);
         this_.setData({
-          "houses": res.data
+          "houses": res.data.data
         });
       }
     })
