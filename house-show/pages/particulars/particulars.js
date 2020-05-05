@@ -10,18 +10,7 @@ Page({
         current:0,//图片数量
 
         houses:[
-            {
-              id:"1",  
-              houseName:"我的小家",
-              houseType:"整租",
-              price:"1000",
-              address:"商丘",
-              images:[
-                "http://img.warting.com/uploads/2013/c0816/13L644M255350-DY23.jpg?touch=",
-                "http://imgs.soufun.com/newshezuo/2013_10/17/778/34ee9ae577a1bcd57318246d5fd51bcd.jpeg",
-                "http://img.pconline.com.cn/images/photoblog/1/0/8/7/10876399/20103/24/1269422597706.jpg"
-              ]
-            }
+            
         ],
       },
 
@@ -36,7 +25,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-        var that = this;
+        var this_=this;
+    wx.getStorage({
+      key: 'house',
+      success:function(res){
+          this_.setData({
+            houses:res.data
+          })
+          console.info(this_.data.houses)
+      }
+    })
   },
 
   /**

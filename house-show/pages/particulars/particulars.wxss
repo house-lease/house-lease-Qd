@@ -50,12 +50,11 @@ text {
 .houseType {
   padding-right: -5rpx;
 }
-
-.wo,
+.wo{
+  display: inline-block;
+}
 .jia {
-  margin-left: 420rpx;
-  margin-top: -110rpx;
-  margin-bottom: 40rpx;
+  margin-left:180rpx;
   font-size: 18px;
   font-weight: bold;
 }

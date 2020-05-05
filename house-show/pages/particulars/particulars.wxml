@@ -1,40 +1,34 @@
       <!--房屋详情页面-->
 
-      <view wx:for="{{houses}}" wx:key="id" wx:for-index="idx" wx:for-item="houses">
+      <view >
       	<!-- 轮播图 -->
       	<view class="swiperContainer">
       		<swiper bindchange="swiperChange" autoplay="true" duration="{{duration}}" interval="{{interval}}" circular="true" style="385rpx">
-      			<view wx:for="{{houses.images}}" wx:key="*this" wx:for-index="idx" wx:for-item="value">
+      			<view wx:for="{{houses.houseImages}}" wx:key="id" wx:for-index="idx" wx:for-item="value">
       				<swiper-item>
-      					<image src="{{value}}" class="slide-image" class='img' />
+      					<image src="{{value.imageUrl}}" class="slide-image" class='img' />
       				</swiper-item>
       			</view>
       		</swiper>
       		<!-- 图片数量-->
-      		<view class="imageCount">{{current+1}}/{{houses.images.length}}</view>
+      		<view class="imageCount">{{current+1}}/{{houses.houseImages.length}}</view>
       	</view>
 
+
       	<view class="particulars">
-      		<view>
-      			<text class="price" >{{houses.price}}</text>元/月
-      		</view>
       		<view class="wo">
-      			<text class="jia">我温馨的小家</text>
+      			<text class="price" >{{houses.price}}</text>元/月
+							<text class="jia">{{houses.houseName}}</text>
       		</view>
+      
       		<view>
-      			<text class="houseType">{{houses.houseType}}|可住5人</text>
+      			<text class="houseType">{{houses.houseLeaseName}} | {{houses.houseTypeName}}</text>
       			<image class="phoneImage" src="/pages/image/phone.png"></image>咨询
       		</view>
 
       		<view class="message">
-      			<text>84m²</text>
-      			<text>11层</text>
-      			<text>一年起</text>
-      		</view>
-      		<view class="messageList">
-      			<text>面积</text>
-      			<text>楼层</text>
-      			<text>起租</text>
+      			<text>{{houses.narrate}}</text>
+      			<text>{{houses.startName}}起</text>
       		</view>
       	</view>
       </view>

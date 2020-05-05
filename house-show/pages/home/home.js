@@ -28,6 +28,14 @@ Page({
       },
       success(res) {
         console.info(res.data.data);
+        wx.setStorage({
+          data: res.data.data,
+          key: 'house',
+        })
+        wx.navigateTo({
+          url: '/pages/particulars/particulars',
+        })
+        
       }
     })
   },
