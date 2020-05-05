@@ -1,23 +1,45 @@
-/* pages/like/likes.wxss */
-image{
-  width: 330rpx;
-  height: 160rpx;
+/* 房屋列表 */
+.lists{
+  padding:30rpx 30rpx 0rpx 60rpx;
+}
+.lists::after{
+  content:" ";
+  display:block;
+  clear:both;
+}
+.tu,.message{
   float: left;
 }
-.like{
-  height: 220rpx;
+.tu image{
+  width: 300rpx;
+  height: 180rpx;
 }
-.like .h3{
-  font-weight:bold;
-  font-size: 28rpx;
+.message{
+  width: 46%;
+  margin-left: 50rpx;
+  border-bottom: 1px solid rgba(192,192,192);
 }
-.like .text {
-  float: left;
-  font-size: 28rpx;
-  color: gray;
+.houseName{
+  font-size: 32rpx;
+  font-weight: bold;
+  color: rgba(0,0,0,0.7);
 }
-.like .textmoney {
-  float: left;
-  font-weight:bold;
-  color:red;
+.houseType{
+  margin-top: 10rpx;
+  font-size: 26rpx;
+}
+.price{
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+  color: red;
+  font-weight: bold;
+
+}
+.price text{
+  font-size: 20rpx;
+}
+.address{
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: rgba(0, 0, 0,0.6);
 }

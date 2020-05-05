@@ -106,7 +106,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+// 获取用户是否登录
+var this_=this;
+wx.getStorage({
+  key: 'ticket',
+  success:function(res){
+      this_.setData({
+        user:res.data
+      })
+  }
+})
   },
 
   /**

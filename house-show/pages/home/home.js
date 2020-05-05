@@ -63,8 +63,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 调用查询房屋的信息
-    this.getHouseList();
+    
     // var this_=this;
     // wx.getStorage({
     //   key: 'ticket',
@@ -89,7 +88,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+// 调用查询房屋的信息
+this.getHouseList();
   },
 
   /**
