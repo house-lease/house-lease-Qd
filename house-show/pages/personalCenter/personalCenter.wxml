@@ -3,7 +3,7 @@
   <image src="{{user.imageUrl}}" />
   <text id="phone">{{user.nickname}}</text>
   <text id="personalMessage">点击查看个人信息</text>
-  <button bindtap="login">登录</button>
+  <button  open-type="getUserInfo"   bindtap="login">登录</button>
 </view>
 
 <view id="middle">

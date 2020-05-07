@@ -1,11 +1,12 @@
 // pages/like/likes.js
+
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
     user:{},
     collect:[]
   },
@@ -22,27 +23,35 @@ login:function(){
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this. gainUser();
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-   this. gainUser();
-    this.houseShow();    
+    this.setData({
+      user:app.globalData.userInfo
+    })
+    if(this.data.user.id!=null){
+      this.houseShow();
+    }
+   
   },
 
   // 显示收藏房屋的方法
   houseShow:function(){
     var this_=this;
+    this.setData({
+      user:app.globalData.userInfo
+    })
     // 定义一个函数：作用是查询所有的房屋信息，返回的结果是json格式
    wx.request({
      url: 'http://localhost:8080/house/collect/queryInfoByUserId', 
@@ -56,22 +65,9 @@ login:function(){
        });
        console.info(this_.data.collect)
      }
-   })
+   })  
   },
-// 获取用户是否登录
-  gainUser:function(){
-    
-    var this_=this;
-    wx.getStorage({
-      key: 'ticket',
-      success:function(res){
-          this_.setData({
-            user:res.data
-          })
-      }
-    })
-  }
-,
+
   // 点击查询的方法
   look:function(e){
     console.info(e);

@@ -80,63 +80,25 @@ text {
 }
 
 /* 详情信息*/
-.message {
-  font-size: 16px;
-  margin-top: 50rpx;
-  margin-left: 10rpx;
-}
 
-.message,
-text {
-  padding-left: 30rpx;
-}
-
-.messageList {
-  margin: 30rpx;
-  margin-left: 60rpx;
-  font-size: 15px;
-  color: rgba(162, 153, 153, 0.714);
-}
-
-.messageLis,
-text {
-  padding-left: 80rpx;
-}
-
-.jianjie {
-  font-weight: 600;
-}
-.intro{
-  margin-top: 40rpx;
-}
 .intro image {
   width: 70rpx;
   height: 70rpx;
 }
-
+.intro::after{
+  content:" ";
+  display:block;
+  clear:both;
+}
 /* 房屋简介*/
-.jianjie {
-  display: block;
-  margin-top: 40rpx;
-  text-align: center;
-  padding-left: 0;
-  margin-bottom: 20rpx;
+.zhengZu{
+  float: left;
+  margin-left: 90rpx;
+  margin-top: 30rpx;
 }
-.furniture-stype{
-  margin-top: 40rpx;
-}
-.furniture-stype,
-.jianjietext {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.jianjietext text {
-  font-size: 12px;
-  padding: 20rpx;
-  display: inline-block;
-  text-align: center;
-  width: 100rpx;
+.t{
+  font-size: 20rpx;
+  color: rgba(192,192,192);
 }
 
 /* 房屋位置*/

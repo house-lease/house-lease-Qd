@@ -37,31 +37,41 @@
       	<!-- 分割线 -->
       	<view class="divLine"></view>
       	<view class="intro">
-      		<text class="jianjie">房屋简介</text>
-      		<view class="furniture-stype">
-      			<image src="/pages/image/dianshi.png" />
-      			<image src="/pages/image/bingxiang.png" />
-      			<image src="/pages/image/kongtiao.png" />
-      			<image src="/pages/image/kuandai.png" />
-      		</view>
-      		<view class="jianjietext">
-      			<text>电视</text>
-      			<text>冰箱</text>
-      			<text>空调</text>
-      			<text>宽带</text>
-      		</view>
-      		<view class="furniture-stype">
-      			<image src="/pages/image/xiyiji.png" />
-      			<image src="/pages/image/shafa.png" />
-      			<image src="/pages/image/nuanqi.png" />
-      			<image src="/pages/image/chuang.png"></image>
-      		</view>
-      		<view class="jianjietext">
-      			<text class="xiyiji">洗衣机</text>
-      			<text class="shafa">沙发</text>
-      			<text>暖气</text>
-      			<text>床</text>
-      		</view>
+      		<view class="jianjie">房屋简介</view>
+    
+			  <view class="zhengZu">
+				<image  class="he" src="/pages/image/zu.png"></image>
+				<view class="t" >整租</view>
+				</view>
+				  <view class="zhengZu">
+				<image  class="he" src="/pages/image/zu.png"></image>
+				<view class="t" >整租</view>
+				</view>
+				  <view class="zhengZu">
+				<image  class="he" src="/pages/image/zu.png"></image>
+				<view class="t" >整租</view>
+				</view>
+				  <view class="zhengZu">
+				<image  class="he" src="/pages/image/zu.png"></image>
+				<view class="t" >整租</view>
+				</view>
+				  <view class="zhengZu">
+				<image  class="he" src="/pages/image/zu.png"></image>
+				<view class="t" >整租</view>
+				</view>
+				  <view class="zhengZu">
+				<image  class="he" src="/pages/image/zu.png"></image>
+				<view class="t" >整租</view>
+				</view>
+				  <view class="zhengZu">
+				<image  class="he" src="/pages/image/zu.png"></image>
+				<view class="t" >整租</view>
+				</view>
+				  <view class="zhengZu">
+				<image  class="he" src="/pages/image/zu.png"></image>
+				<view class="t" >整租</view>
+				</view>
+
       	</view>
       </view>
       <!-- 分割线 -->

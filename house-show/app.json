@@ -1,13 +1,13 @@
 {
   "pages":[
-    "pages/home/home",
     "pages/particulars/particulars",
+    "pages/home/home",
+    "pages/search/search",
+    "pages/select/select",
     "pages/photoAlbum/photoAlbum",
     "pages/like/likes",
-    "pages/search/search",
     "pages/consult/consult",
     "pages/personalCenter/personalCenter",
-    "pages/select/select",
     "pages/paymentMethod/paymentMethod",
     "pages/index/index",
     "pages/logs/logs"

@@ -1,4 +1,6 @@
 // pages/personalCenter/personalCenter.js
+
+var app = getApp();
 Page({
 
   /**
@@ -40,25 +42,13 @@ Page({
                               sex:this_.data.sex
                            },
                             success(responseData) {
-                            console.info(responseData.data)
                             if (responseData.data.data!=null) {
                              // 表示登录成功
-                              // >> 1、小程序客户端保存登录状态，即ticket
-                             wx.setStorage({
-                                key: "ticket",
-                                data: responseData.data.data
-                              })
-                            wx.getStorage({
-                              key: 'ticket',
-                              success:function(res){
-                                console.info(res.data)
-                                  this_.setData({
-                                    user:res.data
-                                  })
-
-                              }
-                            })
-                  
+                              app.globalData.userInfo=responseData.data.data;
+                              this_.setData({
+                                user:app.globalData.userInfo
+                              })
+                                console.info(this_.data.user);
                                 // >> 2、显示登录成功的信息
                               wx.showToast({
                                 title: '登录成功',
