@@ -3,6 +3,7 @@ view,
 input,
 form,
 image {
+  font-family: "楷体";
   padding: 0px;
   margin: 0px;
 }
@@ -36,26 +37,42 @@ image {
   left: 240px;
   bottom: 20rpx;
 }
-
+.im{
+  float: right;
+  margin-right: 30rpx;
+}
 .price {
-  padding-right: 5rpx;
-  font-size: 20px;
+   margin-left: 60rpx;
+  font-weight: bold;
+  font-size: 45rpx;
   color: red;
+}
+
+.xin{
+  font-size: 20rpx;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+  margin-left: 60rpx;
 }
 
 text {
   font-weight: 500;
 }
-
+.jianjie{
+  margin-left: 40rpx;
+}
+.qi{
+  margin-left: 200rpx;
+}
 .houseType {
-  padding-right: -5rpx;
+  margin-left: 100rpx;
 }
 .wo{
   display: inline-block;
 }
 .jia {
-  margin-left:180rpx;
-  font-size: 18px;
+  margin-left:60rpx;
+  font-size: 50rpx;
   font-weight: bold;
 }
 
@@ -66,8 +83,8 @@ text {
 
 .phoneImage {
   margin-left: 180rpx;
-  width: 50rpx;
-  height: 50rpx;
+  width: 80rpx;
+  height: 80rpx;
 
 }
 
@@ -96,9 +113,14 @@ text {
   margin-left: 90rpx;
   margin-top: 30rpx;
 }
-.t{
+.t,.t1{
+  margin-left: 10rpx;
   font-size: 20rpx;
-  color: rgba(192,192,192);
+  color: rgba(128,128,128);
+}
+.t1{
+  font-weight: 400;
+  text-decoration:line-through;
 }
 
 /* 房屋位置*/
@@ -140,6 +162,10 @@ button[size='mini'] {
   background-color: #169AD4;
   color: #fff;
   font-weight: 300;
+  }
+  .zi{
+    font-size: 20rpx;
+    display: block;
   }
   
 

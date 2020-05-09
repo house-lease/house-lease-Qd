@@ -1,7 +1,8 @@
 {
   "pages":[
-    "pages/particulars/particulars",
     "pages/home/home",
+    "pages/particulars/particulars",
+    
     "pages/search/search",
     "pages/select/select",
     "pages/photoAlbum/photoAlbum",
@@ -24,18 +25,22 @@
 
     "list": [{
       "pagePath": "pages/home/home",
+      "iconPath":"/pages/image/sy.png",
       "text": "主页"
     },{
       "pagePath": "pages/like/likes",
+      "iconPath":"/pages/image/shou.png",
       "text": "收藏"
     },{
 
       "pagePath": "pages/consult/consult",
+      "iconPath":"/pages/image/xx.png",
       "text": "消息"
     }
     ,{
       
       "pagePath": "pages/personalCenter/personalCenter",
+      "iconPath":"/pages/image/wd.png",
       "text": "我的"
     }
     ]

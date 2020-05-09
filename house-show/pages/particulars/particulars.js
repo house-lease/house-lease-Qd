@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+
+        hi:"hidden",
         interval:2000,//自动切换时间间隔
         duration:1000,//滑动动画时长
         current:0,//图片数量

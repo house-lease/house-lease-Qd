@@ -8,3 +8,12 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } **/
+/* 清除内外边距 */
+view,
+input,
+form,
+image {
+  font-family: "楷体";
+  padding: 0px;
+  margin: 0px;
+}

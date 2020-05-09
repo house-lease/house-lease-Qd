@@ -77,7 +77,7 @@ image{
   font-size: 26rpx;
 }
 .heZu{
-  margin-left: 60rpx;
+  margin-left: 80rpx;
 }
 .zhengZu{
   margin-left: 150rpx;
