@@ -19,10 +19,10 @@
       		<view class="wo">
 					<text class="jia">{{houses.houseName}}</text>				
       		</view>
-					<view class="im" data-phone="{{houses.user.phone}}" >
+					<view class="im" bindtap="calling" data-phone="{{houses.user.phone}}" >
 						<image class="phoneImage"  src="/pages/image/dh.png">咨询</image>
 					</view>
-					
+	
 					<view class="xin">
 					<text >{{houses.houseLeaseName}} | {{houses.houseTypeName}} | {{houses.narrate}}</text>  
 					</view>
@@ -123,8 +123,12 @@
       <view class="divLine"></view>
 
       <!-- 房屋位置地图显示-->
-      <view class="location">
-      	<image src="/pages/image/ditu.png"></image>
+      <view class="location" >
+        <view class="map_container_top" >
+				<view class="map_container">
+				<map bindtap="daohang" class="map" id="map" longitude="{{houses.longitude}}" latitude="{{houses.latitude}}" scale="16" markers="{{markers}}"></map>  
+				</view>
+			</view>
       </view>
       <!-- 底部-->
       <view class="bottom">

@@ -3,7 +3,10 @@
 <view class="pa">
 <view class="weizhi_">
 <view class="weiZhi">
-{{address_}}
+ <picker bindchange="bindPickerChange" value="id" range="{{addressList}}" range-key="address">
+    <view class="picker">{{address_}}
+    </view>
+  </picker>
 <image class="xiaLa" src="/pages/image/xl.png"/>
 </view> 
 </view>

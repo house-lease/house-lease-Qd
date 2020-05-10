@@ -125,8 +125,22 @@ text {
 
 /* 房屋位置*/
 .location {
-  margin: 20rpx;
-  margin-bottom: 180rpx;
+  margin-top: 30rpx;
+  width: 100%;
+  height: 600rpx;
+  margin-bottom: 120rpx;
+}
+.map_container{
+
+  width: 100%;
+  height: 100%;
+}
+.map_container_top{
+  height: 100%;
+}
+.map{
+  width: 100%;
+  height: 100%;
 }
 
 .bottom {
