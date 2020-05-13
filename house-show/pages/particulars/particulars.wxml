@@ -2,7 +2,7 @@
 
       <view >
       	<!-- 轮播图 -->
-      	<view class="swiperContainer">
+      	<view class="swiperContainer" bindtap="showImage" >
       		<swiper bindchange="swiperChange" autoplay="true" duration="{{duration}}" interval="{{interval}}" circular="true" style="385rpx">
       			<view wx:for="{{houses.houseImages}}" wx:key="id" wx:for-index="idx" wx:for-item="value">
       				<swiper-item>
@@ -133,11 +133,11 @@
       <!-- 底部-->
       <view class="bottom">
       	<!-- 收藏-->
-      	<view class="shouCang" hidden="{{hi}}">
+      	<view bindtap="attention" class="shouCang" hidden="{{hi}}">
       		<image src="/pages/image/guanzhu.png" />
       		<text class="zi">收藏</text>
       	</view>
-				<view class="shouCang">
+				<view bindtap="cancel" class="shouCang" hidden="{{hi1}}">
       		<image src="/pages/image/yiguanzhu.png" />
       		<text class="zi" >已收藏</text>
       	</view>

@@ -5,15 +5,15 @@
 <button size='mini' bindtap="click3" class="btn">客厅</button>
 </view>
 
-<view hidden="{{bedroomhidden}}" class="swiper"  wx:for="{{bedroomphotos}}">
-<image src="{{item}}" mode="scaleToFill"/>
+<view hidden="{{bedroomhidden}}" class="swiper" wx:key="id"  wx:for="{{bedroomphotos}}">
+<image src="{{item.imageUrl}}" mode="scaleToFill"/>
 </view>
 
-<view hidden="{{toilethidden}}" class="swiper"  wx:for="{{toiletphotos}}">
-<image src="{{item}}" mode="scaleToFill"/>
+<view hidden="{{toilethidden}}" class="swiper" wx:key="id"  wx:for="{{toiletphotos}}">
+<image src="{{item.imageUrl}}" mode="scaleToFill"/>
 </view>
 
-<view hidden="{{saloonhidden}}" class="swiper"  wx:for="{{saloonphotos}}">
-<image src="{{item}}" mode="scaleToFill"/>
+<view hidden="{{saloonhidden}}" class="swiper" wx:key="id"  wx:for="{{saloonphotos}}">
+<image src="{{item.imageUrl}}" mode="scaleToFill"/>
 </view>
 

@@ -121,7 +121,6 @@ Page({
         })
       }
     })
-
   }
   ,
   // 添加房屋的方法
@@ -155,22 +154,12 @@ if(e.detail.value.chuang==true){
   this.data.houseCareful.chuang=0
 }
 this.setData({
-  address:e.detail.value.address
+  address:e.detail.value.address,
+  houseName:e.detail.value.houseName,
+  price:e.detail.value.price,
+  narrate:e.detail.value.narrate,
+  residueRoom:e.detail.value.residueRoom,
 })
-this.setData({
-  houseName:e.detail.value.houseName
-})
-this.setData({
-  price:e.detail.value.price
-})
-this.setData({
-  narrate:e.detail.value.narrate
-})
-this.setData({
-  residueRoom:e.detail.value.residueRoom
-})
-let  houseType_ = JSON.stringify(this.data.houseType)
-console.info(houseType_)
 wx.request({
   url: 'http://192.168.0.106:8080/house/house/save', 
   data:{
@@ -183,9 +172,9 @@ wx.request({
     houseName:this.data.houseName,
     address:this.data.address,
     uptown:this.data.uptown,
-    houseType: houseType_,
-    houseLease: JSON.stringify(this.data.houseLease),
-    houseCareful:JSON.stringify(this.data.houseCareful),
+    houseType: this.data.houseType,
+    houseLease: this.data.houseLease,
+    houseCareful:this.data.houseCareful,
     residueRoom:this.data.residueRoom
   },
   success(res) {
