@@ -13,6 +13,11 @@ Page({
     user:{}
   },
 
+  tiaozhuan(){
+    wx.navigateTo({
+      url: '/pages/insertHouse/insertHouse'
+    })
+  },
   // 用户登录方法
   login:function(){
     var this_ = this;
@@ -47,6 +52,10 @@ Page({
                               app.globalData.userInfo=responseData.data.data;
                               this_.setData({
                                 user:app.globalData.userInfo
+                              })
+                              wx.setStorage({
+                                data: responseData.data.data,
+                                key: 'user',
                               })
                                 console.info(this_.data.user);
                                 // >> 2、显示登录成功的信息

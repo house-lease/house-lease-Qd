@@ -7,7 +7,7 @@
 </view>
 
 <view id="middle">
-      <text id="money">我的钱包</text>
+      <text id="money" bindtap="tiaozhuan">我的钱包</text>
       <text id="cookies">浏览记录</text>
       <text id="bill">我的订单</text>
       <text id="feedback">反馈意见</text>

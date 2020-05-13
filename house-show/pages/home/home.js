@@ -17,7 +17,7 @@ Page({
       address_:"",
       addressList:[],
       index:"",
-      houseName:"",
+      houseLeaseName:"",
       price:"",
       startValue:"",
       images:['https://img.meituan.net/iphoenix/fae12ad6cb45735f4835276ada9cb062167115.jpg.webp@3840w_720h_80Q_1e_1c',
@@ -105,7 +105,7 @@ Page({
       url: 'http://192.168.0.106:8080/house/house/queryHouse', 
       data: {
         address: this_.data.address_,
-        houseLeaseName:this_.data.houseName,
+        houseLeaseName:this_.data.houseLeaseName,
         price:this_.data.price,
         startValue:this_.data.startValue
       },

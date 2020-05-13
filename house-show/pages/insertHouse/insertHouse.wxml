@@ -1,0 +1,56 @@
+<view>
+<form bindsubmit="formSubmit">
+<text>房屋名字:</text> <input name="houseName" value=""/>
+<text>最低起租时间:</text>
+  <picker bindchange="bindStart" value="id" range="{{starts}}" range-key="startName">
+    <input name="start" class="picker" value="{{start.startName}}"/>
+  </picker>
+<text>房租/月:</text>
+<input name="price" value="1000"/>
+<text>房屋描述</text>
+<input name="narrate" value=""/>
+
+<text>所属城市:</text>  
+<input name="address"  placeholder="xx市xxx区/县"  value=""/>
+  <text>具体位置:</text>
+  <view class="section">
+  <input bindinput="bindInput" name="uptown" placeholder="搜索" focus="true"  value="{{uptown}}"/>
+</view>
+<view hidden="{{hidd}}" bindtouchstart="bindSearch"wx:key="*this"  data-keywords="{{i}}" class="text_box" wx:for="{{tips}}" wx:for-item="i">
+  {{i.name}}
+</view>
+
+<text>房屋类型:</text>
+  <picker bindchange="bindHouseType" value="id" range="{{houseTypes}}" range-key="houseType">
+     <input name="houseType" class="picker" value="{{houseType.houseType}}"/>
+  </picker> 
+
+  <text>租赁类型:</text>
+  <picker bindchange="bindHouseLease" value="id" range="{{houseLeases}}" range-key="leaseType">
+    <input name="houseType" class="picker" value="{{houseLease.leaseType}}"/>
+  </picker> 
+  <text>可租房间:</text>
+  <input name="residueRoom" value=""/>
+  <text>冰箱</text>
+  <switch  name="bingxiang" />
+  <text>空调</text>
+  <switch  name="kongtiao" />
+  <text>电视</text>
+  <switch  name="dianshi" />
+  <text>沙发</text>
+  <switch  name="shafa" />
+  <text>洗衣机</text>
+  <switch  name="xiyiji" />
+  <text>燃气</text>
+  <switch  name="ranqi" />
+  <text>宽带</text>
+  <switch  name="kuandai" />
+   <text>床</text>
+  <switch  name="chuang" />
+  <view class="btn-area">
+    <button form-type="submit" >Submit</button>
+    <button form-type="reset">Reset</button>
+  </view>
+
+  </form>
+</view>

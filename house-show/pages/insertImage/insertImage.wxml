@@ -1,0 +1,22 @@
+<!--pages/photoAlbum/photoAlbum.wxml-->
+<view >
+<button size='mini' bindtap="click1" class="btn">卧室</button>
+<button size='mini' bindtap="click2" class="btn">卫生间</button>
+<button size='mini' bindtap="click3" class="btn">客厅</button>
+</view>
+
+<view hidden="{{bedroomhidden}}" class="swiper"  >
+<image     src="{{item}}" wx:for="{{bedroomphotos}}" wx:key="*this" mode="scaleToFill"/>
+<button bindtap="selectImage" size='mini' type="primary" data-id="1">选择照片</button>
+</view>
+
+<view hidden="{{toilethidden}}" class="swiper"  >
+<image src="{{item}}" wx:for="{{toiletphotos}}" wx:key="*this"   mode="scaleToFill"/>
+<button bindtap="selectImage1" size='mini' type="primary"  data-id="2">选择照片</button>
+</view>
+
+<view hidden="{{saloonhidden}}"  class="swiper" >
+<image src="{{item}}"    wx:for="{{saloonphotos}}" wx:key="*this"  mode="scaleToFill"/>
+<button bindtap="selectImage2" size='mini'  data-id="3" type="primary">选择照片</button>
+</view>
+<button bindtap="uploadImage" size='mini'  data-id="3" type="primary">上传</button>

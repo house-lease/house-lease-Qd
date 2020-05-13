@@ -1,8 +1,9 @@
 {
   "pages":[
     "pages/home/home",
+    "pages/insertImage/insertImage",
+    "pages/insertHouse/insertHouse",
     "pages/particulars/particulars",
-    
     "pages/search/search",
     "pages/select/select",
     "pages/photoAlbum/photoAlbum",
