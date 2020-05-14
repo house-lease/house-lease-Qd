@@ -1,8 +1,10 @@
  <view>
  <image class="souSuoImg" src="/pages/image/ss.png"></image>
-  <input class="input_"  confirm-type='search'  placeholder="想住哪里?" 
-         bindinput="handleSearcher"> 
-  </input>
+  <input  class="input_"  bindinput="bindInput"
+   confirm-type='search'   placeholder="想住哪里" focus="true" value="{{addrss}}" />
  </view>
-
+<view bindtouchstart="bindSearch" data-keywords="{{i}}" wx:key="id"  class="text_box" wx:for="{{tips}}" wx:for-item="i">
+  <view class="bor">{{i.name}}</view>
+  
+</view>
 

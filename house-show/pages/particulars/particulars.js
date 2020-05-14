@@ -9,8 +9,8 @@ Page({
    */
   data: {
         user:{},
-        hi:"hidden",
-        hi1:"",
+        hi:"",
+        hi1:"hidden",
         interval:2000,//自动切换时间间隔
         duration:1000,//滑动动画时长
         current:0,//图片数量
@@ -43,17 +43,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-        var this_=this;
-    wx.getStorage({
-      key: 'house',
-      success:function(res){
-          this_.setData({
-            houses:res.data
-          })
-          console.info(this_.data.houses)
-      }
-    })
-    this.address();
+  
   },
 
   /**
@@ -62,8 +52,8 @@ Page({
   onReady: function () {
 
   },
+  // 导航
 daohang(){
-
   let this_ = this;
   wx.openLocation({
     latitude: this_.data.houses.latitude,
@@ -118,6 +108,7 @@ address(){
 
     // 判断是否收藏
     Collect(){
+      if(app.globalData.userInfo.id!=null){
       let this_ = this;
       wx.getStorage({
         key: 'house',
@@ -141,14 +132,21 @@ address(){
                     hi1:"hidden",
                     hi:""
                   })
+                }else{
+                  this_.setData({
+                    hi1:"",
+                    hi:"hidden"
+                  })
                 }
               }
             })
         }
-      })
+      }) 
+    }
     },
     // 收藏的方法
     attention(){
+      if(app.globalData.userInfo.id!=null){
       let this_ = this;
       wx.getStorage({
         key: 'house',
@@ -175,6 +173,13 @@ address(){
           })
         }
    })
+  }else{
+    wx.showToast({
+        title: '未登录',
+        image:"/pages/image/jg.png",
+       duration:2000
+   })
+  }
    } ,
   //  取消收藏
    cancel(){
@@ -199,6 +204,17 @@ address(){
    * 生命周期函数--监听页面显示
    */
   onShow:function () {
+    var this_=this;
+    wx.getStorage({
+      key: 'house',
+      success:function(res){
+          this_.setData({
+            houses:res.data
+          })
+          console.info(this_.data.houses)
+      }
+    })
+    this.address();
     this.Collect();
   },
 

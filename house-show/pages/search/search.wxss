@@ -129,6 +129,8 @@
 }
 .money{
   float: left;
+  font-size: 32rpx;
+  color: red;
 }
 .consult{
   float: right;

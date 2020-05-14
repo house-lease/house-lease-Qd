@@ -20,3 +20,6 @@ view,input,form,image{
   top: 25rpx;
   left: 100rpx;
 }
+.bor{
+  border-bottom: 1rpx solid gold;
+}
