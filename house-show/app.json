@@ -1,6 +1,10 @@
 {
   "pages":[
+    "pages/certificate/certificate",   
     "pages/home/home",
+    "pages/verification/verification",
+    "pages/information/information",
+    
     "pages/insertImage/insertImage",
     "pages/insertHouse/insertHouse",
     "pages/particulars/particulars",

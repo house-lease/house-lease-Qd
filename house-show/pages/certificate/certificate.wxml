@@ -1,0 +1,24 @@
+
+<!--pages/mine/Authentication.wxml-->
+<view class="container">
+   
+    <view class="idCard-box">
+       <view class="cardBox-bd1" >
+       
+            <image class="img" src="/pages/image/zhengmian.jpg"></image>
+        <view class="yuan" bindtap="takePhoto">
+            <image  class="jiahao" src="/pages/image/jiahao.png"  ></image>
+        </view>
+       </view>
+       <view class="zhen">身份证照片(人面像)</view>
+    </view>
+    <view class="idCard-box">
+         <view class="cardBox-bd2">
+            <image class="img" src="/pages/image/fanmian.jpg"></image>
+         <view class="yuan">
+            <image  class="jiahao" src="/pages/image/jiahao.png" bindtap="takePhoto"></image>
+        </view>
+         </view>
+           <view class="zhen" >身份证照片(国徽面)</view>
+    </view>
+</view>

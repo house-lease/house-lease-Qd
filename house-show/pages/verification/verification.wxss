@@ -1,0 +1,50 @@
+/* pages/verification/verification.wxss */
+.verification{
+  clear: both;
+}
+.wenzi{
+margin: 30rpx 80rpx;
+font-family: Microsoft Yahei;
+font-size: 12px;
+font :bold;
+}
+
+.citizen{
+margin: 40rpx 80rpx;
+height: 280rpx;
+border-radius: 20rpx;
+background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589552100568&di=9fdbd0b640f3bd7529b0aec4c01c37bb&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Fmaster_pic%2F00%2F09%2F79%2F32565e9fecaaee3.jpg%2521ww598)}
+
+.staff{
+margin: 40rpx 80rpx;
+height: 280rpx;
+border-radius: 20rpx;
+background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589552071916&di=f2a8fdf806a3fa58d8124017a323bc01&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Fback_pic%2F03%2F81%2F06%2F5457c50f7d39d20.jpg);
+}
+
+.one{
+  margin: 0rpx 40rpx;
+  padding-top: 40rpx;
+  padding-bottom: 20rpx;
+  font-family: Microsoft Yahei;
+  color: white;
+}
+
+.two{
+
+  margin-left: 40rpx;
+  font-family: Microsoft Yahei;
+  color: white;
+  font-size: 10px;
+}
+
+image{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.img{
+  float: left;
+  width: 30rpx;
+  height: 30rpx;
+}

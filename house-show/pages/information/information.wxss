@@ -1,0 +1,32 @@
+/* pages/information/information.wxss */
+.phone,.authentication{
+  margin: 0px 20px;
+  width: 80%px;
+  height: 40px;
+  border-bottom:gainsboro solid 1px ;
+  font:bold;
+  font-family: Microsoft Yahei;
+  padding-top: 30rpx;
+  clear: both;
+}
+
+.telephone{
+  float: right;
+  width: 180rpx;
+  height: 40rpx;
+  color: darkgray;
+}
+
+.jiantou{
+  float: right;
+  width: 20rpx;
+  height: 40rpx;
+  color: darkgray;
+}
+
+button{
+  background: dodgerblue;
+  color: white;
+  font-family: Microsoft Yahei;
+  margin-top: 40rpx;
+}

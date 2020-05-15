@@ -1,0 +1,16 @@
+<!--信息验证页面-->
+<view class="information" wx:for="{{phone}}" wx:for-index="key" wx:for-item="value" wx:key="id">
+    <view class="phone">
+      <text>手机号</text>
+      <view class="telephone">
+        <text>{{phone[key].phone}}</text>
+      </view>
+    </view>
+    <view class="authentication">
+      <text>身份认证</text>  
+      <view class="jiantou">
+        <text>></text>
+      </view>
+    </view>
+    <button>退出登录</button>
+</view>
