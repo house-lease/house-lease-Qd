@@ -1,22 +1,23 @@
-<!--pages/photoAlbum/photoAlbum.wxml-->
-<view >
-<button size='mini' bindtap="click1" class="btn">卧室</button>
-<button size='mini' bindtap="click2" class="btn">卫生间</button>
-<button size='mini' bindtap="click3" class="btn">客厅</button>
+<!--房屋上传图片页面-->
+<view class="one">
+	<button size='mini' bindtap="click1" class="btn" hover-class="bt">卧室</button>
+	<button size='mini' bindtap="click2" class="btn" hover-class="bt">卫生间</button>
+	<button size='mini' bindtap="click3" class="btn" hover-class="bt">客厅</button>
+	<button class="shangchuan" bindtap="uploadImage" size='mini' data-id="3" type="primary" hover-class="bt">上传</button>
 </view>
 
-<view hidden="{{bedroomhidden}}" class="swiper"  >
-<image     src="{{item}}" wx:for="{{bedroomphotos}}" wx:key="*this" mode="scaleToFill"/>
-<button bindtap="selectImage" size='mini' type="primary" data-id="1">选择照片</button>
+<view hidden="{{bedroomhidden}}" class="swiper">
+	<image src="{{item}}" wx:for="{{bedroomphotos}}" wx:key="*this" mode="scaleToFill" />
+	<image class="jia" bindtap="selectImage" size='mini' type="primary" data-id="1" src="/pages/image/jia.png"></image>
+
 </view>
 
-<view hidden="{{toilethidden}}" class="swiper"  >
-<image src="{{item}}" wx:for="{{toiletphotos}}" wx:key="*this"   mode="scaleToFill"/>
-<button bindtap="selectImage1" size='mini' type="primary"  data-id="2">选择照片</button>
+<view hidden="{{toilethidden}}" class="swiper">
+	<image src="{{item}}" wx:for="{{toiletphotos}}" wx:key="*this" mode="scaleToFill" />
+	<image class="jia" mode='aspectFill' bindtap="selectImage1" size='mini' type="primary" data-id="2" src="/pages/image/jia.png"></image>
 </view>
 
-<view hidden="{{saloonhidden}}"  class="swiper" >
-<image src="{{item}}"    wx:for="{{saloonphotos}}" wx:key="*this"  mode="scaleToFill"/>
-<button bindtap="selectImage2" size='mini'  data-id="3" type="primary">选择照片</button>
+<view hidden="{{saloonhidden}}" class="swiper">
+	<image src="{{item}}" wx:for="{{saloonphotos}}" wx:key="*this" mode="scaleToFill" />
+	<image class="jia" bindtap="selectImage2" size='mini' data-id="3" type="primary" src="/pages/image/jia.png"></image>
 </view>
-<button bindtap="uploadImage" size='mini'  data-id="3" type="primary">上传</button>
