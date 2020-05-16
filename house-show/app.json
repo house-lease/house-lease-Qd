@@ -1,12 +1,13 @@
 {
   "pages":[
-    "pages/certificate/certificate",   
     "pages/home/home",
     "pages/verification/verification",
-    "pages/information/information",
-    
     "pages/insertImage/insertImage",
     "pages/insertHouse/insertHouse",
+    "pages/certificate/certificate",   
+  
+    
+    "pages/information/information",
     "pages/particulars/particulars",
     "pages/search/search",
     "pages/select/select",
@@ -15,6 +16,7 @@
     "pages/consult/consult",
     "pages/personalCenter/personalCenter",
     "pages/paymentMethod/paymentMethod",
+    "pages/message/message",
     "pages/index/index",
     "pages/logs/logs"
 

@@ -1,23 +1,23 @@
 
 /* 清除内外边距 */
 view,image{
-  padding: 0px;
-  margin: 0px;
+  padding: 0rpx;
+  margin: 0rpx;
 }
 
 /*消息框*/
 .one{
   clear: both;
-  height: 80px;
-  border-bottom:  #F5F5F5 solid 1px ;  
+  height: 80rpx;
+  border-bottom:  #F5F5F5 solid 1rpx ;  
 }
 
 /*头像*/
 image{
-  margin: 8px;
-  border-radius: 8px;
-  width: 60px;
-  height: 60px;
+  margin: 8rpx;
+  border-radius: 8rpx;
+  width: 60rpx;
+  height: 60rpx;
   float: left;
 }
 
@@ -25,23 +25,23 @@ image{
 .username{
   width: 60%;
   float: left;
-  height: 20px;
-  margin-top: 10px;
+  height: 20rpx;
+  margin-top: 10rpx;
 }
 
 /*消息内容*/
 .information{
-  line-height: 50px;
-  font-size: 14px;
+  line-height: 50rpx;
+  font-size: 14rpx;
   color: gray;
 }
 
 /*时间*/
 .Time{
   float: right;
-  padding-top: 10px;
-  padding-right: 10px;
-  font-size: 13px;
+  padding-top: 10rpx;
+  padding-right: 10rpx;
+  font-size: 13rpx;
   color: gray;
 }
 

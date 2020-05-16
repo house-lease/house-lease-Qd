@@ -5,9 +5,9 @@
             <image src="/pages/image/anquan.png"></image>
         </view>
         <text>信息安全保护中，未经你允许不对外提供</text>
+        
     </view>
     <view class="wenzi">
-        
         <view class="img">
             <image src="/pages/image/xinxi.png"></image>
         </view>
