@@ -1,1 +1,67 @@
 /* pages/insertHouse/insertHouse.wxss */
+.zong{
+  clear: both;
+  margin: 40rpx 60rpx;
+
+}
+
+text{
+    font-family: Microsoft Yahei;
+    font-size: 14px;
+    font: bold;
+}
+
+input{
+  border-bottom: solid 1px gainsboro;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+  font-size: 12px;
+}
+
+.anniu{
+  height: 400rpx;
+  clear: both;
+}
+
+.kuang{
+  float: left;
+  width: 120rpx;
+  height: 120rpx;
+  margin: 15rpx;
+  margin-top: 40rpx;
+}
+.kuang text{
+  padding-left: 25rpx;
+}
+.kuang .one{
+  padding-left: 15rpx;
+}
+
+.kuang .two{
+  padding-left: 40rpx;
+}
+
+.btn-area{
+  height: 150rpx;
+}
+
+ button {
+ background-color: turquoise;
+ display: inline;
+ color: white;
+ border-radius: 10rpx;
+}
+
+.an{
+  float: left;
+}
+
+.an2{
+  float: right;
+}
+
+.bt{
+  position: relative;
+  top: 3rpx;
+  box-shadow:0px 0px 8px #999 inset;
+}
