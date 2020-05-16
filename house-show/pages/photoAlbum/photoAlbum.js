@@ -1,4 +1,7 @@
 // pages/photoAlbum/photoAlbum.js
+var app = getApp();
+var liunxUrl=app.globalData.liunxUrl
+var localUrl=app.globalData.localUrl
 Page({
 
   /**
@@ -30,7 +33,7 @@ Page({
     })
     let this_ = this
     wx.request({
-      url: 'http://192.168.0.106:8080/house/houseImage/query', 
+      url: liunxUrl+'house/houseImage/query', 
       data:{
         houseId:this_.data.house.id,
         imagePlaceId:2
@@ -50,7 +53,7 @@ Page({
   })
 let this_ =this
   wx.request({
-    url: 'http://192.168.0.106:8080/house/houseImage/query', 
+    url: liunxUrl+'house/houseImage/query', 
     data:{
       houseId:this_.data.house.id,
       imagePlaceId:3
@@ -88,7 +91,7 @@ let this_ =this
           house:res.data
         })
         wx.request({
-          url: 'http://192.168.0.106:8080/house/houseImage/query', 
+          url: liunxUrl+'house/houseImage/query', 
           data:{
             houseId:this_.data.house.id,
             imagePlaceId:1

@@ -84,7 +84,7 @@
 
 		<view class="btn-area">
       <view class="an">
-			<button form-type="submit" hover-class="bt">Submit</button>
+			<button form-type="submit" hover-class="bt">添加房屋</button>
       </view>
       <view  class="an2">
 			<button form-type="reset" hover-class="bt">Reset</button>

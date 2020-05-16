@@ -3,6 +3,8 @@
 var amapFile = require('../../libs/amap-wx');
 var config = require('../../libs/config');
 var app = getApp();
+var liunxUrl=app.globalData.liunxUrl
+var localUrl=app.globalData.localUrl
 Page({
 
   /**
@@ -43,7 +45,7 @@ Page({
 
     let this_ = this;
     wx.request({
-      url: 'http://192.168.0.106:8080/house/address/queryByParent', 
+      url: liunxUrl+ 'house/address/queryByParent', 
       success(res) {
         console.info(res.data.data);
         this_.setData({
@@ -58,7 +60,7 @@ Page({
     console.info(e.currentTarget.dataset.id);
     var this_ = this;
     wx.request({
-      url: 'http://192.168.0.106:8080/house/house/queryByHouseId', 
+      url: liunxUrl+'house/house/queryByHouseId', 
       data: {
        houseId:e.currentTarget.dataset.id
       },
@@ -102,7 +104,7 @@ Page({
    getHouseList: function(){
      var this_ = this;
     wx.request({
-      url: 'http://192.168.0.106:8080/house/house/queryHouse', 
+      url: liunxUrl+'house/house/queryHouse', 
       data: {
         address: this_.data.address_,
         houseLeaseName:this_.data.houseLeaseName,

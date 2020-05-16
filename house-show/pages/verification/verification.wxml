@@ -1,5 +1,5 @@
 <!--验证方式页面-->
-<view class="verification">
+<view bindtap="idCard" class="verification">
     <view class="wenzi">
         <view class="img">
             <image src="/pages/image/anquan.png"></image>

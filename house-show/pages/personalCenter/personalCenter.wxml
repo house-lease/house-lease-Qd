@@ -2,7 +2,7 @@
 <view id="top">
   <image src="{{user.imageUrl}}" />
   <text id="phone">{{user.nickname}}</text>
-  <text id="personalMessage">点击查看个人信息</text>
+  <view bindtap="examine" id="personalMessage">点击查看个人信息 ></view>
   <button open-type="getUserInfo" bindtap="login">登录</button>
 </view>
 

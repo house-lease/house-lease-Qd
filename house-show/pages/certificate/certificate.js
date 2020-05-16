@@ -1,4 +1,7 @@
 // pages/consult/consult.js
+var app = getApp();
+var liunxUrl=app.globalData.liunxUrl
+var localUrl=app.globalData.localUrl
 Page({
 
   /**

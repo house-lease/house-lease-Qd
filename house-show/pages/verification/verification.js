@@ -1,11 +1,14 @@
 // pages/verification/verification.js
+var app = getApp();
+var liunxUrl=app.globalData.liunxUrl
+var localUrl=app.globalData.localUrl
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    user:{}
   },
 
   /**
@@ -22,11 +25,25 @@ Page({
 
   },
 
+  idCard(){
+    if(this.data.user.idcard==null){
+      wx.navigateTo({
+        url: '/pages/certificate/certificate',
+      })
+    }else{
+      wx.showToast({
+        title: '已经实名认证',
+        icon: 'success',
+        duration: 2000
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.data.user=app.globalData.userInfo
+    
   },
 
   /**

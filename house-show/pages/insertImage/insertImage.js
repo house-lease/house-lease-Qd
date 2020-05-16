@@ -1,4 +1,7 @@
 // pages/photoAlbum/photoAlbum.js
+var app = getApp();
+var liunxUrl=app.globalData.liunxUrl
+var localUrl=app.globalData.localUrl
 Page({
 
   /**
@@ -49,7 +52,7 @@ Page({
     var this_ = this;
     // 调用"选择项目"的api
     wx.chooseImage({
-      count: 4,
+      count: 6,
       sizeType: ['original', 'compressed'],
       sourceType: ['album', 'camera'],
       success(res) {
@@ -67,7 +70,7 @@ selectImage1: function(e){
   var this_ = this;
   // 调用"选择项目"的api
   wx.chooseImage({
-    count: 4,
+    count: 6,
     sizeType: ['original', 'compressed'],
     sourceType: ['album', 'camera'],
     success(res) {
@@ -85,7 +88,7 @@ selectImage2: function(e){
   var this_ = this;
   // 调用"选择项目"的api
   wx.chooseImage({
-    count: 4,
+    count: 6,
     sizeType: ['original', 'compressed'],
     sourceType: ['album', 'camera'],
     success(res) {
@@ -103,7 +106,7 @@ uploadImage(){
   //上传卧室
   for(let i=0;i<this.data.bedroomphotos.length;i++){
     wx.uploadFile({
-      url: 'http://192.168.0.106:8080/house/upload/image', //仅为示例，非真实的接口地址
+      url: liunxUrl+'house/upload/image', //仅为示例，非真实的接口地址
       formData:{
         houseId:this.data.houseObject.id,
         imagePlaceId:this.data.wo
@@ -121,7 +124,7 @@ uploadImage(){
     // 查询卫生间
     for(let i=0;i<this.data.toiletphotos.length;i++){
       wx.uploadFile({
-        url: 'http://192.168.0.106:8080/house/upload/image', //仅为示例，非真实的接口地址
+        url: liunxUrl+'house/upload/image', //仅为示例，非真实的接口地址
         formData:{
           houseId:this.data.houseObject.id,
           imagePlaceId:this.data.wei
@@ -138,7 +141,7 @@ uploadImage(){
 // 上传客厅
   for(let i=0;i<this.data.saloonphotos.length;i++){
     wx.uploadFile({
-      url: 'http://192.168.0.106:8080/house/upload/image', //仅为示例，非真实的接口地址
+      url: liunxUrl+'house/upload/image', //仅为示例，非真实的接口地址
       formData:{
         houseId:this.data.houseObject.id,
         imagePlaceId:this.data.ke

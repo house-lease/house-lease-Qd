@@ -1,4 +1,7 @@
 // pages/information/information.js
+var app = getApp();
+var liunxUrl=app.globalData.liunxUrl
+var localUrl=app.globalData.localUrl
 Page({
 
   /**
@@ -6,10 +9,18 @@ Page({
    */
   data: {
     phone:[{
-      id:1,
+      user:{},
       phone:13844444555
 
     }]
+  },
+
+
+  // 跳转身份认证页面
+  renZheng(){
+    wx.navigateTo({
+      url: '/pages/verification/verification',
+    })
   },
 
   /**
@@ -23,7 +34,10 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.setData({
+      user:app.globalData.userInfo
+    }
+    )
   },
 
   /**

@@ -1,6 +1,7 @@
 // pages/like/likes.js
-
 var app = getApp();
+var liunxUrl=app.globalData.liunxUrl
+var localUrl=app.globalData.localUrl
 Page({
 
   /**
@@ -54,7 +55,7 @@ login:function(){
     })
     // 定义一个函数：作用是查询所有的房屋信息，返回的结果是json格式
    wx.request({
-     url: 'http://localhost:8080/house/collect/queryInfoByUserId', 
+     url: liunxUrl+'house/collect/queryInfoByUserId', 
      data: {
        userId:this_.data.user.id
      },
@@ -73,7 +74,7 @@ login:function(){
     console.info(e);
     var this_ = this;
     wx.request({
-      url: 'http://localhost:8080/house/house/queryByHouseId', 
+      url: liunxUrl+'house/house/queryByHouseId', 
       data: {
        houseId:e.currentTarget.dataset.id
       },

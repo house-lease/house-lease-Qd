@@ -2,6 +2,8 @@
 var amapFile = require('../../libs/amap-wx');
 var config = require('../../libs/config');
 var app = getApp();
+var liunxUrl=app.globalData.liunxUrl
+var localUrl=app.globalData.localUrl
 Page({
 
   /**
@@ -117,7 +119,7 @@ address(){
               houses:res.data
             })
             wx.request({
-              url: 'http://192.168.0.106:8080/house/collect/queryInfoByUserIdAndHouseId', 
+              url: liunxUrl+'house/collect/queryInfoByUserIdAndHouseId', 
               data:{
                   houseId:this_.data.houses.id,
                   userId:app.globalData.userInfo.id
@@ -155,7 +157,7 @@ address(){
               houses:res.data
             })
           wx.request({
-            url: 'http://192.168.0.106:8080/house/collect/addCollectRecord', 
+            url: liunxUrl+'house/collect/addCollectRecord', 
             data:{
                 userId:app.globalData.userInfo.id,
                 houseId:this_.data.houses.id
@@ -185,7 +187,7 @@ address(){
    cancel(){
     let this_ = this;
         wx.request({
-          url: 'http://192.168.0.106:8080/house/collect/deleteInfo', 
+          url: liunxUrl+'house/collect/deleteInfo', 
           data:{
             collectId:this_.data.collect.id
           },

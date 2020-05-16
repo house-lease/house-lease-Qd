@@ -38,6 +38,8 @@ App({
   },
   globalData: {
     userInfo: {},
-    address:""
+    address:"",
+    liunxUrl:"http://182.92.168.223:8080/",
+    localUrl:"http://localhost:8080/",
   }
 })

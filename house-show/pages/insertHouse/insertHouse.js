@@ -1,8 +1,9 @@
 // pages/insertHouse/insertHouse.js
-
+var app = getApp();
+var liunxUrl=app.globalData.liunxUrl
+var localUrl=app.globalData.localUrl
 var amapFile = require('../../libs/amap-wx.js');
 var config = require('../../libs/config.js');
-var app = getApp();
 Page({
 
   /**
@@ -94,7 +95,7 @@ Page({
   package(){
     var this_ = this;
     wx.request({
-      url: 'http://192.168.0.106:8080/house/houseTypeLease/lease', 
+      url: liunxUrl+'house/houseTypeLease/lease', 
       success(res) {
         console.info(res.data.data);
         this_.setData({
@@ -103,7 +104,7 @@ Page({
       }
     })
     wx.request({
-      url: 'http://192.168.0.106:8080/house/houseTypeLease/type', 
+      url: liunxUrl+'house/houseTypeLease/type', 
       success(res) {
         console.info(res.data.data);
         this_.setData({
@@ -113,7 +114,7 @@ Page({
     })
 
     wx.request({
-      url: 'http://192.168.0.106:8080/house/start/queryAll', 
+      url: liunxUrl+'house/start/queryAll', 
       success(res) {
         console.info(res.data.data);
         this_.setData({
@@ -161,7 +162,7 @@ this.setData({
   residueRoom:e.detail.value.residueRoom,
 })
 wx.request({
-  url: 'http://192.168.0.106:8080/house/house/save', 
+  url: liunxUrl+'house/house/save', 
   data:{
     user:this.data.user,
     latitude:this.data.latitude,

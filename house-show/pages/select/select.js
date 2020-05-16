@@ -1,6 +1,9 @@
 // pages/select/select.js
 var amapFile = require('../../libs/amap-wx.js');
 var config = require('../../libs/config.js');
+var app = getApp();
+var liunxUrl=app.globalData.liunxUrl
+var localUrl=app.globalData.localUrl
 Page({
 
   /**
@@ -48,7 +51,7 @@ bindSearch: function(e){
   console.info(this.data.longitude)
   let this_ = this;
   wx.request({
-    url: 'http://192.168.0.106:8080/house/house/rim',
+    url: liunxUrl+'house/house/rim',
     data:{
       latitude:this_.data.latitude,
       longitude:this_.data.longitude

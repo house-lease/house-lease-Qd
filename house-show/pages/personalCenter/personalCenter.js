@@ -1,6 +1,8 @@
 // pages/personalCenter/personalCenter.js
-
 var app = getApp();
+var liunxUrl=app.globalData.liunxUrl
+var localUrl=app.globalData.localUrl
+
 Page({
 
   /**
@@ -13,6 +15,13 @@ Page({
     user:{}
   },
 
+  // 跳转信息页面
+  examine(){
+    wx.navigateTo({
+      url: '/pages/information/information',
+    })
+  },
+  // 跳转房屋添加页面
   tiaozhuan(){
     wx.navigateTo({
       url: '/pages/insertHouse/insertHouse'
@@ -37,7 +46,7 @@ Page({
                    if (code) {
                        // 如果code存在,拿着code向开发者服务器发送请求
                        wx.request({
-                           url: 'http://localhost:8080/house/user/login',
+                           url: liunxUrl+'house/user/login',
                            method: 'POST',
                            header: { "content-type": "application/x-www-form-urlencoded"  },
                            data: { 

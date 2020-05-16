@@ -3,10 +3,10 @@
     <view class="phone">
       <text>手机号</text>
       <view class="telephone">
-        <text>{{phone[key].phone}}</text>
+        <text>{{user.phone}}</text>
       </view>
     </view>
-    <view class="authentication">
+    <view bindtap="renZheng" class="authentication">
       <text>身份认证</text>  
       <view class="jiantou">
         <text>></text>

@@ -1,4 +1,7 @@
 // pages/search/search.js
+var app = getApp();
+var liunxUrl=app.globalData.liunxUrl
+var localUrl=app.globalData.localUrl
 Page({
 
   /**
@@ -43,7 +46,7 @@ Page({
     console.info(e.currentTarget.dataset.id);
     var this_ = this;
     wx.request({
-      url: 'http://192.168.0.106:8080/house/house/queryByHouseId', 
+      url: liunxUrl+'house/house/queryByHouseId', 
       data: {
        houseId:e.currentTarget.dataset.id
       },
