@@ -98,6 +98,9 @@ font-family: Microsoft Yahei;
   margin-right: 20rpx;
   border-bottom: white solid 1px;
 }
+#xinxikuang{
+  position: relative;
+}
 
 image {
   width: 50rpx;
@@ -111,4 +114,13 @@ image {
 .image2{
   width: 50rpx;
   height: 50rpx;
+}
+#fanRz{
+  position: absolute;
+  left: 300rpx;
+  top: 15rpx;
+}
+#fanRz image{
+  width: 60rpx;
+  height: 60rpx;
 }

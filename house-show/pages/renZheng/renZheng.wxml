@@ -25,7 +25,7 @@
 <view class="show" hidden="{{h1}}">
     <view class="v">
     <text class="userName">姓名:{{user.userName}}</text>
-        <text class="idCard">身份证:{{user.idCard}}</text>
+        <text class="idCard">身份证:{{user.idcard}}</text>
     </view>
         
         <button bindtap="tiao" class="shangchuan"  >完成</button>

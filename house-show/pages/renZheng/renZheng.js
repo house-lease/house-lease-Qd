@@ -62,6 +62,7 @@ Page({
 
   // 实名认证
   uploadImage(){
+  
     wx.uploadFile({
       url: liunxUrl+'house/upload/userAuthentication', //仅为示例，非真实的接口地址
       formData:{
@@ -69,21 +70,17 @@ Page({
       },
       filePath:this.data.zheng[0],
       name: 'image',
-      headers: {
-        'Content-Type': 'form-data'
-      },
-      success:res =>{
-       this.setData({
-         user:res.data.data
+      success:(res) =>{
+        let json = JSON.parse(res.data)
+        this.setData({
+         user:json.data
        })
        app.globalData.userInfo=this.data.user
+       console.info(this.data.user)
        this.setData({
          hi:"hidden",
          h1:""
        })
-      },
-      complete(res){
-        console.log(res)
       }
     })
     
@@ -103,7 +100,6 @@ Page({
 
       this.data.user=app.globalData.userInfo
 
-      console.info(this.data.user.id)
   },
 
   /**
