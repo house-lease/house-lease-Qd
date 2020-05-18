@@ -1,9 +1,9 @@
 {
   "pages":[
-     "pages/personalCenter/personalCenter",
     "pages/home/home",
-    "pages/search/search",
+     "pages/personalCenter/personalCenter",
     
+    "pages/search/search",
     "pages/login/login",
     "pages/renZheng/renZheng",
     "pages/paymentMethod/paymentMethod",  
@@ -12,14 +12,10 @@
     "pages/verification/verification",
     "pages/information/information",
     "pages/particulars/particulars",
-    
     "pages/select/select",
     "pages/photoAlbum/photoAlbum",
     "pages/like/likes",
     "pages/consult/consult",
-   
-    "pages/paymentMethod/paymentMethod",
-
     "pages/message/message",
     "pages/index/index",
     "pages/logs/logs"
