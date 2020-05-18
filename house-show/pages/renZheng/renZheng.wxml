@@ -1,0 +1,32 @@
+
+<view class="container" hidden="{{hi}}">
+    <view class="idCard-box">
+       <view class="cardBox-bd1" >
+            <image class="img" src="{{zheng}}"></image>
+        <view class="yuan" bindtap="takePhoto">
+            <image  class="jiahao" src="/pages/image/jiahao.png"  ></image>
+        </view>
+       </view>
+       <view class="zhen">身份证照片(人面像)</view>
+    </view>
+
+    <view class="idCard-box">
+         <view class="cardBox-bd2">
+            <image class="img" src="{{fan}}" ></image>
+         <view class="yuan" bindtap="takePhoto1">
+            <image  class="jiahao" src="/pages/image/jiahao.png" ></image>
+        </view>
+         </view>
+           <view class="zhen" >身份证照片(国徽面)</view>
+    </view>
+
+   	<button class="wan" hidden="{{h2}}" bindtap="uploadImage" size='mini'  type="primary" hover-class="bt">完成</button>
+</view>
+<view class="show" hidden="{{h1}}">
+    <view class="v">
+    <text class="userName">姓名:{{user.userName}}</text>
+        <text class="idCard">身份证:{{user.idCard}}</text>
+    </view>
+        
+        <button bindtap="tiao" class="shangchuan"  >完成</button>
+</view>

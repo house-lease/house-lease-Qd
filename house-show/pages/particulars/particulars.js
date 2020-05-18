@@ -67,6 +67,10 @@ daohang(){
 
 // 地图
 address(){
+  wx.showLoading({
+    title: '加载中',
+    mask: true,
+  })
   var that = this;
   var key = config.Config.key;
   var myAmapFun = new amapFile.AMapWX({key: key});
@@ -89,6 +93,9 @@ address(){
       that.setData({
         markers: marker
       });
+      wx.hideLoading({
+        complete: (res) => {},
+      })
     },
     fail: function(info){
        wx.showModal({title:info.errMsg})
@@ -148,6 +155,7 @@ address(){
     },
     // 收藏的方法
     attention(){
+
       if(app.globalData.userInfo.id!=null){
       let this_ = this;
       wx.getStorage({

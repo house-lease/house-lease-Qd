@@ -1,3 +1,4 @@
 {
-  "usingComponents": {"searcher":"../../components/searcher/searcher"}
+  "usingComponents": {"searcher":"../../components/searcher/searcher"},
+  "navigationBarTitleText": "房屋列表"
 }

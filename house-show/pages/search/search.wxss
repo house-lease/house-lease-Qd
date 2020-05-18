@@ -7,14 +7,22 @@
 .pa{
   margin-bottom: 10rpx;
 }
+
+/* 头部搜索框样式 */
+.zhu{
+  margin-left: 50rpx;
+  position: relative;
+  float: left;
+  width:80%;
+  border: 1px solid rgba(192,192,192);
+  /* margin-left:40rpx; */
+  padding: 20rpx;
+  box-shadow: 5rpx 5rpx  rgba(192,192,192);
+}
 .weiZhi,.souSuo{
   display: inline-block;
 }
-.weiZhi{
-  font-size: 24rpx;
-  padding-right: 40rpx;
 
-}
 /* 下拉图标 */
 .xiaLa,.souSuoImg{
   width: 30rpx;
@@ -25,14 +33,14 @@
   top: 32rpx;
   left: 115rpx;
 }
-.weizhi_{
-  float: left;
-  margin-left: 40rpx;
-  border: 1px solid rgba(192,192,192);
-  border-right: none;
-  /* margin-left:40rpx; */
-  padding: 20rpx;
-  box-shadow: 0rpx 5rpx 5rpx 0rpx rgba(192,192,192);
+.souSuoImg{
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+}
+.souSuo{
+  color: rgba(192,192,192);
+  font-size: 24rpx;
 }
 
 .Split{
@@ -138,4 +146,22 @@
 }
 .tupian{
   height: 450rpx;
+}
+.ti{
+  display: inline-block;
+  color: rgba(182,182,182);
+  font-size: 26rpx;
+  margin-left: 200rpx;
+  margin-top: 30rpx;
+  border-top: 1px solid  rgba(182,182,182);
+  padding-top: 20rpx;
+  margin-bottom: 30rpx;
+}
+.bao{
+  display: inline-block;
+  color: rgba(182,182,182);
+  font-size: 26rpx;
+  margin-left: 140rpx;
+  margin-top: 30rpx;
+  padding-top: 20rpx;
 }

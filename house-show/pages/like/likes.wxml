@@ -3,6 +3,7 @@
 <!--pages/like/likes.wxml-->
 
 <!-- 房屋列表 -->
+<view  wx:if="{{collect.length!=0}}" >
 <view wx:for="{{collect}}" wx:key="id" wx:for-index="idx" wx:for-item="value">
 <view class="lists" bindtap="look" data-id="{{value.house.id}}">
   <view class="tu">
@@ -16,7 +17,15 @@
   </view>
 </view>
 </view>
+<view class="ti">我们是有底线了~/(ㄒoㄒ)/~~</view>
+</view>
+<view class="bao" wx:else>
+暂无收藏,快去收藏吧(●ˇ∀ˇ●)
+</view>
 </view>
 <view wx:else>
-  <button bindtap="login">登录</button>
+<view class="bao">
+暂无收藏,快去收藏吧(●ˇ∀ˇ●)
+</view>
+	<button class="login"  bindtap="login" size='mini'  type="primary" hover-class="bt">登录/注册</button>
 </view>

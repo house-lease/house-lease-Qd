@@ -43,3 +43,24 @@
   font-size: 26rpx;
   color: rgba(0, 0, 0,0.6);
 }
+.ti{
+  display: inline-block;
+  color: rgba(182,182,182);
+  font-size: 26rpx;
+  margin-left: 200rpx;
+  margin-top: 30rpx;
+  border-top: 1px solid  rgba(182,182,182);
+  padding-top: 20rpx;
+}
+.bao{
+  display: inline-block;
+  color: rgba(182,182,182);
+  font-size: 26rpx;
+  margin-left: 200rpx;
+  margin-top: 30rpx;
+  padding-top: 20rpx;
+}
+.login{
+  margin-top: 30%;
+  margin-left: 38%;
+}

@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "searcher":"../../components/searcher/searcher"
-  }
+  },
+  "navigationBarTitleText": "青鸟租房"
 }

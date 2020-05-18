@@ -1,5 +1,4 @@
-/* pages/certificate/certificate.wxss */
-/* pages/mine/Authentication.wxss */
+
 .container{
   clear: both;
   }
@@ -38,8 +37,31 @@
       height: 60rpx;
       margin:40rpx 40rpx ;
   }
-  
+  .wan{
+      margin-left: 300rpx;
+  }
   .zhen{
       padding-left: 200rpx;
       font-family: Microsoft Yahei;
   }
+  .show{
+    position: relative;
+      padding-top: 300rpx;
+      padding-left: 19%;
+  }
+  .v{
+    box-shadow: 0rpx 5rpx 5rpx 0rpx rgba(192,192,192);
+      background-color: rgba(192,192,192,0.1);
+    display: inline-block;
+      padding: 40rpx;
+  }
+  .show text{
+      color: rgb(128,128,128);
+      display: block;
+      margin-bottom: 30rpx;
+  }
+  .shangchuan{
+   position: absolute;
+   top: 110%;
+    right: 180rpx;
+}
