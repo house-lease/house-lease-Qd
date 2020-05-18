@@ -1,5 +1,6 @@
 {
   "pages":[
+     "pages/personalCenter/personalCenter",
     "pages/home/home",
     "pages/insertImage/insertImage",
     "pages/insertHouse/insertHouse",
@@ -12,7 +13,7 @@
     "pages/photoAlbum/photoAlbum",
     "pages/like/likes",
     "pages/consult/consult",
-    "pages/personalCenter/personalCenter",
+   
     "pages/paymentMethod/paymentMethod",
     "pages/message/message",
     "pages/index/index",

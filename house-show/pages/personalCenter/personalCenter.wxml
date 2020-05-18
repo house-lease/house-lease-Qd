@@ -1,16 +1,89 @@
 <!--pages/personalCenter/personalCenter.wxml-->
+
 <view id="top">
-  <image src="{{user.imageUrl}}" />
-  <text id="phone">{{user.nickname}}</text>
-  <view bindtap="examine" id="personalMessage">点击查看个人信息 ></view>
-  <button open-type="getUserInfo" bindtap="login">登录</button>
+	<image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2453073511,2662106730&fm=26&gp=0.jpg" />
+		<text  class="phone">{{user.nickname}}</text>
+	<view id="xinxikuang" wx:if="{{user.id != null}}">
+		<view  bindtap="examine" id="personalMessage">点击查看个人信息 <text decode="{{true}}">></text> </view>
+	</view>
+
+  <view id="or" >
+  <view class="zhuce">注册</view>
+	<text>/</text>
+  <view class="denglu" open-type="getUserInfo" bindtap="login" >登录</view>
+	<view class="zi"> 欢迎来到青鸟公寓 租的省心 住的舒心</view>
+	</view>
 </view>
 
 <view id="middle">
-      <text id="money" bindtap="tiaozhuan">我的钱包</text>
-      <text id="cookies">浏览记录</text>
-      <text id="bill">我的订单</text>
-      <text id="feedback">反馈意见</text>
-      <text id="linksys">客服电话</text>
-      <text id="aboutUs">关于我们</text>
+	<view  id="biaoqian" bindtap="tiaozhuan">
+		<view class="img">
+			<image  src="/pages/image/qian.png"></image>
+		</view>
+		<text >我的钱包</text>	
+		<view class="img2">
+			<image class="image2" src="/pages/image/right.png"></image>
+		</view>
+	</view>
+
+	<view  id="biaoqian" bindtap="tiaozhuan">
+		<view class="img">
+			<image  src="/pages/image/fangwu.png"></image>
+		</view>
+		<text >添加房屋</text>	
+		<view class="img2">
+			<image class="image2" src="/pages/image/right.png"></image>
+		</view>
+	</view>
+
+	<view id="biaoqian">
+		<view class="img">
+			<image  src="/pages/image/jilu.png"></image>
+		</view>
+		<text>浏览记录</text>
+			<view class="img2">
+			<image class="image2" src="/pages/image/right.png"></image>
+		</view>
+	</view>
+
+		<view id="biaoqian">
+		<view class="img">
+			<image  src="/pages/image/dingdan.png"></image>
+		</view>
+		<text>我的订单</text>
+			<view class="img2">
+			<image class="image2" src="/pages/image/right.png"></image>
+		</view>
+	</view>
+
+		<view id="biaoqian">
+		<view class="img">
+			<image  src="/pages/image/yijian.png"></image>
+		</view>
+		<text>反馈意见</text>
+			<view class="img2">
+			<image class="image2" src="/pages/image/right.png"></image>
+		</view>
+	</view>
+
+		<view id="biaoqian">
+		<view class="img">
+			<image  src="/pages/image/dianhua.png"></image>
+		</view>
+		<text>客服电话</text>
+			<view class="img2">
+			<image class="image2" src="/pages/image/right.png"></image>
+		</view>
+	</view>
+
+		<view id="biaoqian1">
+		<view class="img">
+			<image  src="/pages/image/guanyu.png"></image>
+		</view>
+		<text>关于我们</text>
+			<view class="img2">
+			<image class="image2" src="/pages/image/right.png"></image>
+		</view>
+	</view>
+
 </view>

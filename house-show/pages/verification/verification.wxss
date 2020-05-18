@@ -48,3 +48,8 @@ image{
   width: 30rpx;
   height: 30rpx;
 }
+
+image{
+  width: 30rpx;
+  height: 30rpx;
+}
