@@ -21,5 +21,9 @@ view,input,form,image{
   left: 100rpx;
 }
 .bor{
-  border-bottom: 1rpx solid gold;
+  padding-left: 100rpx;
+  font-size: 35rpx;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+  border-bottom: 1rpx solid rgba(192,192,192);
 }

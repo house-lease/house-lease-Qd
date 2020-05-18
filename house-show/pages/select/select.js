@@ -62,6 +62,10 @@ bindSearch: function(e){
           data: res.data.data,
           key: 'rimHouses',
         })
+        wx.setStorage({
+          data: e.currentTarget.dataset.keywords.name,
+          key: 'addressName',
+        })
         wx.navigateTo({
           url: '/pages/search/search',
         })

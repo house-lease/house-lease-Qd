@@ -34,11 +34,11 @@
 
 <!-- 条件按钮 -->
 <view class="anNiu">
-  <view class="heZu">
-  <image class="he" src="/pages/image/he.png"></image>
+  <view bindtap="he" class="heZu" data-a="{{a}}">
+  <image  class="he" src="/pages/image/he.png"></image>
   <view class="t">合租</view>
   </view>
-  <view class="zhengZu">
+  <view bindtap="zheng" data-b="{{b}}" class="zhengZu">
   <image  class="he" src="/pages/image/zu.png"></image>
   <view class="t" >整租</view>
   </view>
@@ -61,6 +61,7 @@
 
 
 <!-- 房屋列表 -->
+<view  wx:if="{{houses.length!=0}}" >
 <view wx:for="{{houses}}" wx:key="id" wx:for-index="idx" wx:for-item="value">
 <view class="lists" bindtap="look" data-id="{{value.id}}">
   <view class="tu">
@@ -74,4 +75,10 @@
   </view>
 </view>
 </view>
+<view class="ti">我们是有底线了~/(ㄒoㄒ)/~~</view>
 </view>
+<view class="bao" wx:else>
+抱歉，该地区暂无房源
+</view>
+</view>
+

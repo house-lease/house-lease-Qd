@@ -2,19 +2,24 @@
   "pages":[
      "pages/personalCenter/personalCenter",
     "pages/home/home",
+    "pages/search/search",
+    
+    "pages/login/login",
+    "pages/renZheng/renZheng",
+    "pages/paymentMethod/paymentMethod",  
     "pages/insertImage/insertImage",
     "pages/insertHouse/insertHouse",
     "pages/verification/verification",
     "pages/information/information",
-    "pages/certificate/certificate",       
     "pages/particulars/particulars",
-    "pages/search/search",
+    
     "pages/select/select",
     "pages/photoAlbum/photoAlbum",
     "pages/like/likes",
     "pages/consult/consult",
    
     "pages/paymentMethod/paymentMethod",
+
     "pages/message/message",
     "pages/index/index",
     "pages/logs/logs"
@@ -25,7 +30,8 @@
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "租赁",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true
   },
   "tabBar": {
 
@@ -39,7 +45,7 @@
       "text": "收藏"
     },{
 
-      "pagePath": "pages/consult/consult",
+      "pagePath": "pages/message/message",
       "iconPath":"/pages/image/xx.png",
       "text": "消息"
     }

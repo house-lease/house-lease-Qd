@@ -11,6 +11,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    a:true,
+    b:true,
     markers: [],
     latitude: '',
     longitude: '',
@@ -53,7 +55,39 @@ Page({
         })
       }
     })
+  },
+
+  // 单击合租和整租的按钮
+  he(e){
+    console.info(e)
+    if(e.currentTarget.dataset.a){
+      this.data.houseLeaseName = "合租"
+      this.setData({
+        a:false
+      })
+    }else{
+      this.data.houseLeaseName = ""
+      this.setData({
+        a:true
+      })
+    }
+    this.getHouseList()
+  },
+zheng(e){
+  console.info(e)
+  if(e.currentTarget.dataset.b){
+    this.data.houseLeaseName = "整租"
+    this.setData({
+      b:false
+    })
+  }else{
+    this.data.houseLeaseName = ""
+    this.setData({
+      b:true
+    })
   }
+  this.getHouseList()
+}
   ,
   // 点击查询方法
   look:function(e){
@@ -102,6 +136,10 @@ Page({
       },
    // 定义一个函数：作用是查询所有的房屋信息，返回的结果是json格式
    getHouseList: function(){
+    wx.showLoading({
+      title: '加载中',
+      mask: true,
+    })
      var this_ = this;
     wx.request({
       url: liunxUrl+'house/house/queryHouse', 
@@ -116,6 +154,9 @@ Page({
         this_.setData({
           "houses": res.data.data
         });
+        wx.hideLoading({
+        
+        })
       }
     })
 },

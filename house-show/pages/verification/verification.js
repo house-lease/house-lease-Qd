@@ -28,7 +28,7 @@ Page({
   idCard(){
     if(this.data.user.idcard==null){
       wx.navigateTo({
-        url: '/pages/certificate/certificate',
+        url: '/pages/renZheng/renZheng',
       })
     }else{
       wx.showToast({

@@ -8,11 +8,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    address:"郑州",
+    address:"你想住哪里？",
     houses:[
 ]
   },
-
+  // 单击搜索触发的事件
+  open:function(){
+    wx.navigateTo({
+      url: '/pages/select/select',
+    })
+ }
+  ,
   /**
    * 生命周期函数--监听页面加载
    */
@@ -36,6 +42,14 @@ Page({
         success:res =>{
           this.setData({
             houses:res.data
+          })
+        }
+      })
+      wx.getStorage({
+        key: 'addressName',
+        success: res=>{
+          this.setData({
+            address:res.data
           })
         }
       })

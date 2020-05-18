@@ -15,7 +15,7 @@ Page({
   // 跳转登录页面
 login:function(){
   wx.navigateTo({
-    url: '',
+    url: '/pages/login/login',
   })
 }
   ,
@@ -49,6 +49,10 @@ login:function(){
 
   // 显示收藏房屋的方法
   houseShow:function(){
+    wx.showLoading({
+      title: '加载中',
+      mask: true,
+    })
     var this_=this;
     this.setData({
       user:app.globalData.userInfo
@@ -65,6 +69,9 @@ login:function(){
          "collect": res.data.data
        });
        console.info(this_.data.collect)
+       wx.hideLoading({
+        
+       })
      }
    })  
   },

@@ -1,12 +1,12 @@
 /* 头部搜索框样式 */
 .zhu{
+  position: relative;
   float: left;
   width:63%;
   border: 1px solid rgba(192,192,192);
-  border-left: none;
   /* margin-left:40rpx; */
   padding: 20rpx;
-  box-shadow: 0rpx 5rpx 5rpx 0rpx rgba(192,192,192);
+  box-shadow: 5rpx 5rpx  rgba(192,192,192);
 }
 .weiZhi,.souSuo{
   display: inline-block;
@@ -24,8 +24,8 @@
 }
 .souSuoImg{
   position: absolute;
-  top: 32rpx;
-  right: 115rpx;
+  top: 30rpx;
+  right: 30rpx;
 }
 .souSuo{
   color: rgba(192,192,192);

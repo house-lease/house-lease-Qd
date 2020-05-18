@@ -5,9 +5,7 @@ view,input,form,image{
   padding: 0px;
   margin: 0px;
 }
-.main{
-  background:rgba(192,192,192,0.1);
-}
+
 
 /* 位置样式 */
 .pa::after{
@@ -22,6 +20,7 @@ view,input,form,image{
   display: inline-block;
 }
 .weiZhi{
+  position: relative;
   font-size: 24rpx;
   padding-right: 40rpx;
 
@@ -33,8 +32,8 @@ view,input,form,image{
 }
 .xiaLa{
   position: absolute;
-  top: 32rpx;
-  left: 115rpx;
+  top: 0rpx;
+  left: 52rpx;
 }
 .weizhi_{
   float: left;
@@ -175,4 +174,21 @@ image{
   margin-top: 10rpx;
   font-size: 26rpx;
   color: rgba(0, 0, 0,0.6);
+}
+.ti{
+  display: inline-block;
+  color: rgba(182,182,182);
+  font-size: 26rpx;
+  margin-left: 200rpx;
+  margin-top: 30rpx;
+  border-top: 1px solid  rgba(182,182,182);
+  padding-top: 20rpx;
+}
+.bao{
+  display: inline-block;
+  color: rgba(182,182,182);
+  font-size: 26rpx;
+  margin-left: 240rpx;
+  margin-top: 30rpx;
+  padding-top: 20rpx;
 }

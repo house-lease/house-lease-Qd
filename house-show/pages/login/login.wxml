@@ -1,0 +1,20 @@
+<!--pages/login/login.wxml-->
+<image class="image" src="/pages/image/login.jpg"></image>
+
+<view class="from">
+
+  <view class="recommend">
+      <text class="line"> ------------推荐方式登录------------ </text>
+  </view>
+
+  <view class="wxsubmit">
+      <button size="60px" class="submit" open-type="getUserInfo" bindtap="login">微信登陆</button>
+  </view>
+
+  <view class="phonesubmit">
+      <button class="submit"  form-type=""  open-type="getUserInfo" bindgetuserinfo="phoneSubmit">手机登录</button>
+  </view>
+
+
+</view>
+

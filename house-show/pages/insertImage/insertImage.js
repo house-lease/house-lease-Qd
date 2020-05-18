@@ -102,7 +102,10 @@ selectImage2: function(e){
 
 // 上传图片
 uploadImage(){
-  
+  wx.showLoading({
+    title: '上传中',
+    mask: true,
+  })
   //上传卧室
   for(let i=0;i<this.data.bedroomphotos.length;i++){
     wx.uploadFile({
@@ -157,7 +160,16 @@ uploadImage(){
             icon: 'success',
            duration: 2000
        })
+      wx.hideLoading({
+        complete: (res) => {},
+      })
+      setTimeout(function () {
+        wx.switchTab({
+          url: '/pages/personalCenter/personalCenter',
+        })
+      }, 2000)      
       }
+      
     })
 }
  
