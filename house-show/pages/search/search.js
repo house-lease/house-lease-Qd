@@ -11,8 +11,24 @@ Page({
     address:"你想住哪里？",
     houses:[
 
+		{
+       address: "商丘市民权县",
+        houseImages:[
+        {
+        imageUrl: "http://182.92.168.223:8080/house/image/tmp_e2bcb96a9bc3e3057f5c0e29deb34386dabda0634ee13612.jpg"
+        }
+        ],
+        houseLeaseName: "合租",
+        houseName: "恒嘉世锦",
+        houseTypeName: "两室一厅",
+        narrate: "100m  8楼",
+        price: 2000,
+        startName: "三个月",
+        }
     ]
+
 },
+
   // 单击搜索触发的事件
   open:function(){
     wx.navigateTo({
