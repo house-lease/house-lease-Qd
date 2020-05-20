@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/personalCenter/personalCenter",
     "pages/home/home",
+    "pages/personalCenter/personalCenter",
     "pages/search/search",
     "pages/login/login",
     "pages/renZheng/renZheng",

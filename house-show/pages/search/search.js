@@ -10,8 +10,9 @@ Page({
   data: {
     address:"你想住哪里？",
     houses:[
-]
-  },
+
+    ]
+},
   // 单击搜索触发的事件
   open:function(){
     wx.navigateTo({

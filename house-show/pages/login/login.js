@@ -44,12 +44,6 @@ Page({
                             if (responseData.data.data!=null) {
                              // 表示登录成功
                               app.globalData.userInfo=responseData.data.data;
-                         
-                              wx.setStorage({
-                                data: responseData.data.data,
-                                key: 'user',
-                              })
-                                console.info(this_.data.user);
                                 // >> 2、显示登录成功的信息
                               wx.showToast({
                                 title: '登录成功',
