@@ -1,84 +1,86 @@
-
 <view class="main">
-<view class="pa">
-<view class="weizhi_">
-<view class="weiZhi">
- <picker bindchange="bindPickerChange" value="id" range="{{addressList}}" range-key="address">
-    <view class="picker">{{address_}}
-    </view>
-  </picker>
-<image class="xiaLa" src="/pages/image/xl.png"/>
-</view> 
-</view>
-<!-- 自定义组件 -->
-<view>
-<searcher></searcher>
-</view>
-</view>
+	<view class="pa">
+		<view class="weizhi_">
+			<view class="weiZhi">
+				<picker bindchange="bindPickerChange" value="id" range="{{addressList}}" range-key="address">
+					<view class="picker">{{address_}}</view>
+				</picker>
+				<image class="xiaLa" src="/pages/image/xl.png" />
+			</view>
+		</view>
 
-<!-- 轮播图 -->
-<view class="lunBo">
-<swiper indicator-dots="true" autoplay="true" interval="3000" duration="500">
-  <swiper-item>
-  <navigator>
-   <image src="{{images[0]}}"  /> 
-  </navigator>
-    </swiper-item>
-  <swiper-item>
-   <navigator>
-   <image src="{{images[1]}}" /> 
-  </navigator> 
-  </swiper-item>
-</swiper>
-</view>
+		<!-- 自定义组件 -->
+		<view>
+			<searcher></searcher>
+		</view>
+	</view>
 
-<!-- 条件按钮 -->
-<view class="anNiu">
-  <view bindtap="he" class="heZu" data-a="{{a}}">
-  <image  class="he" src="/pages/image/he.png"></image>
-  <view class="t">合租</view>
-  </view>
-  <view bindtap="zheng" data-b="{{b}}" class="zhengZu">
-  <image  class="he" src="/pages/image/zu.png"></image>
-  <view class="t" >整租</view>
-  </view>
-  <view class="paiHang">
-  <image class="he" src="/pages/image/p.png"></image>
-  <view  class="t" >排行</view>
-  </view>
-</view>
-<view class="container">
-     <!-- 分割线 -->
-  <view class="divLine"></view>
-</view>
-<!-- 条件筛选框 -->
-<view class="tiaoJian">
-<view class="t1">时间<image class="i1" src="/pages/image/xl.png"></image> </view>
-<view class="t2">类型<image class="i2" src="/pages/image/xl.png"></image></view>
-<view class="t3">位置<image class="i3" src="/pages/image/xl.png"></image></view>
-<view class="t4">价格<image class="i4" src="/pages/image/xl.png"></image></view>
-</view>
+	<!-- 轮播图 -->
+	<view class="lunBo">
+		<swiper indicator-dots="true" autoplay="true" interval="3000" duration="500">
+			<swiper-item>
+				<navigator>
+					<image src="{{images[0]}}" />
+				</navigator>
+			</swiper-item>
+			<swiper-item>
+				<navigator>
+					<image src="{{images[1]}}" />
+				</navigator>
+			</swiper-item>
+		</swiper>
+	</view>
+
+	<!-- 条件按钮 -->
+	<view class="anNiu">
+		<view bindtap="he" class="heZu" data-a="{{a}}">
+			<image class="he" src="/pages/image/he.png"></image>
+			<view class="t">合租</view>
+		</view>
+		<view bindtap="zheng" data-b="{{b}}" class="zhengZu">
+			<image class="he" src="/pages/image/zu.png"></image>
+			<view class="t">整租</view>
+		</view>
+		<view class="paiHang">
+			<image class="he" src="/pages/image/p.png"></image>
+			<view class="t">排行</view>
+		</view>
+	</view>
+	<view class="container">
+		<!-- 分割线 -->
+		<view class="divLine"></view>
+	</view>
+	<!-- 条件筛选框 -->
+	<view class="tiaoJian">
+		<view class="t1">时间<image class="i1" src="/pages/image/xl.png"></image>
+		</view>
+		<view class="t2">类型<image class="i2" src="/pages/image/xl.png"></image>
+		</view>
+		<view class="t3">位置<image class="i3" src="/pages/image/xl.png"></image>
+		</view>
+		<view class="t4">价格<image class="i4" src="/pages/image/xl.png"></image>
+		</view>
+	</view>
 
 
-<!-- 房屋列表 -->
-<view  wx:if="{{houses.length!=0}}" >
-<view wx:for="{{houses}}" wx:key="id" wx:for-index="idx" wx:for-item="value">
-<view class="lists" bindtap="look" data-id="{{value.id}}">
-  <view class="tu">
-  <image src="{{value.houseImages[0].imageUrl}}"></image>
-  </view>
-  <view class="message">
-   <view class="houseName">{{value.houseName}}</view>
-   <view class="houseType" >{{value.houseLeaseName}} | {{value.houseTypeName}}</view>
-   <view class="address">{{value.address}} </view>
-   <view class="price">{{value.price}}<text>/月</text></view>
-  </view>
+	<!-- 房屋列表 -->
+	<view wx:if="{{houses.length!=0}}">
+		<view wx:for="{{houses}}" wx:key="id" wx:for-index="idx" wx:for-item="value">
+			<view class="lists" bindtap="look" data-id="{{value.id}}">
+				<view class="tu">
+					<image src="{{value.houseImages[0].imageUrl}}"></image>
+				</view>
+				<view class="message">
+					<view class="houseName">{{value.houseName}}</view>
+					<view class="houseType">{{value.houseLeaseName}} | {{value.houseTypeName}}</view>
+					<view class="address">{{value.address}} </view>
+					<view class="price">{{value.price}}<text>/月</text></view>
+				</view>
+			</view>
+		</view>
+		<view class="ti">我们是有底线了~/(ㄒoㄒ)/~~</view>
+	</view>
+	<view class="bao" wx:else>
+		抱歉，该地区暂无房源
+	</view>
 </view>
-</view>
-<view class="ti">我们是有底线了~/(ㄒoㄒ)/~~</view>
-</view>
-<view class="bao" wx:else>
-抱歉，该地区暂无房源
-</view>
-</view>
-

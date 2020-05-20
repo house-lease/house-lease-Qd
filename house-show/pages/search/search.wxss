@@ -5,102 +5,109 @@
   clear:both;
 }
 .pa{
-  margin-bottom: 10rpx;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
 }
 
 /* 头部搜索框样式 */
 .zhu{
-  margin-left: 50rpx;
+  margin-left: 65rpx;
   position: relative;
   float: left;
   width:80%;
-  border: 1px solid rgba(192,192,192);
+  border: 1px solid gainsboro;
+  background: whitesmoke;
+  border-radius: 20rpx;
   /* margin-left:40rpx; */
-  padding: 20rpx;
-  box-shadow: 5rpx 5rpx  rgba(192,192,192);
-}
-.weiZhi,.souSuo{
-  display: inline-block;
-}
-
-/* 下拉图标 */
-.xiaLa,.souSuoImg{
-  width: 30rpx;
-  height: 30rpx;
-}
-.xiaLa{
-  position: absolute;
-  top: 32rpx;
-  left: 115rpx;
-}
-.souSuoImg{
-  position: absolute;
-  top: 30rpx;
-  right: 30rpx;
+  height: 70rpx;
 }
 .souSuo{
+  display: inline-block;
+  padding: 20rpx;
+  font-family: Microsoft Yahei;
   color: rgba(192,192,192);
   font-size: 24rpx;
 }
 
-.Split{
-  margin-top: 30rpx;
-  width: 100%;
-  background: rgba(192,192,192);
-  height: 1rpx;
+/* 下拉图标 */
+.souSuoImg{
+  width: 45rpx;
+  height: 45rpx;
+  position: absolute;
+  right: 25rpx;
 }
-.split1{
-  width: 100%;
-  height: 1rpx;
-  background:rgba(192,192,192) ;
-  margin-bottom: 20rpx;
+.xiaLa{
+  width: 20rpx;
+  height: 20rpx;
+  position: absolute;
+  top: 32rpx;
+  left: 115rpx;
 }
+
+.i{
+  width: 18rpx;
+  height: 18rpx;
+  position: absolute;
+  left: 65rpx;
+  top: 8rpx;
+}
+
+
 .tiaoJian view{
   margin-top:15rpx;
   margin-bottom: 10rpx;
   font-size: 26rpx;
   float: left;
   position: relative;
+
 }
 .t1{
   margin-left:80rpx;
+  font-family: Microsoft Yahei;
 }
 .t2{
   margin-left: 190rpx;
+  font-family: Microsoft Yahei;
 }
 .t3{
   margin-left: 190rpx;
-}
-.i1,.i2,.i3{
-  width: 28rpx;
-  height: 28rpx;
-  position: absolute;
-  top: 8rpx;
+  font-family: Microsoft Yahei;
 }
 .tiaoJian{
   height: 65rpx;
+  margin-bottom: 30rpx;
+  border-bottom: gainsboro solid 1px;
 }
-.flex-wrp{
+
+
+
+/*.flex-wrp{
   display: flex;
-  margin-left: 40rpx;
   border: 1rpx solid rgba(192,192,192);
-  height: 500rpx;
-  width: 645rpx;
+  height: 300rpx;
   margin-bottom:10rpx ;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.tupian{
+  border:green solid 1px;
+
+  width: 350rpx;
+  height: 350rpx;
 }
 .i4{
   margin-top: 20rpx;
   margin-left: 20rpx;
-  width: 600rpx;
-  height: 300rpx;
-  border: rgba(192,192,192) 1rpx solid; 
+  width: 300rpx;
+  height: 250rpx;
 }
 .v1{
-  font-size: 30rpx;
+  
+  font-size: 14rpx;
   margin-left:20rpx ;
-  width: 594rpx;
-  height: 80rpx;
-  padding: 5rpx;
+  width: 60rpx;
+  display: inline-block;
+  border: tomato solid 1px;
 }
 .v2{
   font-size: 30rpx;
@@ -147,16 +154,81 @@
 .tupian{
   height: 450rpx;
 }
+
+*/
+
+.one{
+  height: 350rpx;
+  clear: both;
+  border-bottom: Gainsboro solid 1px;
+}
+
+.fangwu{
+  width: 300rpx;
+  height: 260rpx;
+  margin: 40rpx 20rpx;
+  float: left;
+}
+
+.fangtu{
+  width: 300rpx;
+  height: 260rpx;
+}
+
+.name{
+  display: inline-block;
+  margin-top: 40rpx;
+  margin-bottom: 30rpx;
+  margin-left: 40rpx;
+  font-size: 22px;
+  font-family: Microsoft Yahei;
+}
+
+.hezu{
+  font-family: Microsoft Yahei;
+  font-size: 14px;
+  color: darkgray;
+  display: inline-block;
+  margin-left: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.img{
+  float: right;
+  margin-right: 40rpx;
+}
+.phone{
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.address{
+  display: inline-block;
+  margin-left: 40rpx;
+  font-size: 14px;
+  color: darkgray;
+  margin-bottom: 20rpx;
+  font-family: Microsoft Yahei;
+}
+
+.money{
+  display: inline-block;
+  margin-left: 40rpx;
+  color: red;
+  font-size: 24px;
+  font-family: Microsoft Yahei;
+}
+
 .ti{
   display: inline-block;
   color: rgba(182,182,182);
   font-size: 26rpx;
   margin-left: 200rpx;
   margin-top: 30rpx;
-  border-top: 1px solid  rgba(182,182,182);
   padding-top: 20rpx;
   margin-bottom: 30rpx;
 }
+
 .bao{
   display: inline-block;
   color: rgba(182,182,182);

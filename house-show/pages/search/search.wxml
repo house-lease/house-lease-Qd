@@ -1,45 +1,66 @@
 <!-- 自定义组件 -->
 <view class="pa">
-<!-- 自定义组件 -->
-<view class="zhu">
-<view class="souSuo" bindtap="open" > <image class="souSuoImg" src="/pages/image/ss.png"/>{{address}}</view>
+	<!-- 自定义组件 -->
+	<view class="zhu">
+		<view class="souSuo" bindtap="open">
+			<image class="souSuoImg" src="/pages/image/ss.png" />{{address}}</view>
+	</view>
 </view>
-</view>
-<view class="container">
-  <view class="Split"></view>
-</view>
+
 <!-- 条件筛选框 -->
 <view class="tiaoJian">
-<view class="t1">时间<image class="i1" src="/pages/image/xl.png"></image> </view>
-<view class="t2">类型<image class="i2" src="/pages/image/xl.png"></image></view>
-<view class="t3">价格<image class="i3" src="/pages/image/xl.png"></image></view>
+	<view class="t1">时间<image class="i" src="/pages/image/xl.png"></image>
+	</view>
+	<view class="t2">类型<image class="i" src="/pages/image/xl.png"></image>
+	</view>
+	<view class="t3">价格<image class="i" src="/pages/image/xl.png"></image>
+	</view>
 </view>
-<view>
-  <view class="split1"></view>
-</view>
-<view>
-<view  wx:if="{{houses.length!=0}}" >
-  <view wx:for="{{houses}}" wx:for-index="key" wx:for-item="value" wx:key="id">
-    <view class="flex-wrp" style="flex-direction:column;"  bindtap="look" data-id="{{value.id}}"  >
-      <view class="tupian"><image class="i4" src="{{value.houseImages[0].imageUrl}}"></image></view>
-      <view class="v1">
-      <view class="name">{{value.houseName}}</view>
-        <view class="address">{{value.address}}</view>
+
+<view class="zong">
+	<view wx:if="{{houses.length!=0}}">
+		<view wx:for="{{houses}}" wx:for-index="key" wx:for-item="value" wx:key="id">
+			<!-- <view class="flex-wrp" style="flex-direction:column;" bindtap="look" data-id="{{value.id}}">
+				<view class="tupian">
+					<image class="i4" src="{{value.houseImages[0].imageUrl}}"></image>
+				</view>
+
+				<view class="v1">
+					<view class="name">{{value.houseName}}</view>
+	        <view class="address">{{value.address}}</view>
+				</view>
+
+				<view class="v2">
+					<view class="typeAndNum">{{value.houseLeaseName}} | {{value.houseTypeName}}</view>
+					<view class="img">
+						<image class="phone" src="/pages/image/dh.png"></image>
+					</view>
+				</view>
+
+				<view class="v3">
+					<view class="money">{{value.price}}/月</view>
+					<view class="consult">电话咨询</view>
+				</view> 
+        </view>-->
+        
+      <view class="one">
+        <view class="fangwu">
+        <image class="fangtu" src="{{value.houseImages[0].imageUrl}}"></image>
+        </view>
+        <view class="name">{{value.houseName}}</view>
+        <view class="hezu">{{value.houseLeaseName}} | {{value.houseTypeName}}</view>
+        <view class="img">
+						<image class="phone" src="/pages/image/dh.png"></image>
+				</view>
+          <view class="address">{{value.address}}</view>
+          <view class="money">{{value.price}}/月</view>
       </view>
-      <view class="v2">
-         <view class="typeAndNum">{{value.houseLeaseName}} | {{value.houseTypeName}}</view>
-        <view class="img"><image class="phone" src="/pages/image/dh.png"></image></view>
-      </view>     
-      <view class="v3">
-        <view class="money">{{value.price}}/月</view>
-        <view class="consult">电话咨询</view>
-      </view> 
-  </view>
-</view>
-<view class="ti">我们是有底线了~/(ㄒoㄒ)/~~</view>
-  </view>
-  <view class="bao" wx:else>
-抱歉，该地区周边暂无房源/(ㄒoㄒ)/~~
-</view>
+		</view>
+    
+		<view class="ti">我们是有底线了~/(ㄒoㄒ)/~~</view>
+	</view>
+	<view class="bao" wx:else>
+		抱歉，该地区周边暂无房源/(ㄒoㄒ)/~~
+	</view>
 
 </view>
