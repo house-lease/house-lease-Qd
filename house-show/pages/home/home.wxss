@@ -26,12 +26,12 @@ view,input,form,image{
 
 /* 下拉图标 */
 .xiaLa,.souSuoImg{
-  width: 30rpx;
-  height: 30rpx;
+  width: 20rpx;
+  height: 20rpx;
 }
 .xiaLa{
   position: absolute;
-  top: 0rpx;
+  top: 5rpx;
   left: 52rpx;
 }
 .weizhi_{
@@ -125,8 +125,8 @@ image{
   margin-left: 136rpx;
 }
 .i1,.i2,.i3,.i4{
-  width: 28rpx;
-  height: 28rpx;
+  width: 20rpx;
+  height: 20rpx;
   position: absolute;
   top: 8rpx;
 }
