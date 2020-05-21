@@ -1,8 +1,8 @@
       <!--房屋详情页面-->
 
-      <view >
+      <view>
       	<!-- 轮播图 -->
-      	<view class="swiperContainer" bindtap="showImage" >
+      	<view class="swiperContainer" bindtap="showImage">
       		<swiper bindchange="swiperChange" autoplay="true" duration="{{duration}}" interval="{{interval}}" circular="true" style="385rpx">
       			<view wx:for="{{houses.houseImages}}" wx:key="id" wx:for-index="idx" wx:for-item="value">
       				<swiper-item>
@@ -14,22 +14,22 @@
       		<view class="imageCount">{{current+1}}/{{houses.houseImages.length}}</view>
       	</view>
 
-<!-- 房屋基本信息 -->
+      	<!-- 房屋基本信息 -->
       	<view class="particulars">
       		<view class="wo">
-					<text class="jia">{{houses.houseName}}</text>				
+      			<text class="jia">{{houses.houseName}}</text>
       		</view>
-					<view class="im" bindtap="calling" data-phone="{{houses.user.phone}}" >
-						<image class="phoneImage"  src="/pages/image/dh.png">咨询</image>
-					</view>
-	
-					<view class="xin">
-					<text >{{houses.houseLeaseName}} | {{houses.houseTypeName}} | {{houses.narrate}}</text>  
-					</view>
-    
+      		<view class="im" bindtap="calling" data-phone="{{houses.user.phone}}">
+      			<image class="phoneImage" src="/pages/image/dh.png">咨询</image>
+      		</view>
+
+      		<view class="xin">
+      			<text >{{houses.houseLeaseName}} | {{houses.houseTypeName}} | {{houses.narrate}}</text>
+      		</view>
+
       		<view>
-      			<text class="price" >￥{{houses.price}}</text>/月
       			<text class="qi">{{houses.startName}}起</text>
+      			<text class="price" >￥{{houses.price}}</text>/月
       		</view>
 
 
@@ -41,81 +41,81 @@
       	<view class="divLine"></view>
       	<view class="intro">
       		<view class="jianjie">房屋简介</view>
-    
-			  <view class="zhengZu">
-				<image  class="he" src="/pages/image/sf.png"></image>
-				<view wx:if="{{houses.houseCareful.shafa==0}}">
-				<view class="t" >沙发</view>
-				</view>
-				<view wx:elif = "{{houses.houseCareful.shafa==1}}">
-						<view class="t1" >沙发</view>
-				</view>
-				
-				</view>
-				  <view class="zhengZu">
-				<image  class="he" src="/pages/image/c.png"></image>
-				<view wx:if="{{houses.houseCareful.chuang==0}}">
-				<view class="t" >大床</view>
-				</view>
-				<view wx:elif = "{{houses.houseCareful.chuang==1}}">
-						<view class="t1" >大床</view>
-				</view>
-				</view>
 
-				  <view class="zhengZu">
-				<image  class="he" src="/pages/image/kt.png"></image>
-					<view wx:if="{{houses.houseCareful.kongtiao==0}}">
-				<view class="t" >空调</view>
-				</view>
-				<view wx:elif = "{{houses.houseCareful.kongtiao==1}}">
-						<view class="t1" >空调</view>
-				</view>
-				</view>
-				  <view class="zhengZu">
-				<image  class="he" src="/pages/image/lyq.png"></image>
-				<view wx:if="{{houses.houseCareful.kuandai==0}}">
-				<view class="t" >宽带</view>
-				</view>
-				<view wx:elif = "{{houses.houseCareful.kuandai==1}}">
-						<view class="t1" >宽带</view>
-				</view>
-				</view>
-				  <view class="zhengZu">
-				<image  class="he" src="/pages/image/xyj.png"></image>
-				<view wx:if="{{houses.houseCareful.xiyiji==0}}">
-				<view class="t" >洗衣机</view>
-				</view>
-				<view wx:elif = "{{houses.houseCareful.xiyiji==1}}">
-						<view class="t1" >洗衣机</view>
-				</view>
-				</view>
-				  <view class="zhengZu">
-				<image  class="he" src="/pages/image/rq.png"></image>
-				<view wx:if="{{houses.houseCareful.ranqi==0}}">
-				<view class="t" >燃气</view>
-				</view>
-				<view wx:elif = "{{houses.houseCareful.ranqi==1}}">
-						<view class="t1" >燃气</view>
-				</view>
-				</view>
-				  <view class="zhengZu">
-				<image  class="he" src="/pages/image/bx.png"></image>
-				<view wx:if="{{houses.houseCareful.bingxiang==0}}">
-				<view class="t" >冰箱</view>
-				</view>
-				<view wx:elif = "{{houses.houseCareful.bingxiang==1}}">
-						<view class="t1" >冰箱</view>
-				</view>
-				</view>
-				  <view class="zhengZu">
-				<image  class="he" src="/pages/image/ds.png"></image>
-				<view wx:if="{{houses.houseCareful.dianshi==0}}">
-				<view class="t" >电视</view>
-				</view>
-				<view wx:elif = "{{houses.houseCareful.dianshi==1}}">
-						<view class="t1" >电视</view>
-				</view>
-				</view>
+      		<view class="zhengZu">
+      			<image class="he" src="/pages/image/sf.png"></image>
+      			<view wx:if="{{houses.houseCareful.shafa==0}}">
+      				<view class="t">沙发</view>
+      			</view>
+      			<view wx:elif="{{houses.houseCareful.shafa==1}}">
+      				<view class="t1">沙发</view>
+      			</view>
+
+      		</view>
+      		<view class="zhengZu">
+      			<image class="he" src="/pages/image/c.png"></image>
+      			<view wx:if="{{houses.houseCareful.chuang==0}}">
+      				<view class="t">大床</view>
+      			</view>
+      			<view wx:elif="{{houses.houseCareful.chuang==1}}">
+      				<view class="t1">大床</view>
+      			</view>
+      		</view>
+
+      		<view class="zhengZu">
+      			<image class="he" src="/pages/image/kt.png"></image>
+      			<view wx:if="{{houses.houseCareful.kongtiao==0}}">
+      				<view class="t">空调</view>
+      			</view>
+      			<view wx:elif="{{houses.houseCareful.kongtiao==1}}">
+      				<view class="t1">空调</view>
+      			</view>
+      		</view>
+      		<view class="zhengZu">
+      			<image class="he" src="/pages/image/lyq.png"></image>
+      			<view wx:if="{{houses.houseCareful.kuandai==0}}">
+      				<view class="t">宽带</view>
+      			</view>
+      			<view wx:elif="{{houses.houseCareful.kuandai==1}}">
+      				<view class="t1">宽带</view>
+      			</view>
+      		</view>
+      		<view class="zhengZu">
+      			<image class="he" src="/pages/image/xyj.png"></image>
+      			<view wx:if="{{houses.houseCareful.xiyiji==0}}">
+      				<view class="t">洗衣机</view>
+      			</view>
+      			<view wx:elif="{{houses.houseCareful.xiyiji==1}}">
+      				<view class="t1">洗衣机</view>
+      			</view>
+      		</view>
+      		<view class="zhengZu">
+      			<image class="he" src="/pages/image/rq.png"></image>
+      			<view wx:if="{{houses.houseCareful.ranqi==0}}">
+      				<view class="t">燃气</view>
+      			</view>
+      			<view wx:elif="{{houses.houseCareful.ranqi==1}}">
+      				<view class="t1">燃气</view>
+      			</view>
+      		</view>
+      		<view class="zhengZu">
+      			<image class="he" src="/pages/image/bx.png"></image>
+      			<view wx:if="{{houses.houseCareful.bingxiang==0}}">
+      				<view class="t">冰箱</view>
+      			</view>
+      			<view wx:elif="{{houses.houseCareful.bingxiang==1}}">
+      				<view class="t1">冰箱</view>
+      			</view>
+      		</view>
+      		<view class="zhengZu">
+      			<image class="he" src="/pages/image/ds.png"></image>
+      			<view wx:if="{{houses.houseCareful.dianshi==0}}">
+      				<view class="t">电视</view>
+      			</view>
+      			<view wx:elif="{{houses.houseCareful.dianshi==1}}">
+      				<view class="t1">电视</view>
+      			</view>
+      		</view>
 
       	</view>
       </view>
@@ -123,12 +123,12 @@
       <view class="divLine"></view>
 
       <!-- 房屋位置地图显示-->
-      <view class="location" >
-        <view class="map_container_top" >
-				<view class="map_container">
-				<map bindtap="daohang" class="map" id="map" longitude="{{houses.longitude}}" latitude="{{houses.latitude}}" scale="16" markers="{{markers}}"></map>  
-				</view>
-			</view>
+      <view class="location">
+      	<view class="map_container_top">
+      		<view class="map_container">
+      			<map bindtap="daohang" class="map" id="map" longitude="{{houses.longitude}}" latitude="{{houses.latitude}}" scale="16" markers="{{markers}}"></map>
+      		</view>
+      	</view>
       </view>
       <!-- 底部-->
       <view class="bottom">
@@ -137,7 +137,7 @@
       		<image src="/pages/image/guanzhu.png" />
       		<text class="zi">收藏</text>
       	</view>
-				<view bindtap="cancel" class="shouCang" hidden="{{hi1}}">
+      	<view bindtap="cancel" class="shouCang" hidden="{{hi1}}">
       		<image src="/pages/image/yiguanzhu.png" />
       		<text class="zi" >已收藏</text>
       	</view>
@@ -148,10 +148,10 @@
       	</view>
       	<!-- 咨询 -->
       	<view class="zixun">
-					<button size="mini">咨询</button>
+      		<button size="mini">咨询</button>
       	</view>
       	<!-- 付款-->
       	<view class="fukuan">
-				<button size="mini">付款</button>
+      		<button size="mini">付款</button>
       	</view>
       </view>

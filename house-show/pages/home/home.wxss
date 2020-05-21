@@ -182,7 +182,6 @@ image{
   font-size: 26rpx;
   margin-left: 200rpx;
   margin-top: 30rpx;
-  border-top: 1px solid  rgba(182,182,182);
   padding-top: 20rpx;
 }
 .bao{

@@ -13,7 +13,7 @@ view,
 input,
 form,
 image {
-  font-family: "楷体";
+  font-family: "黑体";
   padding: 0px;
   margin: 0px;
 }

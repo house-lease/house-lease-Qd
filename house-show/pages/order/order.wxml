@@ -1,0 +1,23 @@
+<!--我的订单页面-->
+<view id="order-form" wx:for="{{house}}" wx:for-index="idx" wx:for-item="content" wx:key="id">
+	<!--预定日期-->
+	<view class="date">
+		<text class="preset-time">预定时间：{{content.presettime}}</text>
+	</view>
+	<!--订单内容-->
+	<view class="content">
+		<!--内容-->
+		<view class="information">
+			<view class="img">
+				<image class="image" src="{{content.image}}"></image>
+			</view>
+			<view class="name">{{content.housename}}</view>
+			<view class="status">{{content.status}}</view>
+			<view class="type">{{content.type}}</view>
+			<view class="address"> {{content.address}}</view>
+			<view class="money"> {{content.money}}</view>
+		</view>
+		<button class="abandon" style="width:180rpx; " hover-class="btnabandon">放弃订单</button>
+		<button class="continue" style="width:180rpx; " hover-class="btncontinue">继续支付</button>
+	</view>
+</view>

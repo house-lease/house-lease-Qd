@@ -1,0 +1,127 @@
+/* pages/order/order.wxss */
+
+/*订单*/
+#order-form{
+ 
+  height: 350rpx;
+  margin-top: 20rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  clear: both;
+}
+/*预定时间*/
+.date{
+  height: 45rpx;
+  width: 50%;
+  line-height: 45rpx;
+  background:WhiteSmoke ;
+  border-radius: 60rpx;
+  margin-bottom: 15rpx;
+}
+.preset-time{
+  font-family: Microsoft JhengHei;
+  font-size: 12px;
+  color: Gray;
+  padding-left: 20rpx;
+}
+
+/*订单内容*/
+.content{
+  height: 260rpx;
+  padding: 10rpx 10rpx;
+  background: 	Snow;
+  border-radius: 20rpx;
+}
+.information{
+  height: 170rpx;
+}
+.img{
+  width: 160rpx;
+  height: 160rpx;
+  float:left;
+  margin-right: 10rpx;
+}
+.image{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 20rpx;
+}
+.name{
+  height: 45rpx;
+  width: 350rpx;
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Microsoft JhengHei;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.status{
+  width: 110rpx;
+  height: 40rpx;
+  float: right;
+  font-family: Microsoft JhengHei;
+  font-weight: bold;
+  font-size: 12px;
+  margin-left: 10rpx;
+  margin-bottom: 10rpx;
+}
+.type{
+  width: 250rpx;
+  height: 40rpx;
+  font-family: Microsoft JhengHei;
+  font-size: 12px;
+  color: #666666;
+  margin-bottom: 10rpx;
+  display: inline-block;
+}
+.address{
+  width: 300rpx;
+  height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Microsoft JhengHei;
+  font-size: 12px;
+  color: #666666;
+  display: inline-block;
+}
+.money{
+  width: 110rpx;
+  height: 40rpx;
+  float: right;
+  font-size: 16px;
+  font-weight: bold;
+  color: red;
+}
+
+/*按钮*/
+.abandon{
+  font-family: Microsoft JhengHei;
+  font-size:14px; 
+  border: 	Gainsboro solid 1px;
+  height:60rpx;
+  padding-left:5rpx;
+  padding-right:0rpx; 
+  line-height:30rpx;
+  position: absolute;
+  left: 530rpx;
+  margin-top: 20rpx;
+}
+.continue{
+  font-family: Microsoft JhengHei;
+  font-size:14px; 
+  border: 	Gainsboro solid 1px;
+  height:60rpx;
+  padding-left:5rpx;
+  padding-right:0rpx; 
+  line-height:30rpx;
+  margin-top: 20rpx;
+  position: absolute;
+  left: 330rpx;
+}
+.btnabandon,.btncontinue{
+  background: #FFCC00;
+}
+
