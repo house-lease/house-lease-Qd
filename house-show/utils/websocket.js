@@ -1,5 +1,5 @@
 // 聊天室
-var url = 'ws://182.92.168:8080/house/wx';
+var url = 'ws://182.92.168.223:8080/house/wx';
 const app = getApp();
 
 // var utils = require('./util.js');
