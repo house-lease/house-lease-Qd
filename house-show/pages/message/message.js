@@ -9,29 +9,17 @@ Page({
    */
   data: {
 
-    user:[
+    chatList:[
         {
           id:1,
           name:"我是谁",
-          information:"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+          message:"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
           image:"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1124881678,3417344117&fm=26&gp=0.jpg",
           time:"22:36"
-        },
-        {
-          id:2,
-          name:"鸡腿子",
-          information:"pppppppppppp",
-          image:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588525947851&di=b3466ea7bf6488ba1579fa29f046058a&imgtype=0&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D95693490%2C752518729%26fm%3D214%26gp%3D0.jpg",
-          time:"22:00"
-        },
-        {
-          id:3,
-          name:"菠萝菠萝蜜",
-          information:"vvvvvvvvvvv",
-          image:"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1874752187,1869611550&fm=26&gp=0.jpg",
-          time:"21:00"
         }
-    ]
+    ],
+    user:{},
+    chatS:[]
   },
 
   /**
@@ -41,6 +29,51 @@ Page({
 
   },
 
+  // 查询聊天信息
+  chat(e){
+    console.info(e.currentTarget.dataset.id)
+    wx.request({
+      url: liunxUrl+'house/chatTest/queryAllChat',
+      data:{
+        sendUserId:app.globalData.userInfo.id,
+        receptionUserId:e.currentTarget.dataset.id
+      },
+      success:res =>{
+        this.setData({
+          chatS:res.data.data
+        })
+        wx.setStorage({
+          data: res.data.data,
+          key: 'chatS',
+        })
+        wx.setStorage({
+          data: e.currentTarget.dataset.id,
+          key: 'receptionUserId',
+        })
+        console.info(this.data.chatS)
+        wx.navigateTo({
+          url: '/pages/chat/chat',
+        })
+      }
+    })
+
+
+  },
+  // 获得聊天列表
+  getChatList(){
+    wx.request({
+      url: liunxUrl+'house/chatTest/queryAllChatList',
+      data:{
+        userId:app.globalData.userInfo.id
+      },
+      success:res =>{
+        this.setData({
+          chatList:res.data.data
+        })
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -48,10 +81,30 @@ Page({
 
   },
 
+    // 跳转登录页面
+login:function(){
+  wx.navigateTo({
+    url: '/pages/login/login',
+  })
+}
+  ,
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+
+    this.data.user = app.globalData.userInfo
+    this.setData({
+      user:app.globalData.userInfo
+    })
+    if( this.data.user.id!=null){
+      this.getChatList();
+      let that= this;
+      setInterval(function get(){
+        that.getChatList()
+      },2000);
+    }
+   
 
   },
 

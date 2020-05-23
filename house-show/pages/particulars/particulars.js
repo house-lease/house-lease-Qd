@@ -41,6 +41,43 @@ Page({
         url: '/pages/photoAlbum/photoAlbum',
       })
     },
+
+    // 跳转聊天页面
+    consult(e){
+      if(app.globalData.userInfo.id!=null){
+      console.info(e)
+      wx.request({
+        url: liunxUrl+'house/chatTest/queryAllChat',
+        data:{
+          sendUserId:app.globalData.userInfo.id,
+          receptionUserId:e.currentTarget.dataset.id
+        },
+        success:res =>{
+          this.setData({
+            chatS:res.data.data
+          })
+          wx.setStorage({
+            data: res.data.data,
+            key: 'chatS',
+          })
+          wx.setStorage({
+            data: e.currentTarget.dataset.id,
+            key: 'receptionUserId',
+          })
+          console.info(this.data.chatS)
+          wx.navigateTo({
+            url: '/pages/chat/chat',
+          })
+        }
+      })     
+    }else{
+      wx.showToast({
+          title: '未登录',
+          image:"/pages/image/jg.png",
+         duration:2000
+     })
+    }
+    },
   /**
    * 生命周期函数--监听页面加载
    */

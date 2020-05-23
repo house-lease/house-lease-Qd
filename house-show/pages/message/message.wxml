@@ -1,19 +1,42 @@
 <!--消息页面-->
+<view wx:if="{{user.id!=null}}">
 <view class="message">
-
-  <view class="one"  wx:for="{{user}}" wx:for-index="key" wx:for-item="value" wx:key="id">
+  <view class="one"  wx:for="{{chatList}}" wx:for-index="key" 
+   data-id="{{value.sendUser.id==user.id?value.receptionUser.id:value.sendUser.id}}" wx:for-item="value" wx:key="id" bindtap="chat">
+  <view wx:if="{{value.sendUser.id!=user.id}}">
       <view class="picture">
-         <image src="{{user[key].image}}"/>
+         <image src="{{value.sendUser.imageUrl}}"/>
          </view>
       <view  class="username">
-          <text class="name">{{user[key].name}}</text>
+          <text class="name">{{value.sendUser.nickname}}</text>
       </view>  
-      <view>
+         <view>
             <view class="Time"> 
-                    <text class="time">{{user[key].time}}</text>
+                    <text class="time">234</text>
             </view>
-          <text class="information">{{user[key].information}}</text>
+          <text class="information">{{value.message}}</text>
       </view> 
   </view>
-  
+  <view  wx:else>
+      <view class="picture">
+         <image src="{{value.receptionUser.imageUrl}}"/>
+         </view>
+      <view  class="username">
+          <text class="name">{{value.receptionUser.nickname}}</text>
+      </view>  
+         <view>
+            <view class="Time"> 
+                    <text class="time">234</text>
+            </view>
+          <text class="information">{{value.message}}</text>
+      </view> 
+  </view>
+  </view>
+</view>
+</view>
+<view wx:else>
+<view class="bao">
+暂无登录,快去登录吧(●ˇ∀ˇ●)
+</view>
+	<button class="login"  bindtap="login" size='mini'  type="primary" hover-class="bt">登录/注册</button>
 </view>

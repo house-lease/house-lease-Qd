@@ -7,9 +7,15 @@ view,image{
 
 /*消息框*/
 .one{
+  position: relative;
   clear: both;
   height: 160rpx;
   border-bottom:  #F5F5F5 solid 2rpx ;  
+}
+.one::after{
+  content:" ";
+  display:block;
+  clear:both;
 }
 
 /*头像*/
@@ -31,7 +37,9 @@ image{
 
 /*消息内容*/
 .information{
-  line-height: 100rpx;
+  position: absolute;
+  top:80rpx;
+  left:20%;
   font-size: 28rpx;
   color: gray;
 }
@@ -44,6 +52,17 @@ image{
   font-size: 23rpx;
   color: gray;
 }
-
+.bao{
+  display: inline-block;
+  color: rgba(182,182,182);
+  font-size: 26rpx;
+  margin-left: 200rpx;
+  margin-top: 30rpx;
+  padding-top: 20rpx;
+}
+.login{
+  margin-top: 30%;
+  margin-left: 38%;
+}
 
 

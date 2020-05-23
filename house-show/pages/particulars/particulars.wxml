@@ -147,7 +147,7 @@
       		<text class="zi">分享</text>
       	</view>
       	<!-- 咨询 -->
-      	<view class="zixun">
+      	<view class="zixun"  bindtap="consult" data-id="{{houses.user.id}}">
       		<button size="mini">咨询</button>
       	</view>
       	<!-- 付款-->

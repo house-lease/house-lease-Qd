@@ -1,8 +1,8 @@
 {
   "pages":[
     "pages/home/home",
+    "pages/chat/chat",
     "pages/order/order",
-   
     "pages/search/search",
     "pages/personalCenter/personalCenter",
     "pages/login/login",
