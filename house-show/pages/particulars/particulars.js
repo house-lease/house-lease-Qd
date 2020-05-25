@@ -23,10 +23,6 @@ Page({
         ,
         collect:{}
       },
-      hidden(){
-        
-      }
-      ,
 
  swiperChange: function (e) {
         var that = this;
@@ -50,7 +46,7 @@ Page({
         url: liunxUrl+'house/chatTest/queryAllChat',
         data:{
           sendUserId:app.globalData.userInfo.id,
-          receptionUserId:e.currentTarget.dataset.id
+          receptionUserId:e.currentTarget.dataset.id.id
         },
         success:res =>{
           this.setData({

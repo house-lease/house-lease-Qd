@@ -1,6 +1,6 @@
 // 聊天室
 // 192.168.0.106
-var url = 'ws://182.92.168.223:8080/house/wx';
+var url = 'ws://192.168.0.106:8080/house/wx';
 // 182.92.168.223
 const app = getApp();
 
@@ -19,20 +19,10 @@ function connect(user,func) {
     } 
   })
   wx.onSocketOpen(function (res) {
-     wx.showToast({
-       title: '信道已开通~ssss',
-       icon: "success",
-       duration: 2000
-     })
      //接受服务器消息
      wx.onSocketMessage(func);//func回调可以拿到服务器返回的数据
   });
   wx.onSocketError(function (res) {
-    wx.showToast({
-      title: '信道连接失败，请检查！',
-      icon: "none",
-      duration: 2000
-    })
   })  
 }
 //发送消息

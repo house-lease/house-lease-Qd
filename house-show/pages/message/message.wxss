@@ -64,5 +64,17 @@ image{
   margin-top: 30%;
   margin-left: 38%;
 }
+.yuan{
+  color: white;
+  position: absolute;
+  background-color: red;
+  width:40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  line-height:40rpx;
+  text-align:center;
+  top: 65rpx;
+  right: 30rpx;
+}
 
 

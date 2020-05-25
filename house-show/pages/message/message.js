@@ -10,13 +10,7 @@ Page({
   data: {
 
     chatList:[
-        {
-          id:1,
-          name:"我是谁",
-          message:"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
-          image:"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1124881678,3417344117&fm=26&gp=0.jpg",
-          time:"22:36"
-        }
+      
     ],
     user:{},
     chatS:[]
@@ -31,31 +25,46 @@ Page({
 
   // 查询聊天信息
   chat(e){
-    console.info(e.currentTarget.dataset.id)
+    console.info(e)
+    // 修改未读消息的状态
     wx.request({
-      url: liunxUrl+'house/chatTest/queryAllChat',
+      url: liunxUrl+'house/chatTest/updateChatListViewState',
       data:{
         sendUserId:app.globalData.userInfo.id,
-        receptionUserId:e.currentTarget.dataset.id
+        receptionUserId:e.currentTarget.dataset.id.id,
+        chatListId:e.currentTarget.dataset.chatlistid
       },
       success:res =>{
-        this.setData({
-          chatS:res.data.data
-        })
-        wx.setStorage({
-          data: res.data.data,
-          key: 'chatS',
-        })
-        wx.setStorage({
-          data: e.currentTarget.dataset.id,
-          key: 'receptionUserId',
-        })
-        console.info(this.data.chatS)
-        wx.navigateTo({
-          url: '/pages/chat/chat',
-        })
+          if(res.data.data){
+            wx.request({
+              url: liunxUrl+'house/chatTest/queryAllChat',
+              data:{
+                sendUserId:app.globalData.userInfo.id,
+                receptionUserId:e.currentTarget.dataset.id.id
+              },
+              success:res =>{
+                this.setData({
+                  chatS:res.data.data
+                })
+                wx.setStorage({
+                  data: res.data.data,
+                  key: 'chatS',
+                })
+                wx.setStorage({
+                  data: e.currentTarget.dataset.id,
+                  key: 'receptionUserId',
+                })
+                console.info(this.data.chatS)
+                wx.navigateTo({
+                  url: '/pages/chat/chat',
+                })
+              }
+            })
+          }
       }
     })
+   
+
 
 
   },

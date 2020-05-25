@@ -1,14 +1,20 @@
 
 <view class="news" bindtap='outbtn'>
    <view class="historycon">
+  
    <scroll-view scroll-y="true" class="history" scroll-top="{{scrollTop}}">
     
        <block wx:for="{{newslist}}" wx:key="id">
         
-          
+         
           <!--自己的消息  -->
           <view class="chat-news" wx:if="{{item.isMyYou==0&&item.sendUser.id==userInfo.id}}">
-           <view>{{item.time}}</view>
+           <view wx:if="{{item.sendTimeString==null}}">
+            {{item.time}}
+           </view>
+           <view wx:else>
+            {{item.sendTimeString}}
+           </view>
               <view style="text-align: right;padding-right: 20rpx;">
                   <text class="name">{{item.sendUser.nickname }}</text>
                   <image class='new_img' src="{{item.sendUser.imageUrl}}"></image>
@@ -21,12 +27,11 @@
           </view> 
           <!-- 别人的消息  -->
             <view class="chat" wx:if="{{item.isMyYou==0&&item.sendUser.id!=userInfo.id}}">
-            <view wx:if="{{item.sendUser==receptionUserId}}">
-             <view>{{item.time}}</view>
+            <view wx:if="{{item.sendUser.id==receptionUserId.id}}">
+             <view>{{item.sendTimeString}}</view>
               <view style="text-align: right;padding-right: 20rpx;">
                <image class='new_imgs' src="{{item.sendUser.imageUrl}}"></image>
                   <text class="names">{{ item.sendUser.nickname }}</text>
-                   {{item.time}}
               </view>
               <view class='my_rights'>
                   <block>      
@@ -39,7 +44,8 @@
    </scroll-view>
   </view>  
 </view>
-<view id="flag"></view> 
+  <view id="flag">
+</view> 
 <!-- 聊天输入 -->
 <view class="message">
     <form bindreset="cleanInput" class="sendMessage">

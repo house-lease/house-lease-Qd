@@ -44,13 +44,13 @@ page {
   overflow: hidden;
 }
 .chat{
+  position: relative;
   width: 100%;
   overflow: hidden;
 }
 .chat .my_rights{
-  float: right;    
-  /* right: 40rpx;  */
-  margin-right: 70%;
+  float: left;
+  margin-top: 70rpx;
   padding: 10rpx 10rpx; 
 }
 .chat-news .my_right {  
@@ -59,8 +59,9 @@ page {
   padding: 10rpx 10rpx; 
 }  
 .chat .names{
-  float: left;
-  margin-left: 10rpx;
+  position: absolute;
+  top: 70rpx;
+  left: 110rpx;
 }
 .chat-news .name{
   margin-right: 10rpx;
@@ -155,12 +156,12 @@ page {
   z-index:3;  
 }
 .new_imgs{
-  margin-left: 30rpx;
+  position: absolute;
   width: 60rpx;  
   height: 60rpx;  
   border-radius: 50%;   
   vertical-align: middle;
-  float: left;
+  left: 25rpx;
 }
 .sendMessage input{
    float:left;

@@ -2,6 +2,7 @@
 const app = getApp()
 var websocket = require('../../utils/websocket.js');
 var utils = require('../../utils/util.js');
+var time = utils.formatTimeTwo;
 Page({
 
   /**
@@ -28,6 +29,7 @@ Page({
 
   // 页面显示调用
   onShow(){
+    this.bottom()
     var that = this
 
     that.data.userInfo=app.globalData.userInfo
@@ -50,12 +52,17 @@ Page({
         this.setData({
           receptionUserId:res.data
         })
+        wx.setNavigationBarTitle({
+          title:this.data.receptionUserId.nickname
+        })
       }
     })
+    
 
     //调通接口
     websocket.connect(that.data.userInfo,function (res) {
        console.log(JSON.parse(res.data))
+
      that.data.newslist.push(JSON.parse(res.data))
       that.setData({
         newslist:  that.data.newslist
@@ -65,11 +72,6 @@ Page({
   // 页面卸载
   onUnload(){
     wx.closeSocket();
-    wx.showToast({
-      title: '连接已断开~',
-      icon: "none",
-      duration: 2000
-    })
   },
   //事件处理函数
   send: function () {
@@ -88,7 +90,7 @@ Page({
           isMyYou:0
       }
      
-      websocket.send('{ "message": "' +flag.data.message + '","sendUser":"'+flag.data.userInfo.id+'", "receptionUser": "' +flag.data.receptionUserId + '","isMyYou":"0"}')     
+      websocket.send('{ "message": "' +flag.data.message + '","sendUser":"'+flag.data.userInfo.id+'", "receptionUser": "' +flag.data.receptionUserId.id + '","isMyYou":"0"}')     
       flag.data.newslist.push({ isMyYou: 0, sendUser:app.globalData.userInfo,message:flag.data.message,time:utils.formatTime(new Date())});
       flag.setData({
         newslist: flag.data.newslist,
@@ -176,6 +178,7 @@ Page({
     query.select('#flag').boundingClientRect()
     query.selectViewport().scrollOffset()
     query.exec(function (res) {
+      console.info(res)
       wx.pageScrollTo({
         scrollTop: res[0].bottom  // #the-id节点的下边界坐标  
       })

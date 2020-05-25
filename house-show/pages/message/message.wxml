@@ -2,7 +2,9 @@
 <view wx:if="{{user.id!=null}}">
 <view class="message">
   <view class="one"  wx:for="{{chatList}}" wx:for-index="key" 
-   data-id="{{value.sendUser.id==user.id?value.receptionUser.id:value.sendUser.id}}" wx:for-item="value" wx:key="id" bindtap="chat">
+   data-id="{{value.sendUser.id==user.id?value.receptionUser:value.sendUser}}"
+   data-chatlistid="{{value.id}}"
+    wx:for-item="value" wx:key="id" bindtap="chat">
   <view wx:if="{{value.sendUser.id!=user.id}}">
       <view class="picture">
          <image src="{{value.sendUser.imageUrl}}"/>
@@ -12,7 +14,10 @@
       </view>  
          <view>
             <view class="Time"> 
-                    <text class="time">234</text>
+                    <text class="time">{{value.sendTimeString}}</text>
+            </view>
+            <view class="yuan" wx:if="{{value.unread!=0&&value.theSendUserId!=user.id}}">
+                {{value.unread}}
             </view>
           <text class="information">{{value.message}}</text>
       </view> 
@@ -26,7 +31,10 @@
       </view>  
          <view>
             <view class="Time"> 
-                    <text class="time">234</text>
+                    <text class="time">{{value.sendTimeString}}</text>
+            </view>
+             <view class="yuan" wx:if="{{value.unread!=0&&value.theSendUserId!=user.id}}">
+                {{value.unread}}
             </view>
           <text class="information">{{value.message}}</text>
       </view> 
