@@ -90,7 +90,6 @@ Page({
   },
   // 点击查询方法
   look: function (e) {
-    console.info(e.currentTarget.dataset.id);
     var this_ = this;
     wx.request({
       url: liunxUrl + 'house/house/queryByHouseId',

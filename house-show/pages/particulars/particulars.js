@@ -1,6 +1,7 @@
 // pages/particulars/particulars.js
 var amapFile = require('../../libs/amap-wx');
 var config = require('../../libs/config');
+var markersData = [];
 var app = getApp();
 var liunxUrl=app.globalData.liunxUrl
 var localUrl=app.globalData.localUrl
@@ -10,18 +11,26 @@ Page({
    * 页面的初始数据
    */
   data: {
+        qie:"",
+        qie1:"hidden",
         user:{},
         hi:"",
         hi1:"hidden",
         interval:2000,//自动切换时间间隔
         duration:1000,//滑动动画时长
         current:0,//图片数量
+        querykeywords:"",
         houses:[
         
         ],
         markers:{}
         ,
-        collect:{}
+        markerss: [],
+        textData: {},
+        city: '',
+        collect:{},
+        latitude:"",
+        longitude:""
       },
 
  swiperChange: function (e) {
@@ -37,7 +46,23 @@ Page({
         url: '/pages/photoAlbum/photoAlbum',
       })
     },
-
+    weizhi_(){
+      this.setData({
+        qie:"",
+        qie1:"hidden"
+      })
+    },
+    zhou(){
+      this.setData({
+        qie:"hidden",
+        qie1:""
+      })
+    },
+    xuan(e){
+      this.rim(e.currentTarget.dataset.name);
+    }
+    ,
+    
     // 跳转聊天页面
     consult(e){
       if(app.globalData.userInfo.id!=null){
@@ -243,6 +268,118 @@ address(){
           }
         })
    },
+
+// 点击地理位置
+   makertap: function(e) {
+     var id = e.markerId;
+     var that = this;
+     that.showMarkerInfo(markersData,id);
+     that.changeMarkerColor(markersData,id);
+   },
+  //  获取周边
+rim(querykeywords){
+  querykeywords = querykeywords!=null?querykeywords:"小吃"
+  var that = this;
+  wx.getStorage({
+    key: 'house',
+    success:function(res){
+        that.data.houses = res.data
+        var key = config.Config.key;
+        var myAmapFun = new amapFile.AMapWX({key: key});
+        let location = that.data.houses.latitude+","+that.data.houses.longitude;
+    var params = {
+      iconPathSelected: '/pages/image/marker_checked.png',
+      iconPath: '/pages/image/marker.png',
+      querykeywords:querykeywords,
+      location:location,
+      success: function(data){
+        console.info(data)
+        markersData = data.markers;
+        var poisData = data.poisData;
+        var markers_new = [
+            {id: 1,
+            latitude: that.data.houses.latitude,
+            longitude: that.data.houses.longitude,
+            iconPath: "/pages/image/mapicon_navi_s.png",
+            width: 22,
+            height: 32}
+        ];
+        markersData.forEach(function(item,index){
+          markers_new.push({
+            id: item.id,
+            latitude: item.latitude,
+            longitude: item.longitude,
+            iconPath: item.iconPath,
+            width: item.width,
+            height: item.height
+          })
+        })
+        if(markersData.length > 0){
+          that.setData({
+            markerss: markers_new
+          });
+          that.setData({
+            city: poisData[0].cityname || ''
+          });
+          that.setData({
+            latitude: markersData[0].latitude
+          });
+          that.setData({
+            longitude: markersData[0].longitude
+          });
+          that.showMarkerInfo(markersData,0);
+        }
+      },
+      fail: function(info){
+        // wx.showModal({title:info.errMsg})
+      }
+    }
+    myAmapFun.getPoiAround(params)
+  },
+  showMarkerInfo: function(data,i){
+    var that = this;
+    that.setData({
+      textData: {
+        name: data[i].name,
+        desc: data[i].address
+      }
+    });
+    }
+  })
+    
+},
+showMarkerInfo: function(data,i){
+  var that = this;
+  that.setData({
+    textData: {
+      name: data[i].name,
+      desc: data[i].address
+    }
+  });
+},
+changeMarkerColor: function(data,i){
+  var that = this;
+  var markers = [];
+  for(var j = 0; j < data.length; j++){
+    if(j==i){
+      data[j].iconPath = "/pages/image/marker_checked.png";
+    }else{
+      data[j].iconPath = "/pages/image/marker.png";
+    }
+    markers.push({
+      id: data[j].id,
+      latitude: data[j].latitude,
+      longitude: data[j].longitude,
+      iconPath: data[j].iconPath,
+      width: data[j].width,
+      height: data[j].height
+    })
+  }
+  that.setData({
+    markerss: markers
+  });
+}
+,
   /**
    * 生命周期函数--监听页面显示
    */
@@ -254,11 +391,13 @@ address(){
           this_.setData({
             houses:res.data
           })
+          this_.data.houses = res.data
           console.info(this_.data.houses)
       }
     })
     this.address();
     this.Collect();
+    this.rim();
   },
 
   /**
@@ -296,3 +435,4 @@ address(){
 
   }
 })
+

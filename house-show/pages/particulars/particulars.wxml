@@ -35,13 +35,11 @@
 
       	</view>
       </view>
-
       <view>
       	<!-- 分割线 -->
       	<view class="divLine"></view>
       	<view class="intro">
       		<view class="jianjie">房屋简介</view>
-
       		<view class="zhengZu">
       			<image class="he" src="/pages/image/sf.png"></image>
       			<view wx:if="{{houses.houseCareful.shafa==0}}">
@@ -119,14 +117,25 @@
 
       	</view>
       </view>
-      <!-- 分割线 -->
-      <view class="divLine"></view>
 
       <!-- 房屋位置地图显示-->
       <view class="location">
-      	<view class="map_container_top">
-      		<view class="map_container">
-      			<map bindtap="daohang" class="map" id="map" longitude="{{houses.longitude}}" latitude="{{houses.latitude}}" scale="16" markers="{{markers}}"></map>
+      	<view class="divLine_">
+      		<view class="weizhi_" bindtap="weizhi_"> 房屋位置</view>
+      		<view class="zhou" bindtap="zhou"> 房屋周边</view>
+      	</view>
+      	<view class="map_container">
+      		<map hidden="{{qie}}" bindtap="daohang" class="map" id="map" longitude="{{houses.longitude}}" latitude="{{houses.latitude}}" scale="16" markers="{{markers}}"></map>
+      		<view class="xuan" hidden="{{qie1}}">
+      			<view bindtap="xuan" data-name="美食">美食 </view>
+      			<view  bindtap="xuan"  data-name="学校">学校 </view>
+      			<view bindtap="xuan"  data-name="娱乐场所">娱乐场所 </view>
+      			<view bindtap="xuan"  data-name="金融">金融</view>
+      		</view>
+      		<map hidden="{{qie1}}" class="map" id="map" longitude="{{houses.longitude}}" latitude="{{houses.latitude}}" scale="16" markers="{{markerss}}" bindmarkertap="makertap"></map>
+      		<view hidden="{{qie1}}" class="map_text">
+      			<text class="h1">{{textData.name}}</text>
+      			<text class="h2">{{textData.desc}}</text>
       		</view>
       	</view>
       </view>
@@ -147,7 +156,7 @@
       		<text class="zi">分享</text>
       	</view>
       	<!-- 咨询 -->
-      	<view class="zixun"  bindtap="consult" data-id="{{houses.user}}">
+      	<view class="zixun" bindtap="consult" data-id="{{houses.user}}">
       		<button size="mini">咨询</button>
       	</view>
       	<!-- 付款-->
