@@ -23,13 +23,12 @@
       			<image class="phoneImage" src="/pages/image/dh.png">咨询</image>
       		</view>
 
+					<view class="money">
+						<text class="price" >￥{{houses.price}}</text>/月
+							<text class="qi">{{houses.startName}}起</text>
+					</view>
       		<view class="xin">
       			<text >{{houses.houseLeaseName}} | {{houses.houseTypeName}} | {{houses.narrate}}</text>
-      		</view>
-
-      		<view>
-      			<text class="qi">{{houses.startName}}起</text>
-      			<text class="price" >￥{{houses.price}}</text>/月
       		</view>
 
 
@@ -37,7 +36,6 @@
       </view>
       <view>
       	<!-- 分割线 -->
-      	<view class="divLine"></view>
       	<view class="intro">
       		<view class="jianjie">房屋简介</view>
       		<view class="zhengZu">
@@ -122,7 +120,7 @@
       <view class="location">
       	<view class="divLine_">
       		<view class="weizhi_" bindtap="weizhi_"> 房屋位置</view>
-      		<view class="zhou" bindtap="zhou"> 房屋周边</view>
+      		<view class="zhou" bindtap="zhou">房屋周边</view>
       	</view>
       	<view class="map_container">
       		<map hidden="{{qie}}" bindtap="daohang" class="map" id="map" longitude="{{houses.longitude}}" latitude="{{houses.latitude}}" scale="16" markers="{{markers}}"></map>

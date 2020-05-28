@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/particulars/particulars",
     "pages/home/home",
     "pages/chat/chat",
     "pages/order/order",
@@ -12,7 +13,7 @@
     "pages/insertHouse/insertHouse",
     "pages/verification/verification",
     "pages/information/information",
-    "pages/particulars/particulars",
+
     "pages/select/select",
     "pages/photoAlbum/photoAlbum",
     "pages/like/likes",

@@ -21,6 +21,7 @@ image {
 
 .swiperContainer {
   position: relative;
+  margin-top: 20rpx;
 }
 
 /*图片数量*/
@@ -34,7 +35,7 @@ image {
   text-align: center;
   font-size: 26rpx;
   position: absolute;
-  left: 240px;
+  left: 300px;
   bottom: 20rpx;
 }
 .im{
@@ -42,17 +43,24 @@ image {
   margin-right: 30rpx;
 }
 .price {
-   margin-left: 60rpx;
+
   font-weight: bold;
-  font-size: 45rpx;
-  color: red;
+  font-size: 16px;
+  color:tomato;
 }
 
 .xin{
-  font-size: 20rpx;
+  font-size: 16px;
   margin-top: 20rpx;
   margin-bottom: 30rpx;
-  margin-left: 60rpx;
+  margin-left: 40rpx;
+  font-family: Microsoft Yahei;
+}
+.money{
+  font-family: Microsoft Yahei;
+  display: inline-block;
+  margin-left: 40rpx;
+  margin-top: 20rpx;
 }
 
 text {
@@ -60,20 +68,28 @@ text {
 }
 .jianjie{
   margin-left: 40rpx;
+  margin-top: 60rpx;
+  font-family: Microsoft Yahei;
+  font-size: 18px;
 }
 .qi{
-  margin-left: 200rpx;
+  font-family: Microsoft Yahei;
+  font-size: 14px;
+  margin-left: 20rpx;
 }
 .houseType {
   margin-left: 100rpx;
 }
 .wo{
-  display: inline-block;
+  margin-left: 40rpx;
 }
 .jia {
-  margin-left:60rpx;
-  font-size: 50rpx;
+  font-size: 20px;
   font-weight: bold;
+  font-family: Microsoft Yahei;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .particulars {
@@ -83,18 +99,12 @@ text {
 
 .phoneImage {
   margin-left: 180rpx;
-  width: 80rpx;
-  height: 80rpx;
-
+  margin-top: 10rpx;
+  width: 60rpx;
+  height: 60rpx;
 }
 
 /*分割线样式*/
-.divLine {
-  margin-top: 40rpx;
-  background: rgba(128, 125, 125, 0.59);
-  width: 100%;
-  height: 4rpx;
-}
 
 /* 详情信息*/
 
@@ -111,7 +121,7 @@ text {
 .zhengZu{
   float: left;
   margin-left: 90rpx;
-  margin-top: 30rpx;
+  margin-top: 40rpx;
 }
 .t,.t1{
   margin-left: 10rpx;
@@ -145,9 +155,9 @@ text {
 }
 
 .bottom {
-  padding-top: 30rpx;
+
   width: 100%;
-  height: 140rpx;
+  height: 130rpx;
   position: fixed;
  bottom: 0rpx;
   background-color:white;
@@ -222,10 +232,12 @@ button[size='mini'] {
   .weizhi_,.zhou{
     display: inline-block;
     margin-left: 30rpx;
-    font-weight: 600;
+
+    font-family: Microsoft Yahei;
+    font-size: 16px;
   }
   .divLine_{
-    border-bottom: 1rpx solid gray;
+ 
     border-top: 1rpx solid gray;
     padding-top: 30rpx;
     padding-bottom: 30rpx;
