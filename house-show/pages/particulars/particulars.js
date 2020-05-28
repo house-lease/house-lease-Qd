@@ -116,6 +116,7 @@ Page({
 daohang(){
   let this_ = this;
   wx.openLocation({
+    
     latitude: this_.data.houses.latitude,
     longitude: this_.data.houses.longitude,
   })
@@ -133,7 +134,7 @@ address(){
   var key = config.Config.key;
   var myAmapFun = new amapFile.AMapWX({key: key});
   myAmapFun.getRegeo({
-    iconPath: "../image/marker.png",
+    iconPath: "/pages/image/marker.png",
     iconWidth: 22,
     iconHeight: 32,
     success: function(data){
@@ -278,7 +279,7 @@ address(){
    },
   //  获取周边
 rim(querykeywords){
-  querykeywords = querykeywords!=null?querykeywords:"小吃"
+  querykeywords = querykeywords!=null?querykeywords:"餐饮"
   var that = this;
   wx.getStorage({
     key: 'house',
@@ -302,7 +303,8 @@ rim(querykeywords){
             longitude: that.data.houses.longitude,
             iconPath: "/pages/image/mapicon_navi_s.png",
             width: 22,
-            height: 32}
+            height: 32
+          }
         ];
         markersData.forEach(function(item,index){
           markers_new.push({

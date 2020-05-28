@@ -127,9 +127,9 @@
       	<view class="map_container">
       		<map hidden="{{qie}}" bindtap="daohang" class="map" id="map" longitude="{{houses.longitude}}" latitude="{{houses.latitude}}" scale="16" markers="{{markers}}"></map>
       		<view class="xuan" hidden="{{qie1}}">
-      			<view bindtap="xuan" data-name="美食">美食 </view>
+      			<view bindtap="xuan" data-name="餐饮">餐饮 </view>
       			<view  bindtap="xuan"  data-name="学校">学校 </view>
-      			<view bindtap="xuan"  data-name="娱乐场所">娱乐场所 </view>
+      			<view bindtap="xuan"  data-name="娱乐">娱乐 </view>
       			<view bindtap="xuan"  data-name="金融">金融</view>
       		</view>
       		<map hidden="{{qie1}}" class="map" id="map" longitude="{{houses.longitude}}" latitude="{{houses.latitude}}" scale="16" markers="{{markerss}}" bindmarkertap="makertap"></map>
