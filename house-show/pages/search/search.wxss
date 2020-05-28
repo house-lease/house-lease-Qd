@@ -161,6 +161,7 @@
   height: 350rpx;
   clear: both;
   border-bottom: Gainsboro solid 1px;
+  padding-left: 20rpx;
 }
 
 .fangwu{
