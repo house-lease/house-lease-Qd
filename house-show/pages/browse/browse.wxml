@@ -1,0 +1,32 @@
+<!-- 自定义组件 -->
+<view class="zong">
+<view wx:if="{{user.id!=null}}">
+	<view wx:if="{{browse.length!=0}}">
+		<view wx:for="{{browse}}" wx:for-index="key" wx:for-item="value" wx:key="id">
+      <view class="one" bindtap="look" data-id="{{value.house.id}}">
+        <view class="fangwu">
+        <image class="fangtu" src="{{value.house.houseImages[0].imageUrl}}"></image>
+        </view>
+        <view class="name">{{value.house.houseName}}</view>
+        <view class="hezu">{{value.house.houseLeaseName}} | {{value.house.houseTypeName}}</view>
+        <view class="img">
+						<image class="phone" src="/pages/image/dh.png"></image>
+				</view>
+          <view class="address">{{value.house.address}}</view>
+          <view class="money">{{value.house.price}}/月</view>
+      </view>
+		</view>
+    
+		<view class="ti">我们是有底线了~/(ㄒoㄒ)/~~</view>
+	</view>
+	<view class="bao" wx:else>
+		暂无浏览记录,快去看房吧(●ˇ∀ˇ●)
+	</view>
+  </view>
+  <view wx:else>
+<view class="bao">
+	暂无浏览记录,快去看房吧(●ˇ∀ˇ●)
+</view>
+	<button class="login"  bindtap="login" size='mini'  type="primary" hover-class="bt">登录/注册</button>
+</view>
+</view>

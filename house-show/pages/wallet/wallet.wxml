@@ -1,0 +1,23 @@
+<!--pages/wallet/wallet.wxml-->
+<view class="wallet">
+  <view class="balance">
+    <view class="uptext">
+      <text id = "text1"class="text">账户余额</text>
+      <text id = "text2"class="text">￥{{money.money}}</text>
+    </view>
+  </view>
+  <view class="nextval">
+    <view>
+        <view id="chongzhi" >
+          <view><image  src="/pages/image/chongzhi.png" mode="scaleToFill"></image></view>
+          <view class="chongzhi">充值</view>
+        </view>
+        <view class="border"></view>
+        <view id="tixian" > 
+          <view><image  src="/pages/image/tixian.png" mode="scaleToFill"></image></view>
+          <view class="tixian">提现</view>
+        </view>
+    </view>
+  </view>
+  
+</view>

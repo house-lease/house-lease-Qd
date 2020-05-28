@@ -40,8 +40,8 @@ App({
     userInfo: {
     },
     address:"",
-    liunxUrl:"http://182.92.168.223/",
-    localUrl:"http://192.168.0.106:8080/",
+    localUrl:"http://182.92.168.223/",
+    liunxUrl:"http://192.168.0.106:8080/",
     // 192.168.0.106
   }
 })

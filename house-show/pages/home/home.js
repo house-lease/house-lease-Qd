@@ -102,6 +102,20 @@ Page({
           data: res.data.data,
           key: 'house',
         })
+        if(this_.data.user.id!=null){
+
+            // 添加浏览记录
+        wx.request({
+          url:liunxUrl + 'house/browse/addInfo',
+          data:{
+            userId:this_.data.user.id,
+            houseId:e.currentTarget.dataset.id
+          },
+          success:res=>{
+            console.info(res.data.message)
+          }
+        })
+        }
         wx.navigateTo({
           url: '/pages/particulars/particulars',
         })
@@ -191,7 +205,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.data.user=app.globalData.userInfo;
     // 调用查询房屋的信息
     if (this.data.address_ != "") {
       console.info("到我了")

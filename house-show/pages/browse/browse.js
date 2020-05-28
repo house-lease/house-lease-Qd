@@ -1,4 +1,4 @@
-// pages/search/search.js
+// pages/like/likes.js
 var app = getApp();
 var liunxUrl=app.globalData.liunxUrl
 var localUrl=app.globalData.localUrl
@@ -8,25 +8,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    address:"你想住哪里？",
-    houses:[
-    ],
-    user:{}
+    user:{},
+    browse:[]
+  },
 
-},
-
-  // 单击搜索触发的事件
-  open:function(){
-    wx.navigateTo({
-      url: '/pages/select/select',
-    })
- }
+  // 跳转登录页面
+login:function(){
+  wx.navigateTo({
+    url: '/pages/login/login',
+  })
+}
   ,
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -40,28 +38,47 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.data.user=app.globalData.userInfo;
-      wx.getStorage({
-        key: 'rimHouses',
-        success:res =>{
-          this.setData({
-            houses:res.data
-          })
-        }
-      })
-      wx.getStorage({
-        key: 'addressName',
-        success: res=>{
-          this.setData({
-            address:res.data
-          })
-        }
-      })
+    this.setData({
+      user:app.globalData.userInfo
+    })
+    if(this.data.user.id!=null){
+      this.houseShow();
+    }
+   
   },
 
-   // 点击查询方法
-   look:function(e){
-    console.info(e.currentTarget.dataset.id);
+  // 显示收藏房屋的方法
+  houseShow:function(){
+    wx.showLoading({
+      title: '加载中',
+      mask: true,
+    })
+    var this_=this;
+    this.setData({
+      user:app.globalData.userInfo
+    })
+    // 定义一个函数：作用是查询所有的房屋信息，返回的结果是json格式
+   wx.request({
+     url: liunxUrl+'house/browse/queryInfoByUserId', 
+     data: {
+       userId:this_.data.user.id
+     },
+     success(res) {
+       console.info(res.data);
+       this_.setData({
+         "browse": res.data.data
+       });
+       console.info(this_.data.browse)
+       wx.hideLoading({
+        
+       })
+     }
+   })  
+  },
+
+  // 点击查询的方法
+  look:function(e){
+    console.info(e);
     var this_ = this;
     wx.request({
       url: liunxUrl+'house/house/queryByHouseId', 
@@ -74,19 +91,6 @@ Page({
           data: res.data.data,
           key: 'house',
         })
-        if(this_.data.user.id!=null){
-          // 添加浏览记录
-      wx.request({
-        url:liunxUrl + 'house/browse/addInfo',
-        data:{
-          userId:this_.data.user.id,
-          houseId:e.currentTarget.dataset.id
-        },
-        success:res=>{
-          console.info(res.data.message)
-        }
-      })
-      }
         wx.navigateTo({
           url: '/pages/particulars/particulars',
         })
@@ -94,6 +98,7 @@ Page({
       }
     })
   },
+
   /**
    * 生命周期函数--监听页面隐藏
    */

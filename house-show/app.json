@@ -1,7 +1,9 @@
 {
   "pages":[
-    "pages/particulars/particulars",
     "pages/home/home",
+    "pages/wallet/wallet",
+    "pages/browse/browse",
+    "pages/particulars/particulars",
     "pages/chat/chat",
     "pages/order/order",
     "pages/search/search",

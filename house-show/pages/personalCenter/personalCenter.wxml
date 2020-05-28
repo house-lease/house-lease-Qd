@@ -25,7 +25,7 @@
 </view>
 
 <view id="middle">
-	<view  id="biaoqian">
+	<view  id="biaoqian" bindtap="wallet">
 		<view class="img">
 			<image  src="/pages/image/qian.png"></image>
 		</view>
@@ -45,7 +45,7 @@
 		</view>
 	</view>
 
-	<view id="biaoqian">
+	<view id="biaoqian" bindtap="browse">
 		<view class="img">
 			<image  src="/pages/image/jilu.png"></image>
 		</view>
@@ -55,7 +55,7 @@
 		</view>
 	</view>
 
-		<view id="biaoqian">
+		<view id="biaoqian" bindtap="order">
 		<view class="img">
 			<image  src="/pages/image/dingdan.png"></image>
 		</view>

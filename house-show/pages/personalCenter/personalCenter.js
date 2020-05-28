@@ -14,7 +14,41 @@ Page({
      sex:"",
     user:{}
   },
+  // 跳转我的钱包页面
+  wallet(){
+    if(this.data.user.id!=null){
+      wx.navigateTo({
+        url: '/pages/wallet/wallet',
+      })
+    }else{
+      wx.showToast({
+          title: '未登录',
+          image:"/pages/image/jg.png",
+         duration:2000
+     })
+    }
+  },
+  // 跳转我的订单
+  order(){
+    if(this.data.user.id!=null){
+      wx.navigateTo({
+        url: '/pages/order/order',
+      })
+    }else{
+      wx.showToast({
+          title: '未登录',
+          image:"/pages/image/jg.png",
+         duration:2000
+     })
+    }
 
+  },
+  // 跳转浏览记录页面
+  browse(){
+    wx.navigateTo({
+      url: '/pages/browse/browse',
+    })
+  },
   // 跳转信息页面
   examine(){
     wx.navigateTo({

@@ -3,7 +3,12 @@
     <view class="phone">
       <text>手机号</text>
       <view class="telephone">
-        <text>{{user.phone}}</text>
+      <view wx:if="{{user.phone!=null}}">
+      <text>{{user.phone}}</text>
+      </view>
+        <view wx:else>
+          <text>请绑定手机</text>
+        </view>
       </view>
     </view>
     <view bindtap="renZheng" class="authentication">

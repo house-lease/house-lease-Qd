@@ -129,6 +129,7 @@
       			<view  bindtap="xuan"  data-name="学校">学校 </view>
       			<view bindtap="xuan"  data-name="娱乐">娱乐 </view>
       			<view bindtap="xuan"  data-name="金融">金融</view>
+						<view bindtap="xuan"  data-name="交通">交通</view>
       		</view>
       		<map hidden="{{qie1}}" class="map" id="map" longitude="{{houses.longitude}}" latitude="{{houses.latitude}}" scale="16" markers="{{markerss}}" bindmarkertap="makertap"></map>
       		<view hidden="{{qie1}}" class="map_text">

@@ -238,3 +238,15 @@
   margin-top: 30rpx;
   padding-top: 20rpx;
 }
+.bao{
+  display: inline-block;
+  color: rgba(182,182,182);
+  font-size: 26rpx;
+  margin-left: 200rpx;
+  margin-top: 30rpx;
+  padding-top: 20rpx;
+}
+.login{
+  margin-top: 30%;
+  margin-left: 38%;
+}
