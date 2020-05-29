@@ -38,10 +38,18 @@ login:function(){
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setData({
-      user:app.globalData.userInfo
+    wx.getStorage({
+      key: 'login',
+      success:res=>{
+        app.globalData.userInfo=res.data
+        // 获取用户是否登录
+        this.setData({
+          user:app.globalData.userInfo
+        })
+      }
     })
-    if(this.data.user.id!=null){
+ 
+    if(app.globalData.userInfo.id!=null){
       this.houseShow();
     }
    

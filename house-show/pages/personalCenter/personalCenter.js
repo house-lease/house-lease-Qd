@@ -87,10 +87,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-// 获取用户是否登录
-    this.setData({
-      user:app.globalData.userInfo
+    wx.getStorage({
+      key: 'login',
+      success:res=>{
+        console.info(res.data)
+        app.globalData.userInfo=res.data
+        // 获取用户是否登录
+        this.setData({
+          user:app.globalData.userInfo
+        })
+      }
     })
+
   },
 
   /**

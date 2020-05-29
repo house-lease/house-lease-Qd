@@ -30,7 +30,8 @@ Page({
         city: '',
         collect:{},
         latitude:"",
-        longitude:""
+        longitude:"",
+        nearby:[]
       },
 
  swiperChange: function (e) {
@@ -40,6 +41,49 @@ Page({
           })
       }, 
 
+      // 获取周边房子
+      nearby(){
+        wx.getStorage({
+          key: 'house',
+          success:res=>{
+            wx.request({
+              url: liunxUrl+'house/house/rim',
+              data:{
+                latitude:res.data.latitude,
+                longitude:res.data.longitude
+              }, 
+              success:(res)=> {
+                console.info(res.data.data);
+                this.setData({
+                  nearby:res.data.data
+                })
+              }
+            })
+          }
+        })
+      },
+       // 点击查询的方法
+  look:function(e){
+    console.info(e);
+    var this_ = this;
+    wx.request({
+      url: liunxUrl+'house/house/queryByHouseId', 
+      data: {
+       houseId:e.currentTarget.dataset.id
+      },
+      success(res) {
+        console.info(res.data.data);
+        wx.setStorage({
+          data: res.data.data,
+          key: 'house',
+        })
+        wx.navigateTo({
+          url: '/pages/particulars/particulars',
+        })
+        
+      }
+    })
+  },
       // 跳转到相册页面
     showImage(){
       wx.navigateTo({
@@ -67,30 +111,38 @@ Page({
     consult(e){
       if(app.globalData.userInfo.id!=null){
       console.info(e)
-      wx.request({
-        url: liunxUrl+'house/chatTest/queryAllChat',
-        data:{
-          sendUserId:app.globalData.userInfo.id,
-          receptionUserId:e.currentTarget.dataset.id.id
-        },
-        success:res =>{
-          this.setData({
-            chatS:res.data.data
-          })
-          wx.setStorage({
-            data: res.data.data,
-            key: 'chatS',
-          })
-          wx.setStorage({
-            data: e.currentTarget.dataset.id,
-            key: 'receptionUserId',
-          })
-          console.info(this.data.chatS)
-          wx.navigateTo({
-            url: '/pages/chat/chat',
-          })
-        }
-      })     
+      if(e.currentTarget.dataset.id.id!=app.globalData.userInfo.id){
+        wx.request({
+          url: liunxUrl+'house/chatTest/queryAllChat',
+          data:{
+            sendUserId:app.globalData.userInfo.id,
+            receptionUserId:e.currentTarget.dataset.id.id
+          },
+          success:res =>{
+            this.setData({
+              chatS:res.data.data
+            })
+            wx.setStorage({
+              data: res.data.data,
+              key: 'chatS',
+            })
+            wx.setStorage({
+              data: e.currentTarget.dataset.id,
+              key: 'receptionUserId',
+            })
+            console.info(this.data.chatS)
+            wx.navigateTo({
+              url: '/pages/chat/chat',
+            })
+          }
+        })     
+      }else{
+        wx.showToast({
+            title: '这是您的房子',
+            image:"/pages/image/jg.png",
+           duration:2000
+       })
+      } 
     }else{
       wx.showToast({
           title: '未登录',
@@ -387,6 +439,9 @@ changeMarkerColor: function(data,i){
    */
   onShow:function () {
     var this_=this;
+    this_.setData({
+      user:app.globalData.userInfo
+    })
     wx.getStorage({
       key: 'house',
       success:function(res){
@@ -400,6 +455,7 @@ changeMarkerColor: function(data,i){
     this.address();
     this.Collect();
     this.rim();
+    this.nearby();
   },
 
   /**

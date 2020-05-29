@@ -43,7 +43,11 @@ Page({
                             success(responseData) {
                             if (responseData.data.data!=null) {
                              // 表示登录成功
-                              app.globalData.userInfo=responseData.data.data;
+                              // app.globalData.userInfo=responseData.data.data;
+                              wx.setStorage({
+                                data: responseData.data.data,
+                                key: 'login',
+                              })
                                 // >> 2、显示登录成功的信息
                               wx.showToast({
                                 title: '登录成功',
@@ -59,7 +63,7 @@ Page({
                                   // 登录失败
                                   // >> 1、移除已经保存的ticket
                                 wx.removeStorage({
-                                key: 'key'
+                                key: 'login'
                                })
                   
                                   // >> 2、显示登录失败信息

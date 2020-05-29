@@ -22,7 +22,9 @@
       		<view class="im" bindtap="calling" data-phone="{{houses.user.phone}}">
       			<image class="phoneImage" src="/pages/image/dh.png">咨询</image>
       		</view>
-
+							<view id="fanRz" wx:if="{{houses.user.id==user.id}}">
+					<image  src="/pages/image/rz.png"></image>
+				</view>
 					<view class="money">
 						<text class="price" >￥{{houses.price}}</text>/月
 							<text class="qi">{{houses.startName}}起</text>
@@ -131,13 +133,35 @@
       			<view bindtap="xuan"  data-name="金融">金融</view>
 						<view bindtap="xuan"  data-name="交通">交通</view>
       		</view>
-      		<map hidden="{{qie1}}" class="map" id="map" longitude="{{houses.longitude}}" latitude="{{houses.latitude}}" scale="16" markers="{{markerss}}" bindmarkertap="makertap"></map>
+      		<map hidden="{{qie1}}" class="map_" id="map" longitude="{{houses.longitude}}" latitude="{{houses.latitude}}" scale="16" markers="{{markerss}}" bindmarkertap="makertap"></map>
       		<view hidden="{{qie1}}" class="map_text">
       			<text class="h1">{{textData.name}}</text>
       			<text class="h2">{{textData.desc}}</text>
       		</view>
       	</view>
       </view>
+
+<!-- 房屋列表 -->
+<view  wx:if="{{nearby.length!=0}}" >
+<text>附近房源</text>
+<view wx:for="{{nearby}}" wx:key="id" wx:for-index="idx" wx:for-item="value">
+<view class="lists" bindtap="look" data-id="{{value.id}}">
+  <view class="tu">
+  <image src="{{value.houseImages[0].imageUrl}}"></image>
+  </view>
+  <view class="message">
+   <view class="houseName">{{value.houseName}}</view>
+   <view class="houseType_" >{{value.houseLeaseName}} | {{value.houseTypeName}}</view>
+   <view class="address">{{value.address}} </view>
+   <view class="price">{{value.price}}<text>/月</text></view>
+  </view>
+</view>
+</view>
+<view class="ti">我们是有底线了~/(ㄒoㄒ)/~~</view>
+</view>
+<view class="bao" wx:else>
+暂无收藏,快去收藏吧(●ˇ∀ˇ●)
+</view>
       <!-- 底部-->
       <view class="bottom">
       	<!-- 收藏-->
