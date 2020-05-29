@@ -1,0 +1,51 @@
+/* pages/register/register.wxss */
+.register{
+ 
+  margin-top: 40rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+.text{
+  font-weight: bold;
+  font-size: 18px;
+}
+.import{
+  border-bottom: WhiteSmoke solid 1px;
+  margin-top: 150rpx;
+  height: 200rpx;
+}
+.phone{
+  border-bottom: WhiteSmoke solid 1px;
+  height: 70rpx;
+  padding-top: 30rpx;
+  font-size: 14px;
+}
+.verification{
+  float: left;
+  margin-right: 200rpx;
+  height: 70rpx;
+  padding-top: 30rpx;
+  width: 65%;
+  margin:0rpx;
+  font-size: 14px;
+}
+.verification_code{
+ float: right;
+  height: 70rpx;
+  padding-top: 30rpx;
+  width: 223rpx;
+  color: DarkTurquoise;
+  font-size: 12px;
+  text-align: center;
+}
+button{
+  margin-top: 60rpx;
+  background: PaleTurquoise;
+  color: white;
+  margin-bottom: 30rpx;
+}
+.treaty{
+  font-size: 10px;
+  margin-left: 80rpx;
+  color: Silver;
+}
