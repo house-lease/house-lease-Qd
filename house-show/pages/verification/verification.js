@@ -38,6 +38,27 @@ Page({
       })
     }
   },
+  // 房东认证
+  landlord(){
+    if(this.data.user.idcard!=null&&this.data.user.phone!=null&&this.data.user.landlord==0){
+      wx.navigateTo({
+        url: '/pages/certification/certification',
+      })
+    }else if(this.data.user.idcard==null || this.data.user.phone==null){
+      wx.showToast({
+        title: '请完善个人信息',
+        icon: 'success',
+        duration: 2000
+      })
+    }else if(this.data.user.landlord==1){
+      wx.showToast({
+        title: '已认证',
+        icon: 'success',
+        duration: 2000
+      })
+    }
+  }
+  ,
   /**
    * 生命周期函数--监听页面显示
    */

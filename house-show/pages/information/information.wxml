@@ -17,5 +17,5 @@
         <text>></text>
       </view>
     </view>
-    <button>退出登录</button>
+    <button bindtap="exit">退出登录</button>
 </view>

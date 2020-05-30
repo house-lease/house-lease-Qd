@@ -1,0 +1,88 @@
+/* pages/certification/certification.wxss */
+
+.landlordcertification{
+  font-size: 40rpx;
+  text-align: center;
+}
+
+.realinformation{
+  height: 40rpx;
+}
+
+.mation{
+  height: 40rpx;
+  font-size: 30rpx;
+  margin-top: 15rpx;
+  text-align: center;
+  color: red;
+}
+
+
+.informationname{
+  padding-left: 40rpx;
+  margin-top: 20rpx;
+  height: 80rpx;
+   font-size: 50rpx;
+}
+
+.name{
+  height: 80rpx;
+}
+
+.informationnumber{
+  margin-top: 15rpx;
+  height: 80rpx;
+  font-size: 50rpx;
+}
+
+.number{
+  height: 80rpx;  
+}
+
+ 
+
+.informationprestore{ 
+  background-color: #f4f4f4;
+  margin-top: 15rpx;
+  height: 80rpx;
+  font-size: 50rpx;
+}
+
+.prestore{
+  height: 80rpx; 
+}
+
+.submit{
+  margin-top: 20rpx;
+  background-color: #57adf3;
+  color: white;
+}
+
+.message{
+  margin-top: 20rpx;
+  color: red;  
+  font-size: 35rpx;
+}
+
+.authentication{
+  margin-top:50rpx;
+  color:#d8d8d8 ;
+  text-align: center;
+}
+
+.type{
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #d8d8d8;
+}
+
+.img{
+  margin-top: 15rpx;
+  background-color: #f4f4f4;
+}
+
+.clink{
+  color:#c4c4c4; 
+}
+ 

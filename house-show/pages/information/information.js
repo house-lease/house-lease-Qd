@@ -14,6 +14,19 @@ Page({
 
     }]
   },
+  // 推出登录
+exit(){
+  wx.removeStorage({
+    key: 'login'
+  })
+  app.globalData.userInfo={}
+  wx.navigateBack({
+    complete: (res) => {
+        console.info(res)
+    },
+  })
+}
+  ,
 
 
   // 跳转身份认证页面

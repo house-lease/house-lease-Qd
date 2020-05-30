@@ -90,13 +90,32 @@ Page({
     wx.getStorage({
       key: 'login',
       success:res=>{
-        console.info(res.data)
-        app.globalData.userInfo=res.data
-        // 获取用户是否登录
+        if(res.data.id!=null){
+          wx.request({
+            url: liunxUrl+'/house/user/queryByUserId',
+            data:{
+              userId:res.data.id
+            },
+            success:res=>{
+              app.globalData.userInfo=res.data.data
+              // 获取用户是否登录
+              this.setData({
+                user:app.globalData.userInfo
+              })
+              wx.setStorage({
+                data: res.data.data,
+                key: 'login',
+              })
+            }
+          })
+        }
+       },
+       fail:res=>{
+        app.globalData.userInfo={}
         this.setData({
-          user:app.globalData.userInfo
+          user: null
         })
-      }
+       }
     })
 
   },

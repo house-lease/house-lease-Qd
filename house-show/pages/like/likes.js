@@ -46,12 +46,18 @@ login:function(){
         this.setData({
           user:app.globalData.userInfo
         })
-      }
+        if(app.globalData.userInfo.id!=null){
+          this.houseShow();
+        }
+      }, fail:res=>{
+        app.globalData.userInfo={}
+        this.setData({
+          user: null
+        })
+       }
     })
  
-    if(app.globalData.userInfo.id!=null){
-      this.houseShow();
-    }
+   
    
   },
 

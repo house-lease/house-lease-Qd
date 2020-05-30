@@ -1,8 +1,8 @@
 <!--验证方式页面-->
-<view bindtap="idCard" class="verification">
-    <view class="wenzi">
+<view   class="verification">
+    <view   class="wenzi">
         <view class="img">
-            <image src="/pages/image/anquan.png"></image>
+            <image   src="/pages/image/anquan.png"></image>
         </view>
         <text>信息安全保护中，未经你允许不对外提供</text>
         
@@ -14,17 +14,17 @@
         <text>一个账号有且只能进行一次实名认证，认证成功后不支持修改</text>
     </view>
 
-    <view class="citizen"> 
+    <view  bindtap="idCard"  class="citizen"> 
         <view class="one"> 
            <text >实名认证 ></text>
         </view>
        <text class="two">需要进行身份认证</text>
     </view>
 
-     <view class="staff">
+     <view  bindtap="landlord"  class="staff">
           <view class="one">
            <text>房东认证 ></text>
           </view>
-          <text class="two">需要进行个人邮箱认证</text>
+          <text class="two">需认证房产证</text>
     </view>
 </view>
