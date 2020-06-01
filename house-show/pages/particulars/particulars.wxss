@@ -246,7 +246,7 @@ button[size='mini'] {
   }
   /* 房屋列表 */
 .lists{
-  padding:30rpx 30rpx 0rpx 60rpx;
+  padding:30rpx 0rpx 0rpx 30rpx;
 }
 .lists::after{
   content:" ";
@@ -257,11 +257,11 @@ button[size='mini'] {
   float: left;
 }
 .tu image{
-  width: 300rpx;
-  height: 180rpx;
+  width: 350rpx;
+  height: 220rpx;
 }
 .message{
-  width: 46%;
+  width: 42%;
   margin-left: 50rpx;
   border-bottom: 1px solid rgba(192,192,192);
 }
@@ -272,21 +272,21 @@ button[size='mini'] {
 }
 .houseType_{
 
-  margin-top: 10rpx;
+  margin-top: 25rpx;
   font-size: 26rpx;
 }
 .price{
-  margin-top: 10rpx;
+  margin-top: 25rpx;
   margin-bottom: 20rpx;
   color: red;
   font-weight: bold;
 
 }
 .price text{
-  font-size: 20rpx;
+  font-size: 25rpx;
 }
 .address{
-  margin-top: 10rpx;
+  margin-top: 25rpx;
   font-size: 26rpx;
   color: rgba(0, 0, 0,0.6);
 }

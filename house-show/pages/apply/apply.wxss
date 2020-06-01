@@ -1,0 +1,14 @@
+/* pages/apply/apply.wxss */
+.le{
+  padding: 30rpx;
+
+}
+.main{
+  border: 2rpx dashed gray;
+  padding: 30rpx;
+  border-radius:20rpx 20rpx;
+}
+image{
+  width: 100%;
+  height: 400rpx;
+}

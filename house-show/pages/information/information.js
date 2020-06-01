@@ -14,21 +14,41 @@ Page({
 
     }]
   },
+  // 跳转房东申请记录页面
+  apply(){
+    wx.navigateTo({
+      url: '/pages/apply/apply',
+    })
+  }
+  ,
   // 推出登录
 exit(){
-  wx.removeStorage({
-    key: 'login'
-  })
-  app.globalData.userInfo={}
-  wx.navigateBack({
-    complete: (res) => {
-        console.info(res)
-    },
-  })
+  wx.showModal({
+    title: '提示',
+    content: '是否退出当前账户',
+    success: function(res) {
+        if (res.confirm) {
+          wx.removeStorage({
+            key: 'login'
+          })
+          app.globalData.userInfo={}
+          wx.navigateBack({
+            complete: (res) => {
+                console.info(res)
+            },
+          })
+        } 
+    }
+})
+  
 }
   ,
-
-
+  bindPhone(){
+    wx.navigateTo({
+      url: '/pages/register/register',
+    })
+  }
+,
   // 跳转身份认证页面
   renZheng(){
     wx.navigateTo({
@@ -47,17 +67,17 @@ exit(){
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    this.setData({
-      user:app.globalData.userInfo
-    }
-    )
+   
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      user:app.globalData.userInfo
+    }
+    )
   },
 
   /**

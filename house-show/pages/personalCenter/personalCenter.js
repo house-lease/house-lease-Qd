@@ -16,7 +16,7 @@ Page({
   },
   // 跳转我的钱包页面
   wallet(){
-    if(this.data.user.id!=null){
+    if(this.data.user!=null){
       wx.navigateTo({
         url: '/pages/wallet/wallet',
       })
@@ -30,7 +30,7 @@ Page({
   },
   // 跳转我的订单
   order(){
-    if(this.data.user.id!=null){
+    if(this.data.user!=null){
       wx.navigateTo({
         url: '/pages/order/order',
       })
@@ -112,6 +112,7 @@ Page({
        },
        fail:res=>{
         app.globalData.userInfo={}
+        this.data.user=null,
         this.setData({
           user: null
         })

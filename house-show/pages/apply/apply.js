@@ -1,4 +1,4 @@
-// pages/consult/consult.js
+// pages/apply/apply.js
 var app = getApp();
 var liunxUrl=app.globalData.liunxUrl
 var localUrl=app.globalData.localUrl
@@ -8,10 +8,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-
-    userName:"我的萌啊"
+      apply:[]
   },
+  getApply(){
+    wx.request({
+      url: liunxUrl+'/house/apply/queryByUserId',
+      data:{
+        userId:app.globalData.userInfo.id
+      },
+      success:res=>{
+        console.info(res.data)
+        this.setData({
+          apply:res.data.data
+        })
+      }
+    })
 
+  }
+,
+  image(e){
+    e.currentTarget.dataset.image
+    wx.previewImage({
+      current:e.currentTarget.dataset.image, // 当前显示图片的http链接
+      urls: [e.currentTarget.dataset.image] // 需要预览的图片http链接列表
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -30,7 +51,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getApply();
   },
 
   /**

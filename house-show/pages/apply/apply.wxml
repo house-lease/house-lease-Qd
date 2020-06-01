@@ -1,0 +1,16 @@
+<view class="le">
+<view class="main" wx:for="{{apply}}" wx:key="id" wx:for-item="value"> 
+<image  bindtap="image" data-image="{{value.houseImageUrl}}"  src="{{value.houseImageUrl}}"></image>
+<view class="message">
+  <view>申请人:<text>{{value.userName}}</text> </view>
+  <view>手机号:<text>{{value.userPhone}}</text></view>
+  <view>身份证:<text>{{value.user.idcard}}</text></view>
+  <view wx:if="{{value.cash==1}}">押金:已交</view>
+  <view wx:if="{{value.cash==0}}">押金:已退</view>
+  <view wx:if="{{value.state==1}}">申请状态:审核中</view>
+    <view wx:if="{{value.state==0}}">申请状态:审核成功</view>
+      <view wx:if="{{value.state==2}}">申请状态:审核失败</view>
+  <view>备注:<text>{{value.message==null? '无':value.message}}</text></view>
+</view>
+</view>
+</view>

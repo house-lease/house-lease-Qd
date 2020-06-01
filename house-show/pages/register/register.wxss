@@ -38,6 +38,15 @@
   font-size: 12px;
   text-align: center;
 }
+.verification_code_{
+  float: right;
+   height: 70rpx;
+   padding-top: 30rpx;
+   width: 223rpx;
+   color: gray;
+   font-size: 12px;
+   text-align: center;
+ }
 button{
   margin-top: 60rpx;
   background: PaleTurquoise;

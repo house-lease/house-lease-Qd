@@ -6,13 +6,19 @@
       <view wx:if="{{user.phone!=null}}">
       <text>{{user.phone}}</text>
       </view>
-        <view wx:else>
+        <view bindtap="bindPhone" wx:else>
           <text>请绑定手机</text>
         </view>
       </view>
     </view>
     <view bindtap="renZheng" class="authentication">
       <text>身份认证</text>  
+      <view class="jiantou">
+        <text>></text>
+      </view>
+    </view>
+    <view bindtap="apply" class="authentication">
+      <text>房东申请记录</text>  
       <view class="jiantou">
         <text>></text>
       </view>

@@ -116,6 +116,9 @@ login:function(){
           let that= this;
           this.data.setInter=setInterval(function get(){
             that.getChatList()
+            if(app.globalData.userInfo.id==null){
+              clearInterval(that.data.setInter);
+            }
           },2000)
         }
       }, fail:res=>{

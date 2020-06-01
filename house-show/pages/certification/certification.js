@@ -28,36 +28,44 @@ Page({
   },
    // 实名认证
    uploadImage(){
-  
-    wx.uploadFile({
-      url: liunxUrl+'house/apply/landlordApply', //仅为示例，非真实的接口地址
-      formData:{
-        userId:this.data.user.id,
-      },
-      filePath:this.data.image[0],
-      name: 'houseImageUrl',
-      success:(res) =>{
-        let json = JSON.parse(res.data)
-        if(json.data){
-          wx.showToast({
-            title:json.message,
-            icon: 'success',
-            duration: 2000
-          })
-          setTimeout(function () {
-            wx.switchTab({
-              url: '/pages/personalCenter/personalCenter',
+    wx.showModal({
+      title: '押金提醒',
+      content: '是否确定缴付1000元押金',
+      success: e=> {
+          if (e.confirm) {
+            wx.uploadFile({
+              url: liunxUrl+'house/apply/landlordApply', //仅为示例，非真实的接口地址
+              formData:{
+                userId:this.data.user.id,
+              },
+              filePath:this.data.image[0],
+              name: 'houseImageUrl',
+              success:(res) =>{
+                let json = JSON.parse(res.data)
+                if(json.data){
+                  wx.showToast({
+                    title:json.message,
+                    icon: 'success',
+                    duration: 2000
+                  })
+                  setTimeout(function () {
+                    wx.switchTab({
+                      url: '/pages/personalCenter/personalCenter',
+                    })
+                  }, 2300)  
+                }else{
+                  wx.showToast({
+                    title:json.message,
+                    image:'/pages/image/jg.png',
+                    duration: 2000
+                  })
+                }
+              }
             })
-          }, 2300)  
-        }else{
-          wx.showToast({
-            title:json.message,
-            image:'/pages/image/jg.png',
-            duration: 2000
-          })
-        }
+          } 
       }
-    })
+  })
+   
     
   },
   /**

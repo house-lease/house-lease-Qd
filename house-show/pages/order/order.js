@@ -1,45 +1,62 @@
 // pages/order/order.js
+
+var app = getApp();
+var liunxUrl=app.globalData.liunxUrl
+var localUrl=app.globalData.localUrl
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    house:[
-      {
-        id:1,
-        housename:"恒嘉世锦",
-        image:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1590083326290&di=8c70be7341420709e3dfac8478196ff4&imgtype=0&src=http%3A%2F%2Fstatic-xiaoguotu.17house.com%2F000%2F069%2F201405231152043356.jpg",
-        status:"支付超时",
-        type:"合租|押一付三",
-        address:"xx市/xx县/xx路/xxxxx小区/xxxxxx",
-        money:"￥6000",
-        presettime:"2020年5月21日"
-    },{
-      id:1,
-      housename:"恒嘉世锦",
-      image:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1590083326290&di=8c70be7341420709e3dfac8478196ff4&imgtype=0&src=http%3A%2F%2Fstatic-xiaoguotu.17house.com%2F000%2F069%2F201405231152043356.jpg",
-      status:"支付超时",
-      type:"合租|押一付三",
-      address:"xx市/xx县/xx路/xxxxx小区/xxxxxx",
-      money:"￥6000",
-      presettime:"2020年5月21日"
-  },
-  {
-    id:1,
-    housename:"恒嘉世锦",
-    image:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1590083326290&di=8c70be7341420709e3dfac8478196ff4&imgtype=0&src=http%3A%2F%2Fstatic-xiaoguotu.17house.com%2F000%2F069%2F201405231152043356.jpg",
-    status:"支付超时",
-    type:"合租|押一付三",
-    address:"xx市/xx县/xx路/xxxxx小区/xxxxxx",
-    money:"￥6000",
-    presettime:"2020年5月21日"
-}
-  ]
+    
+  records:[]
    
     
   },
+  // 取消订单
+  cancel(e){
+    wx.showModal({
+      title: '提示',
+      content: '是否取消订单',
+      success:res => {
+          if (res.confirm) {
+            console.info(e.currentTarget.dataset.id)
+            wx.request({
+              url: liunxUrl+'/house/record/updateDealState',
+              data:{
+                userId:app.globalData.userInfo.id,
+                id:e.currentTarget.dataset.id,
+                dealState:2
+              },
+              success:res=>{
+                console.info(res.data.data)
+                this.setData({
+                  records:res.data.data
+                })
+              }
+            })
+          } 
+      }
+  })
+  }
+,
 
+  // 获取订单列表
+  getRecord(){
+      wx.request({
+        url: liunxUrl+'/house/record/queryByPayerUserId',
+        data:{
+          payerUserId:app.globalData.userInfo.id
+        },
+        success:res=>{
+          console.info(res.data.data)
+          this.setData({
+            records:res.data.data
+          })
+        }
+      })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -54,11 +71,12 @@ Page({
 
   },
 
+
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getRecord();
   },
 
   /**

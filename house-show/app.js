@@ -38,6 +38,7 @@ App({
   },
   globalData: {
     userInfo: {
+      id:7
     },
     address:"",
     localUrl:"http://182.92.168.223/",
