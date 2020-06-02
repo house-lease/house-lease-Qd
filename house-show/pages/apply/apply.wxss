@@ -1,14 +1,40 @@
 /* pages/apply/apply.wxss */
 .le{
   padding: 30rpx;
-
 }
 .main{
-  border: 2rpx dashed gray;
-  padding: 30rpx;
+  padding: 40rpx;
   border-radius:20rpx 20rpx;
+  background: GhostWhite;
+}
+.house{
+  border-bottom: 1px solid Gainsboro;
+  padding-bottom: 20rpx;
+  font-size: 18px;
+  margin-bottom: 40rpx;
+  font-family: Microsoft Yahei;
 }
 image{
   width: 100%;
-  height: 400rpx;
+  height: 300rpx;
+
+}
+
+.message{
+  margin-top: 20rpx;
+}
+
+.message view{
+  margin-top: 20rpx;
+  font-size: 14px;
+  font-family: Microsoft Yahei;
+}
+
+.shen{
+  color: DarkGray;
+  padding-right: 30rpx;
+}
+.shen1{
+  color: DarkGray;
+  padding-right: 60rpx;
 }
