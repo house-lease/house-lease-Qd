@@ -3,31 +3,31 @@
   <view class="head">
   	<view class="Staging">
   		<view class="ll">
-  			<text>分期付付款计划</text>
+  			<text>租赁月数</text>
   		</view>
   		<view class="deferred">
-  			<text>分期付</text><image src="../image/arrow_down.png"/>
+  			<picker bindchange="bindStart" value="id" range="{{starts}}" range-key="startName">
+		{{startName}}
+		</picker>
   		</view>
   	</view>
-  	<view class="serviceMoney">免缴手续费：￥4444起</view>
 
 
   </view>
   <view class="own">
   	<view class="downPayment">
-  		首付款 (含押金,服务维修费)
-  		<text class="money1">￥8888</text>
-			<image src="../image/arrow_down.png"/>
+  		首付款 (含押金/1000)
+  		<text class="money1">￥{{first}}</text>
+
   	</view>
   	<view class="residue">
   		剩余期支付 (含服务维修费)
-  		<text class="stages">共18期</text>
-  		<text class="money2">￥8888/期</text>
-				<image src="../image/arrow_down.png"/>
+  		<text class="stages">共{{start.startValue}}期</text>
+  		<text class="money2">￥{{residue}}</text>
   	</view>
   	<view class="payment">
   		年总支付
-  		<text class="money3">￥500000</text>
+  		<text class="money3">￥{{sum}}</text>
   	</view>
   	<view class="text1">
   		<text>
@@ -62,6 +62,22 @@
     </text>
   	</view>
   </view>
-  <view class="tp">
-  	<image class="consult" src="/pages/image/consult.png"></image>
-  </view>
+  <!-- 底部-->
+      <view class="bottom">
+			<view class="fukuan">付款方式</view>
+      	<!-- 收藏-->
+      	<view bindtap="attention" class="shouCang" >
+      		<image src="/pages/image/zfb.png" />
+      		<text class="zi_">支付宝</text>
+      	</view>
+      	<view bindtap="cancel" class="shouCang" >
+      		<image src="/pages/image/wx.png" />
+      		<text class="zi" >微信</text>
+      	</view>
+      	<!-- 分享-->
+      	<view class="shouCang" bindtap="payment" >
+      		<image src="/pages/image/ye.png" />
+      		<text class="zi">钱包</text>
+      	</view>
+
+				</view>

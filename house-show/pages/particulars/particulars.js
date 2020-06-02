@@ -20,9 +20,7 @@ Page({
         duration:1000,//滑动动画时长
         current:0,//图片数量
         querykeywords:"",
-        houses:[
-        
-        ],
+        houses:{},
         markers:{}
         ,
         markerss: [],
@@ -33,7 +31,22 @@ Page({
         longitude:"",
         nearby:[]
       },
-
+// 跳转付款页面
+      payment(){
+        wx.getStorage({
+          key: 'house',
+          success:function(res){
+            wx.setStorage({
+              data: res.data,
+              key: 'payment',
+            })
+            wx.navigateTo({
+              url: '/pages/paymentMethod/paymentMethod',
+            })
+          }
+        })
+       
+      },
  swiperChange: function (e) {
         var that = this;
           that.setData({

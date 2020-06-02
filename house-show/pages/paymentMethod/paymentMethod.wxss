@@ -8,7 +8,7 @@
 }
 .serviceMoney {
   /* border: 1px red solid; */
-  font-size: 12px;
+  font-size: 20rpx;
   color: red;
 }
 .ll{
@@ -22,17 +22,14 @@
   align-items: center;
   text-align: center;
 }
-.downPayment{
-  
-}
 .deferred{
   width: 220rpx;
   height: 60rpx;
   line-height: 60rpx;
   background-color: #F7F8FA;
   text-align: center;
-  border-radius:50px 50px 50px 50px;
-  font-size: 13px;
+  border-radius:100rpx 100rpx 100rpx 100rpx;
+  font-size: 24rpx;
   /* border: 1px red solid; */
 }
 .deferred image{
@@ -42,7 +39,7 @@
 }
 
 .downPayment, .residue{
-  font-size: 12px;
+  font-size: 24rpx;
   margin-bottom: 10rpx;
   background-color: #FFFFFF;
   border: 1px solid #F0F0F0;
@@ -63,11 +60,11 @@
 .stages{
   margin-left: 20rpx;
   color:  rgb(40, 216, 157);
-  font-size: 10px;
+  font-size: 20rpx;
   background-color: rgba(175, 225, 208, 0.604);
 }
 .residue{
-  font-size: 12px;
+  font-size: 24rpx;
   margin-bottom: 30rpx;
 }
 .money2{
@@ -75,15 +72,15 @@
 }
 
 .payment{
-  font-size: 12px;
+  font-size:24rpx;
   margin-bottom: 20rpx;
-  border-bottom: solid 1px #F0F0F0;
+  border-bottom: solid 2rpx #F0F0F0;
   height: 100rpx;
   line-height: 100rpx;
   text-align: center;
 }
 .money3{
-  font-size: 14px;
+  font-size: 28rpx;
   font-weight: 500;
   margin-left: 350rpx;
 }
@@ -102,7 +99,7 @@
 }
 
 .pledgeExplain{
-  font-size: 14px;
+  font-size: 28rpx;
   font-weight: 300;
   margin-bottom: -60rpx;
 }
@@ -123,7 +120,7 @@
 .serviceChargeExplain{
   font-weight: 300;
   color: #666;
-  font-size: 14px;
+  font-size: 28rpx;
   margin-bottom: -50rpx;
 }
 .Explain2{
@@ -134,25 +131,64 @@
 .maintain{
   font-weight: 300;
 
-  font-size: 14px;
+  font-size: 28rpx;
   margin-top: 40rpx;
 }
 .maintainGold{
-  font-size: 14px;
+  font-size: 28rpx;
   font-weight: 300;
-  margin-bottom: -20px;
+  margin-bottom: -40rpx;
   color: #666;  
 
 }
 .Explain3{
   word-break: keep-all;word-wrap: break-word;white-space: pre-line;
-  font-size: 12px;
+  font-size: 24rpx;
 }
 /* 图片*/
 .tp{
   margin: 25rpx;
 }
 .consult{
-    width: 280px;
-    height: 45px;
+    width: 560rpx;
+    height: 90rpx;
 }
+.bottom {
+  width: 100%;
+  height: 130rpx;
+  position: fixed;
+ bottom: 0rpx;
+  background-color:white;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.shouCang image, .fenxiang image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.shouCang, .fenxiang{
+  padding-top: 30rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+.bottom text{
+  padding-left: 0;
+}
+
+
+  .zi{
+    font-size: 20rpx;
+    display: block;
+    text-indent: 0.5em;
+  }
+  .zi_{
+    font-size: 20rpx;
+    display: block;
+ 
+  }
+  .fukuan{
+    margin-top: 10rpx;
+  }
+  
