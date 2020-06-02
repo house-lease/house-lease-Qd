@@ -38,10 +38,14 @@ App({
   },
   globalData: {
     userInfo: {
+      id:14
     },
     address:"",
-    localUrl:"http://182.92.168.223/",
-    liunxUrl:"http://localhost:8080/",
+    liunxUrl:"http://182.92.168.223/",
+    localUrl:"http://localhost:8080/",
+
+    // liunxUrl:"http://192.168.0.106:8080/",
+
     // 192.168.0.106
   }
 })

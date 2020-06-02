@@ -180,13 +180,22 @@ wx.request({
   },
   success(res) {
     console.info(res.data.data);
-    wx.setStorage({
-      data: res.data.data,
-      key: 'houseObject',
-    })
-    wx.navigateTo({
-      url: '/pages/insertImage/insertImage',
-    })
+    if(res.data.data!=null){
+      wx.setStorage({
+        data: res.data.data,
+        key: 'houseObject',
+      })
+      wx.navigateTo({
+        url: '/pages/insertImage/insertImage',
+      })
+    }else{
+      wx.showToast({
+        title:"添加失败",
+        image:'/pages/image/jg.png',
+        duration: 2000
+      })
+    }
+   
   }
 })
 

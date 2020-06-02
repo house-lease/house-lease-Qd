@@ -1,23 +1,41 @@
 <!--我的订单页面-->
-<view id="order-form" wx:for="{{house}}" wx:for-index="idx" wx:for-item="content" wx:key="id">
+<view id="order-form" wx:for="{{records}}" wx:for-index="idx" wx:for-item="content" wx:key="id">
 	<!--预定日期-->
 	<view class="date">
-		<text class="preset-time">预定时间：{{content.presettime}}</text>
+		<text class="preset-time">预定时间：{{content.dealTime}}</text>
 	</view>
 	<!--订单内容-->
 	<view class="content">
 		<!--内容-->
 		<view class="information">
 			<view class="img">
-				<image class="image" src="{{content.image}}"></image>
+				<image class="image" src="{{content.house.houseImages[0].imageUrl}}"></image>
 			</view>
-			<view class="name">{{content.housename}}</view>
-			<view class="status">{{content.status}}</view>
-			<view class="type">{{content.type}}</view>
-			<view class="address"> {{content.address}}</view>
-			<view class="money"> {{content.money}}</view>
+			<view class="name">{{content.houseName}}</view>
+			<view  class="status"  wx:if="{{content.dealState==0}}">
+				已完成
+			</view>
+			<view class="status"  wx:if="{{content.dealState==1}}">
+			签约中
+			</view>
+		<view class="status"  wx:if="{{content.dealState==2}}">
+			已取消
+			</view>
+			<view class="status"  wx:if="{{content.dealState==3}}">
+			等待支付
+			</view>
+			<view class="type">{{content.house.houseLeaseName}} | {{content.house.houseTypeName}}</view>
+			<view class="address"> {{content.house.address}}</view>
+			<view class="money"> ￥{{content.dealMoney}}</view>
 		</view>
-		<button class="abandon" style="width:180rpx; " hover-class="btnabandon">放弃订单</button>
-		<button class="continue" style="width:180rpx; " hover-class="btncontinue">继续支付</button>
+<view wx:if="{{content.dealState==3}}">
+		<button bindtap="cancel" data-id="{{content.id}}" class="abandon" style="width:180rpx; " hover-class="btnabandon">取消订单</button>
+		<button  class="continue" style="width:180rpx; " hover-class="btncontinue">继续支付</button>
+</view>
+
+		<view wx:if="{{content.dealState!=3}}">
+		<button class="abandon" style="width:180rpx; " hover-class="btncontinue">查看订单</button>
+		</view>
 	</view>
+
 </view>

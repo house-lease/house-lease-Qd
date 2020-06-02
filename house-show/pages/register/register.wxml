@@ -1,11 +1,13 @@
 <!--用户登录-->
 <view class="register">
-	<text class="text">登录青鸟公寓</text>
+	<text class="text">绑定手机号</text>
 	<view class="import">
-		<input class="phone" placeholder="请输入手机号" bindinput="phone" ></input>
-		<input class="verification" placeholder="请输入验证码" value="{{verification}}"></input>
-    <view class="verification_code" bindtap="note">获取验证码</view>
+
+		<input bindinput="phone" class="phone" placeholder="请输入手机号" ></input>
+		<input class="verification" bindinput="userVerification" placeholder="请输入验证码"  ></input>
+    <view bindtap="verification" hidden="{{hi}}" class="verification_code">获取验证码</view>
+		<view  hidden="{{hi1}}" class="verification_code_">({{num}})获取验证码</view>
 	</view>
-	<button style="width:90%; border-radius: 50rpx;">登录</button>
+	<button bindtap="login" style="width:90%; border-radius: 50rpx;">绑定</button>
   <text class="treaty">登陆即代表您同意《用户使用条款》和《隐私保护政策》</text>
 </view>

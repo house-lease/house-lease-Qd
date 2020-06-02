@@ -1,7 +1,10 @@
 {
   "pages":[
-    "pages/register/register",
+    "pages/apply/apply",
     "pages/home/home",
+    
+    "pages/certification/certification",
+    "pages/register/register",
     "pages/wallet/wallet",
     "pages/browse/browse",
     "pages/particulars/particulars",
@@ -16,11 +19,9 @@
     "pages/insertHouse/insertHouse",
     "pages/verification/verification",
     "pages/information/information",
-
     "pages/select/select",
     "pages/photoAlbum/photoAlbum",
     "pages/like/likes",
-    "pages/consult/consult",
     "pages/message/message",
     "pages/index/index",
     "pages/logs/logs"

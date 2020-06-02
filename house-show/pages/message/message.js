@@ -13,7 +13,8 @@ Page({
       
     ],
     user:{},
-    chatS:[]
+    chatS:[],
+    setInter:''
   },
 
   /**
@@ -101,20 +102,34 @@ login:function(){
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
-    this.data.user = app.globalData.userInfo
-    this.setData({
-      user:app.globalData.userInfo
+    wx.getStorage({
+      key: 'login',
+      success:res=>{
+        app.globalData.userInfo=res.data
+        this.data.user = app.globalData.userInfo
+        // 获取用户是否登录
+        this.setData({
+          user:app.globalData.userInfo
+        })
+        if( this.data.user.id!=null){
+          this.getChatList();
+          let that= this;
+          this.data.setInter=setInterval(function get(){
+            that.getChatList()
+            if(app.globalData.userInfo.id==null){
+              clearInterval(that.data.setInter);
+            }
+          },2000)
+        }
+      }, fail:res=>{
+        app.globalData.userInfo={}
+        this.data.user = null
+        this.setData({
+          user: null
+        })
+        clearInterval(this.data.setInter);
+       }
     })
-    if( this.data.user.id!=null){
-      this.getChatList();
-      let that= this;
-      setInterval(function get(){
-        that.getChatList()
-      },2000);
-    }
-   
-
   },
 
   /**

@@ -6,7 +6,7 @@
       <view wx:if="{{user.phone!=null}}">
       <text>{{user.phone}}</text>
       </view>
-        <view wx:else>
+        <view bindtap="bindPhone" wx:else>
           <text>请绑定手机</text>
         </view>
       </view>
@@ -17,5 +17,11 @@
         <text>></text>
       </view>
     </view>
-    <button>退出登录</button>
+    <view bindtap="apply" class="authentication">
+      <text>房东申请记录</text>  
+      <view class="jiantou">
+        <text>></text>
+      </view>
+    </view>
+    <button bindtap="exit">退出登录</button>
 </view>

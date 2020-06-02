@@ -205,7 +205,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.data.user=app.globalData.userInfo;
+    wx.getStorage({
+      key: 'login',
+      success:res=>{
+        console.info(res.data)
+        app.globalData.userInfo=res.data
+        // 获取用户是否登录
+        this.data.user=app.globalData.userInfo;
+      }
+    })
+ 
     // 调用查询房屋的信息
     if (this.data.address_ != "") {
       console.info("到我了")

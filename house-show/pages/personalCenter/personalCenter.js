@@ -16,7 +16,7 @@ Page({
   },
   // 跳转我的钱包页面
   wallet(){
-    if(this.data.user.id!=null){
+    if(this.data.user!=null){
       wx.navigateTo({
         url: '/pages/wallet/wallet',
       })
@@ -30,7 +30,7 @@ Page({
   },
   // 跳转我的订单
   order(){
-    if(this.data.user.id!=null){
+    if(this.data.user!=null){
       wx.navigateTo({
         url: '/pages/order/order',
       })
@@ -87,10 +87,38 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-// 获取用户是否登录
-    this.setData({
-      user:app.globalData.userInfo
+    wx.getStorage({
+      key: 'login',
+      success:res=>{
+        if(res.data.id!=null){
+          wx.request({
+            url: liunxUrl+'/house/user/queryByUserId',
+            data:{
+              userId:res.data.id
+            },
+            success:res=>{
+              app.globalData.userInfo=res.data.data
+              // 获取用户是否登录
+              this.setData({
+                user:app.globalData.userInfo
+              })
+              wx.setStorage({
+                data: res.data.data,
+                key: 'login',
+              })
+            }
+          })
+        }
+       },
+       fail:res=>{
+        app.globalData.userInfo={}
+        this.data.user=null,
+        this.setData({
+          user: null
+        })
+       }
     })
+
   },
 
   /**
