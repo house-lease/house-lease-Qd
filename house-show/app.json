@@ -14,7 +14,6 @@
     "pages/personalCenter/personalCenter",
     "pages/login/login",
     "pages/renZheng/renZheng",
-   
     "pages/insertImage/insertImage",
     "pages/insertHouse/insertHouse",
     "pages/verification/verification",
@@ -25,8 +24,6 @@
     "pages/message/message",
     "pages/index/index",
     "pages/logs/logs"
-
-    
   ],
   "window":{
     "backgroundTextStyle":"light",

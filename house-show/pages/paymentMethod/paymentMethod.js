@@ -79,11 +79,11 @@ getPayment(){
 },
 payment(){
   wx.showModal({
-    title: '提示',
+    title: '支付提醒',
     content: '是否确定支付',
-    success: function(res) {
+    success: res=> {
         if (res.confirm) {
-        
+            
         } 
     }
 })

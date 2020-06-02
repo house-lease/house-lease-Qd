@@ -2,6 +2,7 @@
 <view class="register">
 	<text class="text">绑定手机号</text>
 	<view class="import">
+
 		<input bindinput="phone" class="phone" placeholder="请输入手机号" ></input>
 		<input class="verification" bindinput="userVerification" placeholder="请输入验证码"  ></input>
     <view bindtap="verification" hidden="{{hi}}" class="verification_code">获取验证码</view>

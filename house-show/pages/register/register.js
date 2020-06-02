@@ -2,21 +2,20 @@
 var app = getApp();
 var liunxUrl=app.globalData.liunxUrl
 var localUrl=app.globalData.localUrl
-Page({
 
+Page({
+data:{
   /**
    * 页面的初始数据
    */
-  data: {
     num:60,
      phone:"",
      verification:"",
      userVerification:"",
      hi:"",
      hi1:"hidden"
-  },
 
-  // 获取手机号
+  },
 phone(e){
   this.data.phone=e.detail.value;
 },
