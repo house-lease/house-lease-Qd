@@ -83,8 +83,82 @@ payment(){
     content: '是否确定支付',
     success: res=> {
         if (res.confirm) {
-            
-        } 
+            wx.request({
+              url: liunxUrl+'/house/record/save',
+              data:{
+                judge:0,
+                payerUserId:app.globalData.userInfo.id,
+                payeeUserId:this.data.payment.user.id,
+                houseId:this.data.payment.id,
+                sumMoney:this.data.sum,
+                residueMoney:this.data.residue,
+                startValue:this.data.start.startValue
+              },
+              success:res=>{
+                if(res.data.data!=null){
+                  if(res.data.data==0){
+                    wx.showToast({
+                      title: '交易完成',
+                       duration: 2000
+                    })
+                    setTimeout(function () {
+                      wx.navigateBack({
+                        complete: (res) => {
+                            console.info(res)
+                        }
+                      })
+                    }, 2000)     
+                  }else if(res.data.data==1){
+                    wx.showToast({
+                      title: '余额不足',
+                       duration: 2000
+                    })
+                  }else if(res.data.data==3){
+                    wx.showToast({
+                      title: '房间不足',
+                       duration: 2000
+                    })
+                    setTimeout(function () {
+                      wx.switchTab({
+                        url: '/pages/home/home',
+                      })
+                    }, 2000)     
+                  }
+                }
+              }
+            })
+        } else{
+          wx.request({
+            url: liunxUrl+'/house/record/save',
+            data:{
+              judge:1,
+              payerUserId:app.globalData.userInfo.id,
+              payeeUserId:this.data.payment.user.id,
+              houseId:this.data.payment.id,
+              sumMoney:this.data.sum,
+              residueMoney:this.data.residue,
+              startValue:this.data.start.startValue
+            },
+            success:res=>{
+                if(res.data.data==2){
+                  wx.showToast({
+                    title: '已保存订单',
+                     duration: 2000
+                  })
+                }else if(res.data.data==3){
+                  wx.showToast({
+                    title: '房间不足',
+                     duration: 2000
+                  })
+                  setTimeout(function () {
+                    wx.switchTab({
+                      url: '/pages/home/home',
+                    })
+                  }, 2000)     
+                }
+            }
+          })
+        }
     }
 })
 },

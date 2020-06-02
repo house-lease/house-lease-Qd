@@ -2,7 +2,7 @@
 <view id="order-form" wx:for="{{records}}" wx:for-index="idx" wx:for-item="content" wx:key="id">
 	<!--预定日期-->
 	<view class="date">
-		<text class="preset-time">预定时间：{{content.dealTime}}</text>
+		<text class="preset-time">订单号:{{content.record}}</text>
 	</view>
 	<!--订单内容-->
 	<view class="content">
@@ -13,10 +13,10 @@
 			</view>
 			<view class="name">{{content.houseName}}</view>
 			<view  class="status"  wx:if="{{content.dealState==0}}">
-				已完成
+			已完成
 			</view>
 			<view class="status"  wx:if="{{content.dealState==1}}">
-			签约中
+			缴租中
 			</view>
 		<view class="status"  wx:if="{{content.dealState==2}}">
 			已取消
