@@ -1,6 +1,6 @@
 // 聊天室
 // 192.168.0.106
-var url = 'ws://182.92.168.223/house/wx';
+var url = 'ws://www.makamaka.top/house/wx';
 // 182.92.168.223
 const app = getApp();
 
