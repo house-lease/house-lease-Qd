@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/lease/lease",
     "pages/home/home",
     "pages/paymentMethod/paymentMethod",  
     "pages/apply/apply",
