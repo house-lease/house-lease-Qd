@@ -1,0 +1,151 @@
+/* pages/lease/lease.wxss */
+.title{
+  font-size: 22px;
+  font-family: Microsoft JhengHei;
+  font-weight: bold;
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+}
+.lease{
+  border: Gainsboro solid 1px;
+  border-radius: 20rpx;
+  margin: 40rpx 40rpx;
+}
+
+/*房屋信息*/
+.house{
+  border-bottom: WhiteSmoke solid 1px;
+  height: 380rpx;
+}
+.house-message{
+  border-bottom: WhiteSmoke solid 1px;
+  margin-bottom: 40rpx;
+  font-family: Microsoft JhengHei;
+  font-size: 18px;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+}
+.image{
+  float: left;
+  width: 330rpx;
+  height: 200rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.house-img{
+  width: 330rpx;
+  height: 200rpx;
+  
+}
+.name{
+  font-family: Microsoft JhengHei;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.zu{
+  font-family: Microsoft JhengHei;
+  font-size: 12px;
+  padding-top: 15rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/*房东信息*/
+.user{
+  border:WhiteSmoke solid 1px;
+  clear: both;
+  height: 280rpx;
+}
+.user-message{
+  border-bottom: WhiteSmoke solid 1px;
+  margin-bottom: 40rpx;
+  font-family: Microsoft JhengHei;
+  font-size: 18px;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+}
+.touxiang{
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  float: left;
+  border-radius: 8rpx;
+}
+.touxiang-img{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 8rpx;
+}
+.uname{
+  float: left;
+  width: 250rpx;
+  margin-top: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Microsoft JhengHei;
+  font-weight: bold;
+}
+.phone{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  left: 460rpx;
+}
+.phone-img{
+  width: 60rpx;
+  height: 60rpx;
+  padding: 20rpx;
+}
+.chat{
+  width: 100rpx;
+  height: 100rpx;
+  float: right;
+  margin-right: 20rpx;
+}
+.chat-img{
+  width: 60rpx;
+  height: 60rpx;
+  padding: 20rpx;
+}
+
+/*订单信息*/
+.indent{
+  border-bottom: WhiteSmoke solid 1px;
+  height: 380rpx;
+  margin-bottom: 40rpx;
+}
+.indent-message{
+  border-bottom: WhiteSmoke solid 1px;
+  margin-bottom: 20rpx;
+  font-family: Microsoft JhengHei;
+  font-size: 18px;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+}
+.one{
+  font-family: Microsoft JhengHei;
+  font-weight: bold;
+  font-size: 14px;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+.two{
+  font-family: Microsoft JhengHei;
+  font-size: 14px;
+  float: right;
+}
+
+/*按钮*/
+.bts{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 40rpx;
+}
+.button{
+  color: white;
+  background: PaleTurquoise;
+}
