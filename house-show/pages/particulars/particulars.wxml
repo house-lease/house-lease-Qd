@@ -183,7 +183,7 @@
       		<button size="mini">咨询</button>
       	</view>
       	<!-- 付款-->
-      	<view bindtap="payment" class="fukuan">
+      	<view bindtap="payment" class="fukuan" data-id="{{houses.user.id}}">
       		<button size="mini">付款</button>
       	</view>
       </view>

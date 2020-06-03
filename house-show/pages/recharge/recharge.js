@@ -1,7 +1,4 @@
-// pages/wallet/wallet.js
-var app = getApp();
-var liunxUrl=app.globalData.liunxUrl
-var localUrl=app.globalData.localUrl
+// pages/recharge/recharge.js
 Page({
 
   /**
@@ -9,8 +6,6 @@ Page({
    */
   data: {
 
-    user:{},
-    money:{},
   },
 
   /**
@@ -31,27 +26,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.data.user=app.globalData.userInfo;
-    // 获取用户剩余金额
-    wx.request({
-      url: liunxUrl+'house/user/queryMoney',
-      data:{
-        userId:this.data.user.id
-      },
-      success:res =>{
-        console.info(res.data.data)
-        this.setData({
-          money:res.data.data
-        })
-      }
-    })
+
   },
-// 跳转充值页面
-  recharge(){
-    wx.navigateTo({
-      url: '/pages/recharge/recharge',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面隐藏
    */
