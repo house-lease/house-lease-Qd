@@ -41,7 +41,27 @@ Page({
   })
   }
 ,
-
+// 继续付款
+go(e){
+  console.info(e.currentTarget.dataset.id)
+  wx.request({
+    url: liunxUrl+'/house/record/queryByRecordId',
+    data:{
+      recordId:e.currentTarget.dataset.id
+    },
+    success:res=>{
+      console.info(res.data.data)
+      wx.setStorage({
+        data: res.data.data,
+        key: 'paymentOne',
+      })
+      wx.navigateTo({
+        url: '/pages/payment/payment',
+      })
+    }
+  })
+}
+,
   // 获取订单列表
   getRecord(){
       wx.request({

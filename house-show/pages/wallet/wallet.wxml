@@ -8,7 +8,7 @@
   </view>
   <view class="nextval">
     <view>
-        <view id="chongzhi" >
+        <view bindtap="recharge" id="chongzhi" >
           <view><image  src="/pages/image/chongzhi.png" mode="scaleToFill"></image></view>
           <view class="chongzhi">充值</view>
         </view>

@@ -30,7 +30,7 @@
 		</view>
 <view wx:if="{{content.dealState==3}}">
 		<button bindtap="cancel" data-id="{{content.id}}" class="abandon" style="width:180rpx; " hover-class="btnabandon">取消订单</button>
-		<button  class="continue" style="width:180rpx; " hover-class="btncontinue">继续支付</button>
+		<button  class="continue" style="width:180rpx; " data-id="{{content.id}}"  bindtap="go" hover-class="btncontinue">继续支付</button>
 </view>
 
 		<view wx:if="{{content.dealState!=3}}">

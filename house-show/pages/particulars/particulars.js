@@ -32,19 +32,36 @@ Page({
         nearby:[]
       },
 // 跳转付款页面
-      payment(){
-        wx.getStorage({
-          key: 'house',
-          success:function(res){
-            wx.setStorage({
-              data: res.data,
-              key: 'payment',
+      payment(e){
+        if(app.globalData.userInfo.id!=null){
+          if(e.currentTarget.dataset.id!=app.globalData.userInfo.id){
+            wx.getStorage({
+              key: 'house',
+              success:function(res){
+                wx.setStorage({
+                  data: res.data,
+                  key: 'payment',
+                })
+                wx.navigateTo({
+                  url: '/pages/paymentMethod/paymentMethod',
+                })
+              }
             })
-            wx.navigateTo({
-              url: '/pages/paymentMethod/paymentMethod',
-            })
+          }else{
+            wx.showToast({
+                title: '这是您的房子',
+                image:"/pages/image/jg.png",
+               duration:2000
+           })
           }
-        })
+        }else{
+          wx.showToast({
+              title: '未登录',
+              image:"/pages/image/jg.png",
+             duration:2000
+         })
+        }
+      
        
       },
  swiperChange: function (e) {
@@ -77,7 +94,7 @@ Page({
       },
        // 点击查询的方法
   look:function(e){
-    console.info(e);
+    
     var this_ = this;
     wx.request({
       url: liunxUrl+'house/house/queryByHouseId', 
@@ -123,7 +140,6 @@ Page({
     // 跳转聊天页面
     consult(e){
       if(app.globalData.userInfo.id!=null){
-      console.info(e)
       if(e.currentTarget.dataset.id.id!=app.globalData.userInfo.id){
         wx.request({
           url: liunxUrl+'house/chatTest/queryAllChat',

@@ -1,0 +1,8 @@
+
+<text class="biaoti">充值金额</text>
+
+
+<view class="fuhao"> <text  >￥ </text> </view>
+<view><input  class="input"type="number"  pattern="\d*" focus="{true}"></input></view>
+<view class="border"></view>
+<button >充值</button>
