@@ -1,9 +1,10 @@
 {
   "pages":[
+    "pages/recharge/recharge",
     "pages/lease/lease",
     "pages/home/home",
     "pages/payment/payment",
-    "pages/recharge/recharge",
+    
     "pages/paymentMethod/paymentMethod",  
     "pages/apply/apply",
     "pages/certification/certification",

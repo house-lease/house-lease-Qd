@@ -3,6 +3,6 @@
 
 
 <view class="fuhao"> <text  >￥ </text> </view>
-<view><input  class="input"type="number"  pattern="\d*" focus="{true}"></input></view>
+<view><input class="input"type="number"  pattern="\d*" focus="{true}" bindblur="inputSetData"></input></view>
 <view class="border"></view>
-<button >充值</button>
+<button bindtap="buttonClick">充值</button>

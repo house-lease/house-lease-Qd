@@ -1,3 +1,6 @@
+var app = getApp();
+var liunxUrl=app.globalData.liunxUrl
+var localUrl=app.globalData.localUrl
 // pages/recharge/recharge.js
 Page({
 
@@ -5,8 +8,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    user:{},
+    total_amount:"1"
   },
+  inputSetData:function(e){
+    this.setData({
+      total_amount:e.detail.value
+    })
+  }
+  ,
+buttonClick:function(){
+
+  var this_ = this
+
+  this_.setData({
+    user:app.globalData.userInfo
+  })
+
+  wx.request({
+    url: liunxUrl+'house/payApiController/Pay', 
+    data: {
+      subject:"充值",
+      body:"充值到余额",
+      total_amount:this_.data.total_amount,
+      userId:this_.data.user.id,
+    },
+})
+},
 
   /**
    * 生命周期函数--监听页面加载
