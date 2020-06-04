@@ -72,15 +72,23 @@ Page({
       name: 'image',
       success:(res) =>{
         let json = JSON.parse(res.data)
-        this.setData({
-         user:json.data
-       })
-       app.globalData.userInfo=this.data.user
-       console.info(this.data.user)
-       this.setData({
-         hi:"hidden",
-         h1:""
-       })
+        if(json.data!=null){
+          this.setData({
+            user:json.data
+          })
+          app.globalData.userInfo=this.data.user
+          console.info(this.data.user)
+          this.setData({
+            hi:"hidden",
+            h1:""
+          })
+        }else{
+          wx.showToast({
+              title: '实名认证失败',
+              image:"/pages/image/jg.png",
+             duration:2000
+         })
+        }
       }
     })
     

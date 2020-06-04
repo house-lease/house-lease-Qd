@@ -35,18 +35,26 @@ Page({
       payment(e){
         if(app.globalData.userInfo.id!=null){
           if(e.currentTarget.dataset.id!=app.globalData.userInfo.id){
-            wx.getStorage({
-              key: 'house',
-              success:function(res){
-                wx.setStorage({
-                  data: res.data,
-                  key: 'payment',
-                })
-                wx.navigateTo({
-                  url: '/pages/paymentMethod/paymentMethod',
-                })
-              }
-            })
+            if(app.globalData.userInfo.idcard!=null&&app.globalData.userInfo.phone!=null){
+              wx.getStorage({
+                key: 'house',
+                success:function(res){
+                  wx.setStorage({
+                    data: res.data,
+                    key: 'payment',
+                  })
+                  wx.navigateTo({
+                    url: '/pages/paymentMethod/paymentMethod',
+                  })
+                }
+              })
+            }else{
+              wx.showToast({
+                  title: '请完善个人信息',
+                  image:"/pages/image/jg.png",
+                 duration:2000
+             })
+            }
           }else{
             wx.showToast({
                 title: '这是您的房子',
@@ -519,7 +527,7 @@ changeMarkerColor: function(data,i){
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    
   }
 })
 

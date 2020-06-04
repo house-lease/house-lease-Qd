@@ -174,7 +174,7 @@
       		<text class="zi" >已收藏</text>
       	</view>
       	<!-- 分享-->
-      	<view class="fenxiang">
+      	<view class="fenxiang" bindtap="onShareAppMessage">
       		<image src="/pages/image/fx.png" />
       		<text class="zi">分享</text>
       	</view>

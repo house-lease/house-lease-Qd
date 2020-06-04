@@ -33,11 +33,11 @@
 
 	<!-- 条件按钮 -->
 	<view class="anNiu">
-		<view bindtap="he" class="heZu" data-a="{{a}}">
+		<view bindtap="he" class="heZu" data-a="{{a}}" data-b="{{b}}">
 			<image class="he" src="/pages/image/he.png"></image>
 			<view class="t">合租</view>
 		</view>
-		<view bindtap="zheng" data-b="{{b}}" class="zhengZu">
+		<view bindtap="zheng" data-b="{{b}}" data-a="{{a}}" class="zhengZu">
 			<image class="he" src="/pages/image/zu.png"></image>
 			<view class="t">整租</view>
 		</view>
@@ -52,11 +52,11 @@
 	</view>
 	<!-- 条件筛选框 -->
 	<view class="tiaoJian">
-		<view class="t1">时间<image class="i1" src="/pages/image/xl.png"></image>
+		<view bindtap="start" class="t1">时间<image class="i1" src="/pages/image/xl.png"></image>
 		</view>
-		<view class="t2">类型<image class="i2" src="/pages/image/xl.png"></image>
+		<view  bindtap="houseLease" class="t2">类型<image class="i2" src="/pages/image/xl.png"></image>
 		</view>
-		<view class="t3">位置<image class="i3" src="/pages/image/xl.png"></image>
+		<view class="t3">房屋<image class="i3" src="/pages/image/xl.png"></image>
 		</view>
 		<view class="t4">价格<image class="i4" src="/pages/image/xl.png"></image>
 		</view>

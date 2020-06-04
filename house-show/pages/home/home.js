@@ -11,6 +11,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    houseLeases:[],
+    starts:[],
+    houseTypes:[],
     a: true,
     b: true,
     markers: [],
@@ -31,6 +34,81 @@ Page({
 
     ]
   },
+// 获得房屋类型 房屋起租类型   起租时间
+package(){
+  var this_ = this;
+  wx.request({
+    url: liunxUrl+'house/houseTypeLease/lease', 
+    success(res) {
+      console.info(res.data.data);
+      this_.setData({
+        houseLeases:res.data.data
+      })
+    }
+  })
+  wx.request({
+    url: liunxUrl+'house/houseTypeLease/type', 
+    success(res) {
+      console.info(res.data.data);
+      this_.setData({
+        houseTypes:res.data.data
+      })
+    }
+  })
+
+  wx.request({
+    url: liunxUrl+'house/start/queryAll', 
+    success(res) {
+      console.info(res.data.data);
+      this_.setData({
+        starts:res.data.data
+      })
+    }
+  })
+}
+,
+
+// 筛选条件
+start(){
+    let item = ["全部"]
+    this.data.starts.forEach(function(value,index){
+        item.push(value.startName+"起")
+    })
+    wx.showActionSheet({
+      itemList: item,
+      success: (res)=> {
+        console.log(res.tapIndex)
+        if(res.tapIndex!=0){
+          this.data.startValue = this.data.starts[res.tapIndex-1].startValue
+          this.getHouseList()
+        }else{
+          this.data.startValue = " "
+          this.getHouseList()
+        }
+        
+      }
+    })
+  },
+// 筛选条件
+houseLease(){
+  let item = ["全部"]
+  this.data.houseLeases.forEach(function(value,index){
+      item.push(value.leaseType)
+  })
+  wx.showActionSheet({
+    itemList: item,
+    success: (res)=> {
+      console.log(res.tapIndex)
+      if(res.tapIndex!=0){
+        this.data.houseLeaseName = this.data.houseLeases[res.tapIndex-1].leaseType
+        this.getHouseList()
+      }else{
+        this.data.houseLeaseName = " "
+        this.getHouseList()
+      }
+    }
+  })
+},
 
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e)
@@ -63,12 +141,13 @@ Page({
     if (e.currentTarget.dataset.a) {
       this.data.houseLeaseName = "合租"
       this.setData({
-        a: false
+        a: false,
+        b:true
       })
     } else {
       this.data.houseLeaseName = ""
       this.setData({
-        a: true
+        a: true,
       })
     }
     this.getHouseList()
@@ -78,12 +157,13 @@ Page({
     if (e.currentTarget.dataset.b) {
       this.data.houseLeaseName = "整租"
       this.setData({
-        b: false
+        b: false,
+        a:true
       })
     } else {
       this.data.houseLeaseName = ""
       this.setData({
-        b: true
+        b: true,
       })
     }
     this.getHouseList()
@@ -181,17 +261,7 @@ Page({
   onLoad: function (options) {
     this.getaddressList();
     this.getAddress();
-    // var this_=this;
-    // wx.getStorage({
-    //   key: 'ticket',
-    //   success:function(res){
-    //     console.info(res.data)
-    //       this_.setData({
-    //         user:res.data
-    //       })
-    //       console.info(this_.data.user)
-    //   }
-    // })
+   
   },
 
   /**
@@ -205,6 +275,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.package();
     wx.getStorage({
       key: 'login',
       success:res=>{
