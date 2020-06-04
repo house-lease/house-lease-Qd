@@ -2,6 +2,10 @@ var app = getApp();
 var liunxUrl=app.globalData.liunxUrl
 var localUrl=app.globalData.localUrl
 // pages/recharge/recharge.js
+var app = getApp();
+// 请求路径  需要改路径请在app.js中修改
+var liunxUrl=app.globalData.liunxUrl
+
 Page({
 
   /**
@@ -54,7 +58,8 @@ buttonClick:function(){
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    // 获取用户
+    this.data.user=app.globalData.userInfo;
   },
 
   /**

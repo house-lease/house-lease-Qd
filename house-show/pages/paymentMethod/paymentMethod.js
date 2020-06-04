@@ -85,6 +85,7 @@ payment(){
         if (res.confirm) {
             wx.request({
               url: liunxUrl+'/house/record/save',
+              header: { "content-type": "application/x-www-form-urlencoded" },
               data:{
                 judge:0,
                 payerUserId:app.globalData.userInfo.id,
@@ -95,6 +96,7 @@ payment(){
                 startValue:this.data.start.startValue
               },
               success:res=>{
+                console.info(res.data)
                 if(res.data.data!=null){
                   if(res.data.data==0){
                     wx.showToast({
@@ -130,6 +132,7 @@ payment(){
         } else{
           wx.request({
             url: liunxUrl+'/house/record/save',
+            header: { "content-type": "application/x-www-form-urlencoded" },
             data:{
               judge:1,
               payerUserId:app.globalData.userInfo.id,

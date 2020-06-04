@@ -40,7 +40,7 @@ App({
     userInfo: {
     },
     address:"",
-    localUrl:"https://www.makamaka.top/",
+    localUrl:"https://makamaka.top/",
     liunxUrl:"http://localhost:8080/",
 
     // liunxUrl:"http://192.168.0.106:8080/",
