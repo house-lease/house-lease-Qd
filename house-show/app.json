@@ -1,12 +1,8 @@
 {
   "pages":[
-<<<<<<< HEAD
-    "pages/recharge/recharge",
-    "pages/lease/lease",
-=======
->>>>>>> 9263dd9cb12c97842c9a60cc05ebc1210c0a7d4e
     "pages/home/home",
     "pages/lease/lease",
+    "pages/recharge/recharge",
     "pages/payment/payment",
     
     "pages/paymentMethod/paymentMethod",  
