@@ -62,6 +62,27 @@ go(e){
   })
 }
 ,
+// 查看订单详细
+examine(e){
+  console.info(e.currentTarget.dataset.id)
+  wx.request({
+    url: liunxUrl+'/house/record/queryByRecordId',
+    data:{
+      recordId:e.currentTarget.dataset.id
+    },
+    success:res=>{
+      console.info(res.data.data)
+      wx.setStorage({
+        data: res.data.data,
+        key: 'lease',
+      })
+      wx.navigateTo({
+        url: '/pages/lease/lease',
+      })
+    }
+  })
+}
+,
   // 获取订单列表
   getRecord(){
       wx.request({

@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/lease/lease",
     "pages/home/home",
+    "pages/lease/lease",
     "pages/payment/payment",
     "pages/recharge/recharge",
     "pages/paymentMethod/paymentMethod",  

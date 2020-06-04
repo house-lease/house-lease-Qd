@@ -1,35 +1,36 @@
 <!--房顶租赁信息页面-->
+<wxs src="../../utils/data.wxs" module="filters"/>
 <view class="title">缴租中</view>
 <view class="lease">
 	<view class="house">
 		<view class="house-message">房屋信息</view>
 		<view class="image">
-			<image class="house-img" src="http://www.bizhidaquan.com/d/file/dongman/katong/2016-11-20/small748d2ef7d9c8b111bf78116442bf38e1.jpg"></image>
+			<image class="house-img" src="{{lease.house.houseImages[0].imageUrl}}"></image>
 		</view>
-		<view class="name">我温馨的小家</view>
-    <view class="zu">￥1000</view>
-		<view class="zu">整租|可住2人</view>
-		<view class="zu">XX市XX县</view>
+		<view class="name">{{lease.houseName}}</view>
+    <view class="zu">￥{{lease.house.price}}</view>
+		<view class="zu">{{lease.house.houseLeaseName}} | {{lease.house.houseTypeName}}</view>
+		<view class="zu">{{lease.house.address}}</view>
 	</view>
 	<view class="user">
   <view class="user-message">房东信息</view>
 		<view class="touxiang">
-			<image class="touxiang-img" src="http://img.jf258.com/i/0a3083889050x2863077464b27.jpg"></image>
+			<image class="touxiang-img" src="{{lease.house.user.imageUrl}}"></image>
 		</view>
-		<text class="uname">昵称</text>
-    <view class="phone">
+		<text class="uname">{{lease.house.user.nickname}}</text>
+    <view class="phone" bindtap="calling" data-phone="{{lease.house.user.phone}}">
 		<image class="phone-img" src="/pages/image/dh.png"></image>
     </view>
-    <view class="chat">
+    <view class="chat" bindtap="consult" data-id="{{lease.house.user}}">
 		<image class="chat-img" src="/pages/image/yijian.png"></image>
     </view>
 	</view>
 	<view class="indent">
   <view class="indent-message">订单信息</view>
-		<view class="one">支付金额<text class="two">￥1000</text></view>
-		<view class="one">剩余金额<text class="two">￥100</text></view>
-		<view class="one">下次缴租时间<text class="two">2020/6/18</text></view>
-		<view class="one">每月缴租金额<text class="two">￥1000</text></view>
+		<view class="one">订单总金额<text class="two">￥{{lease.sumMoney}}</text></view>
+		<view class="one">剩余金额<text class="two">￥{{lease.residueMoney}}</text></view>
+		<view class="one">下次缴租时间<text class="two">{{filters.formatDate(lease.nextTime)}}</text></view>
+		<view class="one">每月缴租金额<text class="two">￥{{lease.house.price}}</text></view>
 	</view>
   <view class="bts">
 	<button class="button" style="width:200rpx">缴费</button>

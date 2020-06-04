@@ -34,7 +34,7 @@
 </view>
 
 		<view wx:if="{{content.dealState!=3}}">
-		<button class="abandon" style="width:180rpx; " hover-class="btncontinue">查看订单</button>
+		<button class="abandon" style="width:180rpx;"  data-id="{{content.id}}"  bindtap="examine" hover-class="btncontinue">查看订单</button>
 		</view>
 	</view>
 

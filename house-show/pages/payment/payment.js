@@ -77,6 +77,8 @@ getPayment(){
     }
   })
 },
+
+// 支付
 payment(){
   wx.showModal({
     title: '支付提醒',
