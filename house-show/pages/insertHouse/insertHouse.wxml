@@ -15,7 +15,12 @@
 		<input name="narrate" value="" />
 
 		<text>所属城市:</text>
-		<input name="address" placeholder="xx市xxx区/县" value="" />
+		<picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="picker">
+			<input name="address" placeholder="xx市xxx区/县" value="{{region}}" />
+    </view>
+  </picker>
+	
 
 		<text>具体位置:</text>
 		<view class="section">

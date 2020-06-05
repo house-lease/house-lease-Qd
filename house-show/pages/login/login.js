@@ -43,7 +43,8 @@ Page({
                             success(responseData) {
                             if (responseData.data.data!=null) {
                              // 表示登录成功
-                              // app.globalData.userInfo=responseData.data.data;
+                             
+                              app.globalData.userInfo = responseData.data.data;
                               wx.setStorage({
                                 data: responseData.data.data,
                                 key: 'login',

@@ -42,34 +42,17 @@ bindInput: function(e){
 bindSearch: function(e){
   let location = e.currentTarget.dataset.keywords.location
   let index = location.indexOf(",")
-  this.data.longitude = location.substring(0,index)
-  this.data.latitude = location.substring(index+1)
+  app.globalData.longitude = location.substring(0,index)
+  app.globalData.latitude = location.substring(index+1)
   this.setData({
     addrss:e.currentTarget.dataset.keywords.name
   })
-  console.info(this.data.latitude)
-  console.info(this.data.longitude)
-  let this_ = this;
-  wx.request({
-    url: liunxUrl+'house/house/rim',
-    data:{
-      latitude:this_.data.latitude,
-      longitude:this_.data.longitude
-    }, 
-    success(res) {
-      console.info(res.data.data);
-        wx.setStorage({
-          data: res.data.data,
-          key: 'rimHouses',
-        })
-        wx.setStorage({
-          data: e.currentTarget.dataset.keywords.name,
-          key: 'addressName',
-        })
-        wx.navigateTo({
-          url: '/pages/search/search',
-        })
-    }
+  wx.setStorage({
+    data: e.currentTarget.dataset.keywords.name,
+    key: 'addressName',
+  })
+  wx.navigateTo({
+    url: '/pages/search/search',
   })
 },
   /**

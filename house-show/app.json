@@ -1,10 +1,11 @@
 {
   "pages":[
+    
     "pages/home/home",
     "pages/lease/lease",
     "pages/recharge/recharge",
     "pages/payment/payment",
-    
+    "pages/insertHouse/insertHouse",
     "pages/paymentMethod/paymentMethod",  
     "pages/apply/apply",
     "pages/certification/certification",
@@ -19,7 +20,7 @@
     "pages/login/login",
     "pages/renZheng/renZheng",
     "pages/insertImage/insertImage",
-    "pages/insertHouse/insertHouse",
+   
     "pages/verification/verification",
     "pages/information/information",
     "pages/select/select",
@@ -39,23 +40,25 @@
   "tabBar": {
 
     "list": [{
+      "selectedIconPath":"/pages/image/sy.png",
       "pagePath": "pages/home/home",
-      "iconPath":"/pages/image/sy.png",
+      "iconPath":"/pages/image/zyy.png",
       "text": "主页"
     },{
+      "selectedIconPath":"/pages/image/shou.png",
       "pagePath": "pages/like/likes",
-      "iconPath":"/pages/image/shou.png",
+      "iconPath":"/pages/image/sc1.png",
       "text": "收藏"
     },{
-
+      "selectedIconPath":"/pages/image/xx1.png",
       "pagePath": "pages/message/message",
-      "iconPath":"/pages/image/xx.png",
+      "iconPath":"/pages/image/xi11.png",
       "text": "消息"
     }
     ,{
-      
+      "selectedIconPath":"/pages/image/wd2.png",
       "pagePath": "pages/personalCenter/personalCenter",
-      "iconPath":"/pages/image/wd.png",
+      "iconPath":"/pages/image/wd1.png",
       "text": "我的"
     }
     ]

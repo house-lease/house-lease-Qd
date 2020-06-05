@@ -1,4 +1,5 @@
 <!--我的订单页面-->
+<view  wx:if="{{records.length!=0}}" >
 <view id="order-form" wx:for="{{records}}" wx:for-index="idx" wx:for-item="content" wx:key="id">
 	<!--预定日期-->
 	<view class="date">
@@ -37,5 +38,9 @@
 		<button class="abandon" style="width:180rpx;"  data-id="{{content.id}}"  bindtap="examine" hover-class="btncontinue">查看订单</button>
 		</view>
 	</view>
-
+</view>
+ <view class="ti">我们是有底线的~/(ㄒoㄒ)/~~</view>
+</view>
+ <view class="bao" wx:else>
+暂无订单信息,快去下单吧(●ˇ∀ˇ●)
 </view>

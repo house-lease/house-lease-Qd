@@ -77,6 +77,8 @@ Page({
         userId:app.globalData.userInfo.id
       },
       success:res =>{
+        
+        this.data.chatList = res.data.data
         this.setData({
           chatList:res.data.data
         })

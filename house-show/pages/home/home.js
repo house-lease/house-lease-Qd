@@ -25,7 +25,9 @@ Page({
     addressList: [],
     index: "",
     houseLeaseName: "",
-    price: "",
+    houseTypeName:"",
+    maxPrice: "",
+    minPrice:"",
     startValue: "",
     images: ['https://img.meituan.net/iphoenix/fae12ad6cb45735f4835276ada9cb062167115.jpg.webp@3840w_720h_80Q_1e_1c',
       'https://p0.meituan.net/scarlett/082bc697bf06e8475b738bec094607a9434582.jpg.webp@3840w_720h_80Q_1e_1c'
@@ -70,14 +72,13 @@ package(){
 
 // 筛选条件
 start(){
-    let item = ["全部"]
+    let item = ["不限"]
     this.data.starts.forEach(function(value,index){
         item.push(value.startName+"起")
     })
     wx.showActionSheet({
       itemList: item,
       success: (res)=> {
-        console.log(res.tapIndex)
         if(res.tapIndex!=0){
           this.data.startValue = this.data.starts[res.tapIndex-1].startValue
           this.getHouseList()
@@ -91,14 +92,13 @@ start(){
   },
 // 筛选条件
 houseLease(){
-  let item = ["全部"]
+  let item = ["不限"]
   this.data.houseLeases.forEach(function(value,index){
       item.push(value.leaseType)
   })
   wx.showActionSheet({
     itemList: item,
     success: (res)=> {
-      console.log(res.tapIndex)
       if(res.tapIndex!=0){
         this.data.houseLeaseName = this.data.houseLeases[res.tapIndex-1].leaseType
         this.getHouseList()
@@ -109,6 +109,48 @@ houseLease(){
     }
   })
 },
+// 条件筛选
+houseType(){
+  let item = ["不限"]
+  this.data.houseTypes.forEach(function(value,index){
+      item.push(value.houseType)
+  })
+  wx.showActionSheet({
+    itemList: item,
+    success: (res)=> {
+      if(res.tapIndex!=0){
+        this.data.houseTypeName = this.data.houseTypes[res.tapIndex-1].houseType
+        this.getHouseList()
+      }else{
+        this.data.houseTypeName = " "
+        this.getHouseList()
+      }
+    }
+  })
+},
+price(){
+  let item = ["不限","0-1000","1000-2000","2000-4000","4000-8000","8000-"]
+  wx.showActionSheet({
+    itemList: item,
+    success: (res)=> {
+      if(res.tapIndex!=0){
+        let price =item[res.tapIndex]
+        let index = price.indexOf("-")
+        this.data.minPrice = price.substring(0,index)
+        this.data.maxPrice = price.substring(index+1)
+        console.info(this.data.minPrice)
+        console.info(this.data.maxPrice=="")
+       
+        this.getHouseList()
+      }else{
+        this.data.minPrice = ""
+        this.data.maxPrice=""
+        this.getHouseList()
+      }
+    }
+  })
+}
+,
 
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e)
@@ -182,20 +224,6 @@ houseLease(){
           data: res.data.data,
           key: 'house',
         })
-        if(this_.data.user.id!=null){
-
-            // 添加浏览记录
-        wx.request({
-          url:liunxUrl + 'house/browse/addInfo',
-          data:{
-            userId:this_.data.user.id,
-            houseId:e.currentTarget.dataset.id
-          },
-          success:res=>{
-            console.info(res.data.message)
-          }
-        })
-        }
         wx.navigateTo({
           url: '/pages/particulars/particulars',
         })
@@ -240,8 +268,10 @@ houseLease(){
       data: {
         address: this_.data.address_,
         houseLeaseName: this_.data.houseLeaseName,
-        price: this_.data.price,
-        startValue: this_.data.startValue
+        maxPrice: this_.data.maxPrice,
+        minPrice:this_.data.minPrice,
+        startValue: this_.data.startValue,
+        houseTypeName:this_.data.houseTypeName
       },
       success(res) {
         console.info(res.data);
@@ -275,6 +305,7 @@ houseLease(){
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+
     this.package();
     wx.getStorage({
       key: 'login',
@@ -283,7 +314,12 @@ houseLease(){
         app.globalData.userInfo=res.data
         // 获取用户是否登录
         this.data.user=app.globalData.userInfo;
-      }
+      }, fail:res=>{
+        app.globalData.userInfo={}
+        this.setData({
+          user: null
+        })
+       }
     })
  
     // 调用查询房屋的信息

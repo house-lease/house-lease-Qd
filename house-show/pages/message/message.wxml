@@ -1,6 +1,7 @@
 <!--消息页面-->
 <view wx:if="{{user.id!=null}}">
 <view class="message">
+<view  wx:if="{{chatList.length!=0}}" >
   <view class="one"  wx:for="{{chatList}}" wx:for-index="key" 
    data-id="{{value.sendUser.id==user.id?value.receptionUser:value.sendUser}}"
    data-chatlistid="{{value.id}}"
@@ -40,6 +41,11 @@
       </view> 
   </view>
   </view>
+  <view class="ti">没有更多消息了~/(ㄒoㄒ)/~~</view>
+  </view>
+ <view class="bao" wx:else>
+暂无消息,快去咨询房东吧(●ˇ∀ˇ●)
+</view>
 </view>
 </view>
 <view wx:else>

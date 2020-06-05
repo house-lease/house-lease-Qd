@@ -10,6 +10,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    region: "",
     houseLeases:[],
     houseTypes:[],
     starts:[],
@@ -58,6 +59,13 @@ Page({
       residueRoom:"",
   },
 
+  bindRegionChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    let region_ = e.detail.value[1]+e.detail.value[2]
+    this.setData({
+      region: region_
+    })
+  },
   // 房屋租赁类型
   bindHouseLease: function(e) {
     console.log('picker发送选择改变，携带值为', e)

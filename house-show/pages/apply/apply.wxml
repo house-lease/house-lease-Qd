@@ -1,4 +1,5 @@
 <view class="le">
+<view  wx:if="{{apply.length!=0}}" >
 <view class="main" wx:for="{{apply}}" wx:key="id" wx:for-item="value"> 
 <view class="house">XXXX房屋租赁</view>
 <image  bindtap="image" data-image="{{value.houseImageUrl}}"  src="{{value.houseImageUrl}}"></image>
@@ -13,5 +14,10 @@
       <view wx:if="{{value.state==2}}"><text class="shen">申请状态</text>审核失败</view>
   <view><text class="shen">备注状态</text><text>{{value.message==null? '无':value.message}}</text></view>
 </view>
+</view>
+<view class="ti">我们是有底线了~/(ㄒoㄒ)/~~</view>
+</view>
+ <view class="bao" wx:else>
+暂无消息,快去申请房东吧(●ˇ∀ˇ●)
 </view>
 </view>

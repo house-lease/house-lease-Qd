@@ -63,11 +63,9 @@ Page({
            })
           }
         }else{
-          wx.showToast({
-              title: '未登录',
-              image:"/pages/image/jg.png",
-             duration:2000
-         })
+          wx.navigateTo({
+            url: '/pages/login/login',
+          })
         }
       
        
@@ -88,7 +86,11 @@ Page({
               url: liunxUrl+'house/house/rim',
               data:{
                 latitude:res.data.latitude,
-                longitude:res.data.longitude
+                longitude:res.data.longitude,
+                houseLeaseName:"",
+                maxPrice: "",
+                minPrice:"",
+                startValue:""    
               }, 
               success:(res)=> {
                 console.info(res.data.data);
@@ -303,7 +305,6 @@ address(){
     },
     // 收藏的方法
     attention(){
-
       if(app.globalData.userInfo.id!=null){
       let this_ = this;
       wx.getStorage({
@@ -332,11 +333,9 @@ address(){
         }
    })
   }else{
-    wx.showToast({
-        title: '未登录',
-        image:"/pages/image/jg.png",
-       duration:2000
-   })
+    wx.navigateTo({
+      url: '/pages/login/login',
+    })
   }
    } ,
   //  取消收藏
@@ -469,28 +468,61 @@ changeMarkerColor: function(data,i){
   that.setData({
     markerss: markers
   });
+},
+getUser(){
+  wx.getStorage({
+    key: 'login',
+    success:res=>{
+        app.globalData.userInfo=res.data
+      // 获取用户是否登录
+      this.setData({
+        user:app.globalData.userInfo
+      })
+      this.Collect();
+     
+    }, fail:res=>{
+      app.globalData.userInfo={}
+      this.setData({
+        user: null
+      })
+     }
+  })
+}
+,
+addBrowse(){
+  if(app.globalData.userInfo.id!=null){
+    // 添加浏览记录
+wx.request({
+  url:liunxUrl + 'house/browse/addInfo',
+  data:{
+    userId:app.globalData.userInfo.id,
+    houseId:this.data.houses.id
+  },
+  success:res=>{
+    console.info(res.data.message)
+  }
+})
+}
 }
 ,
   /**
    * 生命周期函数--监听页面显示
    */
   onShow:function () {
-    var this_=this;
-    this_.setData({
-      user:app.globalData.userInfo
-    })
+  this.getUser()
     wx.getStorage({
       key: 'house',
-      success:function(res){
-          this_.setData({
+      success:res =>{
+          this.setData({
             houses:res.data
           })
-          this_.data.houses = res.data
-          console.info(this_.data.houses)
+          this.data.houses = res.data
+          console.info(this.data.houses)
+          // 添加浏览记录
+          this.addBrowse()
       }
     })
     this.address();
-    this.Collect();
     this.rim();
     this.nearby();
   },

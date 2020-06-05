@@ -56,9 +56,9 @@
 		</view>
 		<view  bindtap="houseLease" class="t2">类型<image class="i2" src="/pages/image/xl.png"></image>
 		</view>
-		<view class="t3">房屋<image class="i3" src="/pages/image/xl.png"></image>
+		<view bindtap="houseType" class="t3">房屋<image class="i3" src="/pages/image/xl.png"></image>
 		</view>
-		<view class="t4">价格<image class="i4" src="/pages/image/xl.png"></image>
+		<view bindtap="price" class="t4">价格<image class="i4" src="/pages/image/xl.png"></image>
 		</view>
 	</view>
 

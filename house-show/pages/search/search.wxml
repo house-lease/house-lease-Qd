@@ -9,11 +9,11 @@
 
 <!-- 条件筛选框 -->
 <view class="tiaoJian">
-	<view class="t1">时间<image class="i" src="/pages/image/xl.png"></image>
+	<view bindtap="start" class="t1">时间<image class="i" src="/pages/image/xl.png"></image>
 	</view>
-	<view class="t2">类型<image class="i" src="/pages/image/xl.png"></image>
+	<view bindtap="houseLease" class="t2">类型<image class="i" src="/pages/image/xl.png"></image>
 	</view>
-	<view class="t3">价格<image class="i" src="/pages/image/xl.png"></image>
+	<view bindtap="price" class="t3">价格<image class="i" src="/pages/image/xl.png"></image>
 	</view>
 </view>
 
