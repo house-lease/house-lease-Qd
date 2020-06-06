@@ -83,16 +83,17 @@ Page({
         })
         let count  = 0;
         this.data.chatList.forEach(function(item,index){
+          if(item.theSendUserId!=app.globalData.userInfo.id)
           count+=item.unread
         })
         if(count==0){
-          count = ''
+          count = ' '
         }
         wx.setTabBarBadge({
           index: 2,	//从左边开始第几个页面显示
-          text: count.toString(),  //消息条数
+          text: count.toString().trim(),  //消息条数
           fail:res=>{
-            
+
           }
       })
       }
