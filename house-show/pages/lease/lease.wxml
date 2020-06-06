@@ -1,8 +1,16 @@
 <!--房顶租赁信息页面-->
 <wxs src="../../utils/data.wxs" module="filters"/>
-<view class="title">缴租中</view>
+<view class="title" wx:if="{{lease.state==1}}">
+缴租中
+</view>
+<view class="title" wx:if="{{lease.state==0}}">
+已完成
+</view>
+<view class="title" wx:if="{{lease.state==2}}">
+已取消
+</view>
 <view class="lease">
-	<view class="house">
+	<view class="house" bindtap="look" data-id="{{lease.house.id}}">
 		<view class="house-message">房屋信息</view>
 		<view class="image">
 			<image class="house-img" src="{{lease.house.houseImages[0].imageUrl}}"></image>
@@ -27,9 +35,13 @@
 	</view>
 	<view class="indent">
   <view class="indent-message">订单信息</view>
-		<view class="one">订单总金额<text class="two">￥{{lease.sumMoney}}</text></view>
-		<view class="one">剩余金额<text class="two">￥{{lease.residueMoney}}</text></view>
-		<view class="one">下次缴租时间<text class="two">{{filters.formatDate(lease.nextTime)}}</text></view>
+		<view class="one">订单总金额<text class="two">￥{{lease.sumMoney==null?'已取消':lease.sumMoney}}</text></view>
+		<view class="one">剩余金额<text class="two">￥{{lease.residueMoney==null?'已取消':lease.residueMoney}}</text></view>
+		<view class="one">
+		下次缴租时间
+		<text class="two" wx:if="{{lease.nextTime!=null}}">{{filters.formatDate(lease.nextTime)}}</text>
+		<text class="two" wx:if="{{lease.nextTime==null}}">无</text>
+		</view>
 		<view class="one">每月缴租金额<text class="two">￥{{lease.house.price}}</text></view>
 	</view>
   <view class="bts">

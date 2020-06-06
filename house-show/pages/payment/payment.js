@@ -27,8 +27,8 @@ Page({
       startName:this.data.starts[this.data.startIndex].startName,
       start:this.data.starts[this.data.startIndex]
     })
-    let money1 = this.data.payment.house.price+1000;
-    let money3 = this.data.start.startValue * this.data.payment.house.price+1000;
+    let money1 = this.data.payment.house.price+this.data.payment.price;
+    let money3 = this.data.start.startValue * this.data.payment.house.price+this.data.payment.price;
     let money2 = money3-money1;
     this.data.first = money1;
     this.data.residue = money2;
@@ -61,8 +61,8 @@ getPayment(){
             startName:res.data.data[0].startName,
             start:res.data.data[0]
           })
-          let money1 = this.data.payment.house.price+1000;
-          let money3 = this.data.start.startValue * this.data.payment.house.price+1000;
+          let money1 = this.data.payment.house.price+this.data.payment.house.price;
+          let money3 = this.data.start.startValue * this.data.payment.house.price+this.data.payment.house.price;
           let money2 = money3-money1;
           this.data.first = money1;
           this.data.residue = money2;

@@ -16,12 +16,12 @@
   </view>
   <view class="own">
   	<view class="downPayment">
-  		首付款 (含押金/1000)
+  		首付款 (含押金/一月房租)
   		<text class="money1">￥{{first}}</text>
 
   	</view>
   	<view class="residue">
-  		剩余期支付 (含服务维修费)
+  		剩余期支付  (剩余房租)
   		<text class="stages">共{{start.startValue}}期</text>
   		<text class="money2">￥{{residue}}</text>
   	</view>
@@ -32,26 +32,20 @@
   	<view class="text1">
   		<text>
           *上述付款详情以及活动优惠信息仅供参考，以实际付款计划表
-          展示为准，如签约两年需一次性付清。
+          展示为准
         </text>
   	</view>
 
   	<view class="pledge">
   		<view class="pledgeExplain">押金说明</view>
   		<text class="Explain1">
-  			为该付款方式一个月租金，租赁关系终止时，蛋壳租客
+  			为该付款方式一个月租金，租赁关系终止时，租客
   			依约返还了租赁物、缴清全部款项等，且并无其它不履
-  			行合同义务情形的，蛋壳应返还押金或已扣除损害赔偿
+  			行合同义务情形的，青鸟应返还押金或已扣除损害赔偿
   			后的余额。
  				</text>
   	</view>
 
-  	<view class="serviceCharge">
-  		<view class="serviceChargeExplain">服务费说明</view>
-  		<text class="Explain2">
-  			展示为准，如签约两年需一次性付清。展示为准，如签约两年需一次性付清。
-  	</text>
-  	</view>
 
   	<view class="maintain">
   		<view class="maintainGold">维修金说明</view>

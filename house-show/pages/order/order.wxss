@@ -36,13 +36,13 @@
   height: 170rpx;
 }
 .img{
-  width: 160rpx;
+  width: 240rpx;
   height: 160rpx;
   float:left;
   margin-right: 10rpx;
 }
 .image{
-  width: 160rpx;
+  width: 100%;
   height: 160rpx;
   border-radius: 20rpx;
 }
@@ -58,7 +58,7 @@
   margin-bottom: 20rpx;
 }
 .status{
-  width: 110rpx;
+ 
   height: 40rpx;
   float: right;
   font-family: Microsoft JhengHei;

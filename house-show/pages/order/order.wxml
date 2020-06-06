@@ -8,8 +8,8 @@
 	<!--订单内容-->
 	<view class="content">
 		<!--内容-->
-		<view class="information">
-			<view class="img">
+		<view class="information" >
+			<view class="img" bindtap="look" data-id="{{content.house.id}}">
 				<image class="image" src="{{content.house.houseImages[0].imageUrl}}"></image>
 			</view>
 			<view class="name">{{content.houseName}}</view>

@@ -38,27 +38,26 @@
     "enablePullDownRefresh":true
   },
   "tabBar": {
-
     "list": [{
-      "selectedIconPath":"/pages/image/sy.png",
+      "selectedIconPath":"/pages/image/z1.png",
       "pagePath": "pages/home/home",
-      "iconPath":"/pages/image/zyy.png",
+      "iconPath":"/pages/image/z2.png",
       "text": "主页"
     },{
-      "selectedIconPath":"/pages/image/shou.png",
+      "selectedIconPath":"/pages/image/s1.png",
       "pagePath": "pages/like/likes",
-      "iconPath":"/pages/image/sc1.png",
+      "iconPath":"/pages/image/s2.png",
       "text": "收藏"
     },{
-      "selectedIconPath":"/pages/image/xx1.png",
+      "selectedIconPath":"/pages/image/x1.png",
       "pagePath": "pages/message/message",
-      "iconPath":"/pages/image/xi11.png",
+      "iconPath":"/pages/image/x2.png",
       "text": "消息"
     }
     ,{
-      "selectedIconPath":"/pages/image/wd2.png",
+      "selectedIconPath":"/pages/image/w2.png",
       "pagePath": "pages/personalCenter/personalCenter",
-      "iconPath":"/pages/image/wd1.png",
+      "iconPath":"/pages/image/w1.png",
       "text": "我的"
     }
     ]

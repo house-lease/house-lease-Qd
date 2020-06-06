@@ -13,6 +13,26 @@ Page({
       lease:{},
       chatS:[]
   },
+  // 点击查询方法
+look (e) {
+  wx.request({
+    url: liunxUrl + 'house/house/queryByHouseId',
+    data: {
+      houseId: e.currentTarget.dataset.id
+    },
+    success(res) {
+      console.info(res.data.data);
+      wx.setStorage({
+        data: res.data.data,
+        key: 'house',
+      })
+      wx.navigateTo({
+        url: '/pages/particulars/particulars',
+      })
+
+    }
+  })
+},
 // 获取订单信息
   getLease(){
       wx.getStorage({

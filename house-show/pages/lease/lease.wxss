@@ -30,7 +30,7 @@
   width: 330rpx;
   height: 200rpx;
   margin-left: 20rpx;
-  margin-right: 20rpx;
+  margin-right: 60rpx;
 }
 .house-img{
   width: 330rpx;
