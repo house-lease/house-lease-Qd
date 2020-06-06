@@ -77,11 +77,24 @@ Page({
         userId:app.globalData.userInfo.id
       },
       success:res =>{
-        
         this.data.chatList = res.data.data
         this.setData({
           chatList:res.data.data
         })
+        let count  = 0;
+        this.data.chatList.forEach(function(item,index){
+          count+=item.unread
+        })
+        if(count==0){
+          count = ''
+        }
+        wx.setTabBarBadge({
+          index: 2,	//从左边开始第几个页面显示
+          text: count.toString(),  //消息条数
+          fail:res=>{
+            
+          }
+      })
       }
     })
   },
@@ -138,7 +151,6 @@ login:function(){
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
   },
 
   /**
