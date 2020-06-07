@@ -38,12 +38,11 @@ App({
   },
   globalData: {
     userInfo: {
-      id:7
     },
     longitude:"",
     latitude:"",
-    localUrl:"https://makamaka.top/",
-    liunxUrl:"http://192.168.0.106:8080/",
+    liunxUrl:"https://makamaka.top/",
+    localUrl:"http://192.168.0.106:8080/",
 
     // liunxUrl:"http://192.168.0.106:8080/",
 
