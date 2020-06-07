@@ -1,7 +1,9 @@
 {
   "pages":[
-    
     "pages/home/home",
+    "pages/order/order",
+    "pages/landlordLease/landlordLease",
+    "pages/landlordOrder/landlordOrder",
     "pages/lease/lease",
     "pages/recharge/recharge",
     "pages/payment/payment",
@@ -14,13 +16,12 @@
     "pages/browse/browse",
     "pages/particulars/particulars",
     "pages/chat/chat",
-    "pages/order/order",
+
     "pages/search/search",
     "pages/personalCenter/personalCenter",
     "pages/login/login",
     "pages/renZheng/renZheng",
     "pages/insertImage/insertImage",
-   
     "pages/verification/verification",
     "pages/information/information",
     "pages/select/select",

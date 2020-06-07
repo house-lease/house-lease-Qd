@@ -41,7 +41,12 @@ Page({
          duration:2000
      })
     }
-
+  },
+  // 房东订单
+  landlordOrder(){
+    wx.navigateTo({
+      url: '/pages/landlordOrder/landlordOrder',
+    })
   },
   // 跳转浏览记录页面
   browse(){

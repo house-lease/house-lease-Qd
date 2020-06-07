@@ -27,8 +27,8 @@ Page({
       startName:this.data.starts[this.data.startIndex].startName,
       start:this.data.starts[this.data.startIndex]
     })
-    let money1 = this.data.payment.house.price+this.data.payment.price;
-    let money3 = this.data.start.startValue * this.data.payment.house.price+this.data.payment.price;
+    let money1 = this.data.payment.house.price+this.data.payment.house.price;
+    let money3 = this.data.start.startValue * this.data.payment.house.price+this.data.payment.house.price;
     let money2 = money3-money1;
     this.data.first = money1;
     this.data.residue = money2;
@@ -110,11 +110,13 @@ payment(){
                   }else if(res.data.data==1){
                     wx.showToast({
                       title: '余额不足',
+                        image:"/pages/image/jg.png",
                        duration: 2000
                     })
                   }else if(res.data.data==2){
                     wx.showToast({
                       title: '房间不足',
+                        image:"/pages/image/jg.png",
                        duration: 2000
                     })  
                   }

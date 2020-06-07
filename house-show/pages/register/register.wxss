@@ -49,7 +49,7 @@
  }
 button{
   margin-top: 60rpx;
-  background: PaleTurquoise;
+  background: #00FFFF;
   color: white;
   margin-bottom: 30rpx;
 }

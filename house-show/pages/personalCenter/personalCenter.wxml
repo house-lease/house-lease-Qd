@@ -45,6 +45,16 @@
 		</view>
 	</view>
 
+		<view  id="biaoqian" wx:if="{{user.landlord==1}}"  bindtap="landlordOrder">
+		<view class="img">
+			<image  src="/pages/image/fangwu.png"></image>
+		</view>
+		<text >房屋订单</text>	
+		<view class="img2">
+			<image class="image2" src="/pages/image/right.png"></image>
+		</view>
+	</view>
+
 	<view id="biaoqian" bindtap="browse">
 		<view class="img">
 			<image  src="/pages/image/jilu.png"></image>

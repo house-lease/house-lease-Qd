@@ -1,10 +1,5 @@
 <!--我的订单页面-->
-<view class="ten">
-<view class="jiao"  bindtap="classify"  data-state="1">缴租中</view>
-<view  class="jiao1" data-state="0" bindtap="classify">已完成</view>
-<view   class="jiao2" bindtap="classify"  data-state="3">未支付</view>
-<view data-state="2" bindtap="classify">已取消</view>
-</view>
+<view class="ten"><view class="jiao"  bindtap="classify"  data-state="1">缴租中</view><view data-state="0" bindtap="classify">已完成</view></view>
 <view  wx:if="{{records.length!=0}}" >
 <view id="order-form" wx:for="{{records}}" wx:for-index="idx" wx:for-item="content" wx:key="id">
 	<!--预定日期-->
@@ -25,21 +20,10 @@
 			<view class="status"  wx:if="{{content.dealState==1}}">
 			缴租中
 			</view>
-		<view class="status"  wx:if="{{content.dealState==2}}">
-			已取消
-			</view>
-			<view class="status"  wx:if="{{content.dealState==3}}">
-			等待支付
-			</view>
 			<view class="type">{{content.house.houseLeaseName}} | {{content.house.houseTypeName}}</view>
 			<view class="address"> {{content.house.address}}</view>
 			<view class="money"> ￥{{content.dealMoney}}</view>
 		</view>
-<view wx:if="{{content.dealState==3}}">
-		<button bindtap="cancel" data-id="{{content.id}}" class="abandon" style="width:180rpx; " hover-class="btnabandon">取消订单</button>
-		<button  class="continue" style="width:180rpx; " data-id="{{content.id}}"  bindtap="go" hover-class="btncontinue">继续支付</button>
-</view>
-
 		<view wx:if="{{content.dealState!=3}}">
 		<button class="abandon" style="width:180rpx;"  data-id="{{content.id}}"  bindtap="examine" hover-class="btncontinue">查看订单</button>
 		</view>
@@ -48,5 +32,5 @@
  <view class="ti">我们是有底线的~/(ㄒoㄒ)/~~</view>
 </view>
  <view class="bao" wx:else>
-暂无订单信息,快去下单吧(●ˇ∀ˇ●)
+暂无订单信息(●ˇ∀ˇ●)
 </view>

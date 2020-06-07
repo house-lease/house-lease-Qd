@@ -13,6 +13,13 @@ Page({
       lease:{},
       chatS:[]
   },
+  // 返回上层
+  fanHui(){
+    wx.navigateBack({
+      complete: (res) => {},
+    })
+  }
+  ,
   // 点击查询方法
 look (e) {
   wx.request({
@@ -29,7 +36,6 @@ look (e) {
       wx.navigateTo({
         url: '/pages/particulars/particulars',
       })
-
     }
   })
 },
@@ -76,13 +82,6 @@ pay(e){
 })
 }
 ,
-  // 返回上层
-  fanHui(){
-    wx.navigateBack({
-      complete: (res) => {},
-    })
-  }
-  ,
 // 获取订单信息
   getLease(){
       wx.getStorage({
@@ -108,6 +107,49 @@ pay(e){
             }
         })
     },
+    // 退还押金
+    return(e){
+      wx.showModal({
+        title: '提示',
+        content: '是否确认缴费',
+        success: res => {
+            if (res.confirm) {
+              wx.request({
+                url: liunxUrl+'/house/record/returnMoney',
+                data:{
+                  id:e.currentTarget.dataset.id
+                },
+                success:re=>{
+                 if(re.data.data!=null){
+                    if(re.data.data==0){
+                      wx.showToast({
+                        title: '交易失败',
+                         image:"/pages/image/jg.png",
+                         duration: 2000
+                      })
+                    }else{
+                      this.setData({
+                        lease:re.data.data
+                      })
+                      wx.showToast({
+                        title: '交易完成',
+                         duration: 2000
+                      })
+                    }
+                 }else{
+                  wx.showToast({
+                    title: '余额不足',
+                     image:"/pages/image/jg.png",
+                     duration: 2000
+                  })
+                 }
+                }
+              })
+            } 
+        }
+    })
+    }
+    ,
     // 跳转聊天页面
     consult(e){
       if(app.globalData.userInfo.id!=null){

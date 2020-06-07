@@ -113,11 +113,13 @@ payment(){
                   }else if(res.data.data==1){
                     wx.showToast({
                       title: '余额不足',
+                        image:"/pages/image/jg.png",
                        duration: 2000
                     })
                   }else if(res.data.data==3){
                     wx.showToast({
                       title: '房间不足',
+                        image:"/pages/image/jg.png",
                        duration: 2000
                     })
                     setTimeout(function () {
@@ -151,6 +153,7 @@ payment(){
                 }else if(res.data.data==3){
                   wx.showToast({
                     title: '房间不足',
+                     image:"/pages/image/jg.png",
                      duration: 2000
                   })
                   setTimeout(function () {

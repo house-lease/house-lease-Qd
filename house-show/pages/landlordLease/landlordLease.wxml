@@ -9,7 +9,7 @@
 <view class="title" wx:if="{{lease.state==2}}">
 已取消
 </view>
-<view class="ddd" wx:if="{{lease.state==0}}" >订单已完成，可联系房东退还押金</view>
+<view class="ddd" wx:if="{{lease.state==0}}" >订单已完成，请和房客协商退还押金</view>
 <view class="lease">
 	<view class="house" bindtap="look" data-id="{{lease.house.id}}">
 		<view class="house-message">房屋信息</view>
@@ -22,15 +22,15 @@
 		<view class="zu">{{lease.house.address}}</view>
 	</view>
 	<view class="user">
-  <view class="user-message">房东信息</view>
+  <view class="user-message">房客信息</view>
 		<view class="touxiang">
-			<image class="touxiang-img" src="{{lease.house.user.imageUrl}}"></image>
+			<image class="touxiang-img" src="{{lease.payerUser.imageUrl}}"></image>
 		</view>
-		<text class="uname">{{lease.house.user.nickname}}</text>
-    <view class="phone" bindtap="calling" data-phone="{{lease.house.user.phone}}">
+		<text class="uname">{{lease.payerUser.nickname}}</text>
+    <view class="phone" bindtap="calling" data-phone="{{lease.payerUser.phone}}">
 		<image class="phone-img" src="/pages/image/dh.png"></image>
     </view>
-    <view class="chat" bindtap="consult" data-id="{{lease.house.user}}">
+    <view class="chat" bindtap="consult" data-id="{{lease.payerUser}}">
 		<image class="chat-img" src="/pages/image/yijian.png"></image>
     </view>
 	</view>
@@ -51,10 +51,9 @@
 
 	<view  wx:if="{{lease.state!=2}}">
 	<view class="bts">
-	<button wx:if="{{lease.state==1}}" class="button" bindtap="pay" data-id="{{lease.id}}" style="width:200rpx">缴费</button>
-	<button wx:if="{{lease.state==0}}" class="button" bindtap="consult" data-id="{{lease.house.user}}" style="width:200rpx">联系房东</button>
-	<button  wx:if="{{lease.state==1}}" class="button" style="width:200rpx">取消订单</button>
-	 <button wx:if="{{lease.state==0}}" bindtap="fanHui" class="button" style="width:200rpx">返回</button>
+	<button  class="button" bindtap="consult" data-id="{{lease.payerUser}}" style="width:200rpx">联系房客</button>
+  <button wx:if="{{lease.cashState==0}}" bindtap="return" data-id="{{lease.id}}" class="button" style="width:200rpx">退还押金</button>
+  <button wx:if="{{lease.cashState==1}}" bindtap="fanHui" class="button" style="width:200rpx">返回</button>
   </view>
  </view>
   

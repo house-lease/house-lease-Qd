@@ -89,6 +89,9 @@ Page({
         if(count==0){
           count = ' '
         }
+        if(count>99){
+          count = ' 99+'
+        }
         wx.setTabBarBadge({
           index: 2,	//从左边开始第几个页面显示
           text: count.toString().trim(),  //消息条数

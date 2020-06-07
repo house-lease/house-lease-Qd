@@ -9,62 +9,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
   records:[],
   dealState:1
-   
-    
   },
   
-  // 取消订单
-  cancel(e){
-    wx.showModal({
-      title: '提示',
-      content: '是否取消订单',
-      success:res => {
-          if (res.confirm) {
-            console.info(e.currentTarget.dataset.id)
-            wx.request({
-              url: liunxUrl+'/house/record/updateDealState',
-              data:{
-                userId:app.globalData.userInfo.id,
-                id:e.currentTarget.dataset.id,
-                dealState:2
-              },
-              success:res=>{
-                console.info(res.data.data)
-                this.setData({
-                  records:res.data.data
-                })
-              }
-            })
-          } 
-      }
-  })
-  }
-,
-// 继续付款
-go(e){
-  console.info(e.currentTarget.dataset.id)
-  wx.request({
-    url: liunxUrl+'/house/record/queryByRecordId',
-    data:{
-      recordId:e.currentTarget.dataset.id
-    },
-    success:res=>{
-      console.info(res.data.data)
-      wx.setStorage({
-        data: res.data.data,
-        key: 'paymentOne',
-      })
-      wx.navigateTo({
-        url: '/pages/payment/payment',
-      })
-    }
-  })
-}
-,
-
 // 点击查询方法
 look (e) {
   wx.request({
@@ -100,12 +48,11 @@ examine(e){
         key: 'lease',
       })
       wx.navigateTo({
-        url: '/pages/lease/lease',
+        url: '/pages/landlordLease/landlordLease',
       })
     }
   })
-}
-,
+},
 // 订单分类
 classify(e){
   this.getRecord(e.currentTarget.dataset.state);
@@ -116,9 +63,9 @@ classify(e){
       this.data.dealState=e
     }
       wx.request({
-        url: liunxUrl+'/house/record/queryByPayerUserId',
+        url: liunxUrl+'/house/record/queryByPayeeUserId',
         data:{
-          payerUserId:app.globalData.userInfo.id,
+          payeeUserId:app.globalData.userInfo.id,
           dealState:this.data.dealState
         },
         success:res=>{
