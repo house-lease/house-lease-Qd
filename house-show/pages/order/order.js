@@ -115,6 +115,10 @@ classify(e){
     if(e!=null){
       this.data.dealState=e
     }
+    wx.showLoading({
+      title: '加载中',
+      mask: true,
+    })
       wx.request({
         url: liunxUrl+'/house/record/queryByPayerUserId',
         data:{
@@ -122,6 +126,9 @@ classify(e){
           dealState:this.data.dealState
         },
         success:res=>{
+          wx.hideLoading({
+            complete: (res) => {},
+          })
           console.info(res.data.data)
           this.setData({
             records:res.data.data
@@ -133,7 +140,6 @@ classify(e){
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
 
   /**

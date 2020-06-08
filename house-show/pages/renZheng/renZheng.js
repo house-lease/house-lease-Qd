@@ -84,7 +84,7 @@ Page({
           })
         }else{
           wx.showToast({
-              title: '实名认证失败',
+              title: '请上传有效证件',
               image:"/pages/image/jg.png",
              duration:2000
          })

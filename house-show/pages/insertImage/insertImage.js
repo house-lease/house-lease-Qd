@@ -120,7 +120,7 @@ uploadImage(){
         'Content-Type': 'form-data'
       },
       success: function (res) {
-       
+        
       }
     })   
   }

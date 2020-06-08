@@ -6,7 +6,7 @@
   border: 1px solid rgba(192,192,192);
   /* margin-left:40rpx; */
   padding: 20rpx;
-  box-shadow: 5rpx 5rpx  rgba(192,192,192);
+  /* box-shadow: 5rpx 5rpx  rgba(192,192,192); */
 }
 .weiZhi,.souSuo{
   display: inline-block;

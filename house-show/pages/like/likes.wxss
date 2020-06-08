@@ -1,6 +1,6 @@
 /* 房屋列表 */
 .lists{
-  padding:30rpx 30rpx 0rpx 60rpx;
+  padding:30rpx 30rpx 0rpx 30rpx;
 }
 .lists::after{
   content:" ";

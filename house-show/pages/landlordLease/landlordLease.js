@@ -46,12 +46,19 @@ pay(e){
     content: '是否确认缴费',
     success: res => {
         if (res.confirm) {
+          wx.showLoading({
+            title: '交易中',
+            mask: true,
+          })
           wx.request({
             url: liunxUrl+'/house/record/pay',
             data:{
               id:e.currentTarget.dataset.id
             },
             success:re=>{
+              wx.hideLoading({
+                complete: (res) => {},
+              })
              if(re.data.data!=null){
                 if(re.data.data==0){
                   wx.showToast({

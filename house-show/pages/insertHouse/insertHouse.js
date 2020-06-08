@@ -97,8 +97,12 @@ Page({
     })
     console.info(this.data.start)
   },
-
-
+  fanHui(){
+    wx.navigateBack({
+      complete: (res) => {},
+    })
+  }
+,
   // 获得房屋类型 房屋起租类型   起租时间
   package(){
     var this_ = this;

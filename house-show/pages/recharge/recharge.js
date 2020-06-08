@@ -13,31 +13,58 @@ Page({
    */
   data: {
     user:{},
-    total_amount:"1"
+    money:""
   },
   inputSetData:function(e){
-    this.setData({
-      total_amount:e.detail.value
-    })
+    this.data.money=e.detail.value
   }
   ,
 buttonClick:function(){
-
-  var this_ = this
-
-  this_.setData({
-    user:app.globalData.userInfo
+  wx.showModal({
+    title: '充值提醒',
+    content: '是否确定充值',
+    success: res=> {
+      if (res.confirm) {
+        wx.showLoading({
+          title: '充值中',
+          mask: true,
+        })
+        wx.request({
+          url: liunxUrl+'house/particular/save', 
+          data: {
+            userId:app.globalData.userInfo.id,
+            money:this.data.money
+          },
+          success:res=>{
+            wx.hideLoading({
+              complete: (res) => {},
+            })
+            if(res.data.data!=null){
+                if(res.data.data==0){
+                  wx.showToast({
+                    title: '充值成功',
+                     duration: 2000
+                  })
+                  setTimeout(function () {
+                    wx.navigateBack({
+                      complete: (res) => {
+                      }
+                    })
+                  }, 2000)    
+                }
+            }else{
+              wx.showToast({
+                title: '充值失败',
+                  image:"/pages/image/jg.png",
+                 duration: 2000
+              })
+            }
+          }
+      })
+      }
+    }
   })
-
-  wx.request({
-    url: liunxUrl+'house/payApiController/Pay', 
-    data: {
-      subject:"充值",
-      body:"充值到余额",
-      total_amount:this_.data.total_amount,
-      userId:this_.data.user.id,
-    },
-})
+  
 },
 
   /**

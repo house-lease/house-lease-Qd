@@ -83,6 +83,10 @@ payment(){
     content: '是否确定支付',
     success: res=> {
         if (res.confirm) {
+          wx.showLoading({
+            title: '交易中',
+            mask: true,
+          })
             wx.request({
               url: liunxUrl+'/house/record/save',
               header: { "content-type": "application/x-www-form-urlencoded" },
@@ -96,6 +100,9 @@ payment(){
                 startValue:this.data.start.startValue
               },
               success:res=>{
+                wx.hideLoading({
+                  complete: (res) => {},
+                })
                 console.info(res.data)
                 if(res.data.data!=null){
                   if(res.data.data==0){
@@ -132,6 +139,10 @@ payment(){
               }
             })
         } else{
+          wx.showLoading({
+            title: '交易中',
+            mask: true,
+          })
           wx.request({
             url: liunxUrl+'/house/record/save',
             header: { "content-type": "application/x-www-form-urlencoded" },
@@ -145,6 +156,9 @@ payment(){
               startValue:this.data.start.startValue
             },
             success:res=>{
+              wx.hideLoading({
+                complete: (res) => {},
+              })
                 if(res.data.data==2){
                   wx.showToast({
                     title: '已保存订单',

@@ -89,9 +89,10 @@
 
 		<view class="btn-area">
       
-      <view  class="an2">
-				<button form-type="submit" hover-class="bt">下一步</button>
-      </view>
+			<button bindtap="fanHui" class="an" size="mini" hover-class="bt">返回</button>
+    
+			<button class="an2" form-type="submit" size="mini" hover-class="bt">下一步</button>
+ 
 		</view>
 
 	</form>
