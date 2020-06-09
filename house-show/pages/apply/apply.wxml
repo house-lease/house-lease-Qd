@@ -1,7 +1,7 @@
 <view class="le">
 <view  wx:if="{{apply.length!=0}}" >
 <view class="main" wx:for="{{apply}}" wx:key="id" wx:for-item="value"> 
-<view class="house">XXXX房屋租赁</view>
+<view class="house">申请回执单据</view>
 <image  bindtap="image" data-image="{{value.houseImageUrl}}"  src="{{value.houseImageUrl}}"></image>
 <view class="message">
   <view><text class="shen1">申请人</text><text>{{value.userName}}</text> </view>

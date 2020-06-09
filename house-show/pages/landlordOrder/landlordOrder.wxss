@@ -146,8 +146,9 @@
   padding-left: 20rpx;
 }
 .ten view{
-  padding-top: 20rpx;
-  padding-bottom: 20rpx;
+  font-size:30rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
   display: inline-block;
   padding-left: 130rpx;
   padding-right: 130rpx;  

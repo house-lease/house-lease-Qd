@@ -52,8 +52,10 @@
 	<view  wx:if="{{lease.state!=2}}">
 	<view class="bts">
 	<button  class="button" bindtap="consult" data-id="{{lease.payerUser}}" style="width:200rpx">联系房客</button>
-  <button wx:if="{{lease.cashState==0}}" bindtap="return" data-id="{{lease.id}}" class="button" style="width:200rpx">退还押金</button>
-  <button wx:if="{{lease.cashState==1}}" bindtap="fanHui" class="button" style="width:200rpx">返回</button>
+  <button wx:if="{{lease.state==0&&lease.cashState==0}}" bindtap="return" data-id="{{lease.id}}" class="button" style="width:200rpx">退还押金</button>
+  <button wx:if="{{lease.state==0&&lease.cashState==1}}" bindtap="fanHui" class="button" style="width:200rpx">返回</button>
+	<button wx:if="{{lease.state==1}}"  bindtap="fanHui" class="button" style="width:200rpx">返回</button>
+
   </view>
  </view>
   

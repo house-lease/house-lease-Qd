@@ -152,5 +152,5 @@
 .button{
   font-size: 24rpx;
   color: white;
-  background: #00FFFF;
+  background:#42A5F5;
 }
