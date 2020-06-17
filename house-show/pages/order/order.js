@@ -11,8 +11,11 @@ Page({
   data: {
     
   records:[],
-  dealState:1
-   
+  dealState:1,
+   color0:"",
+   color1:"",
+   color2:"",
+   color3:"",
     
   },
   
@@ -114,7 +117,43 @@ classify(e){
   getRecord(e){
     if(e!=null){
       this.data.dealState=e
-    }
+    if(e==0){
+      this.setData({
+        color0:"font-size: 35rpx;font-weight: 800",
+        color1:"",
+        color2:"",
+        color3:"",
+      })
+    }else if(e==1){
+      this.setData({
+        color1:"font-size: 35rpx;font-weight: 800",
+        color0:"",
+        color2:"",
+        color3:"",
+      })
+    }else if(e==2){
+      this.setData({
+        color2:"font-size: 35rpx;font-weight: 800",
+        color1:"",
+        color0:"",
+        color3:"",
+      })
+    }else{
+      this.setData({
+        color3:"font-size: 35rpx;font-weight: 800",
+        color1:"",
+        color2:"",
+        color0:"",
+      })
+    } 
+  }else{
+    this.setData({
+      color1:"font-size: 35rpx;font-weight: 800",
+      color3:"",
+      color2:"",
+      color0:"",
+    })
+  }
     wx.showLoading({
       title: '加载中',
       mask: true,

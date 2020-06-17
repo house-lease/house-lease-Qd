@@ -17,11 +17,18 @@
         <text>></text>
       </view>
     </view>
+    <view bindtap="myHouse" wx:if="{{user.landlord==1}}" class="authentication">
+      <text>我的房屋</text>  
+      <view class="jiantou">
+        <text>></text>
+      </view>
+    </view>
     <view bindtap="apply" class="authentication">
       <text>房东申请记录</text>  
       <view class="jiantou">
         <text>></text>
       </view>
     </view>
+
     <button bindtap="exit">退出登录</button>
 </view>

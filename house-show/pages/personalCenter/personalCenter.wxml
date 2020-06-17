@@ -47,7 +47,7 @@
 
 		<view  id="biaoqian" wx:if="{{user.landlord==1}}"  bindtap="landlordOrder">
 		<view class="img">
-			<image  src="/pages/image/fangwu.png"></image>
+			<image  src="/pages/image/dd_1.png"></image>
 		</view>
 		<text >房屋订单</text>	
 		<view class="img2">

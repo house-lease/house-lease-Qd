@@ -140,20 +140,21 @@
   margin-top: 30rpx;
   padding-top: 20rpx;
 }
-
+.ten::after{
+  content:" ";
+  display:block;
+  clear:both;
+}
 .ten{
-  border-radius: 60rpx;
-  border: 1rpx  solid  rgba(182,182,182);
-  padding-left: 10rpx;
+  margin-left: 10rpx;
 }
 .ten view{
+  /* border-top: 1rpx  solid  rgba(182,182,182);
+  border-bottom: 1rpx  solid  rgba(182,182,182); */
   font-size:30rpx;
   padding-top: 10rpx;
   padding-bottom: 10rpx;
-  display: inline-block;
+  float: left;
   padding-left: 6%;
   padding-right: 6%;
-}
-.jiao,.jiao1,.jiao2{
-  border-right: 2rpx solid  rgba(182,182,182) ;
 }

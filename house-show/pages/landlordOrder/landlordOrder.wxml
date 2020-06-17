@@ -1,5 +1,8 @@
 <!--我的订单页面-->
-<view class="ten"><view class="jiao"  bindtap="classify"  data-state="1">缴租中</view><view data-state="0" bindtap="classify">已完成</view></view>
+<view class="ten">
+<view class="jiao" style="{{color1}}" bindtap="classify"  data-state="1">缴租中</view>
+<view data-state="0" style="{{color0}}" bindtap="classify">已完成</view>
+</view>
 <view  wx:if="{{records.length!=0}}" >
 <view id="order-form" wx:for="{{records}}" wx:for-index="idx" wx:for-item="content" wx:key="id">
 	<!--预定日期-->

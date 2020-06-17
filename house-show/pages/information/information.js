@@ -31,7 +31,7 @@ exit(){
           wx.removeStorage({
             key: 'login'
           })
-          app.globalData.userInfo={}
+          app.globalData.userInfo=null
           wx.navigateBack({
             complete: (res) => {
                 console.info(res)
@@ -55,7 +55,12 @@ exit(){
       url: '/pages/verification/verification',
     })
   },
-
+// 跳转我的房屋页面
+myHouse(){
+  wx.navigateTo({
+    url: '/pages/myHouse/myHouse',
+  })
+},
   /**
    * 生命周期函数--监听页面加载
    */

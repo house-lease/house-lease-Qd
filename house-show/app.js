@@ -42,7 +42,7 @@ App({
     longitude:"",
     latitude:"",
     liunxUrl:"https://makamaka.top/",
-    localUrl:"http://192.168.0.106:8080/",
+    localUrl:"http://localhost:8080/",
 
     // liunxUrl:"http://192.168.0.106:8080/",
 

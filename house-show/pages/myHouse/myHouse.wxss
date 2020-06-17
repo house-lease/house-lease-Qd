@@ -1,0 +1,265 @@
+/* 位置样式 */
+.pa::after{
+  content:" ";
+  display:block;
+  clear:both;
+}
+.pa{
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+
+/* 头部搜索框样式 */
+.zhu{
+  margin-left: 65rpx;
+  position: relative;
+  float: left;
+  width:80%;
+  border: 1px solid gainsboro;
+  background: whitesmoke;
+  border-radius: 20rpx;
+  /* margin-left:40rpx; */
+  height: 70rpx;
+}
+.souSuo{
+  display: inline-block;
+  padding: 20rpx;
+  font-family: Microsoft Yahei;
+  color: rgba(192,192,192);
+  font-size: 24rpx;
+}
+
+/* 下拉图标 */
+.souSuoImg{
+  width: 45rpx;
+  height: 45rpx;
+  position: absolute;
+  right: 25rpx;
+}
+.xiaLa{
+  width: 20rpx;
+  height: 20rpx;
+  position: absolute;
+  top: 32rpx;
+  left: 115rpx;
+}
+
+.i{
+  width: 18rpx;
+  height: 18rpx;
+  position: absolute;
+  left: 65rpx;
+  top: 8rpx;
+}
+
+
+.tiaoJian view{
+  margin-top:15rpx;
+  margin-bottom: 10rpx;
+  font-size: 26rpx;
+  float: left;
+  position: relative;
+
+}
+.t1{
+  margin-left:80rpx;
+  font-family: Microsoft Yahei;
+}
+.t2{
+  margin-left: 190rpx;
+  font-family: Microsoft Yahei;
+}
+.t3{
+  margin-left: 190rpx;
+  font-family: Microsoft Yahei;
+}
+.tiaoJian{
+  height: 65rpx;
+  margin-bottom: 30rpx;
+  border-bottom: gainsboro solid 1px;
+}
+
+
+
+/*.flex-wrp{
+  display: flex;
+  border: 1rpx solid rgba(192,192,192);
+  height: 300rpx;
+  margin-bottom:10rpx ;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.tupian{
+  border:green solid 1px;
+
+  width: 350rpx;
+  height: 350rpx;
+}
+.i4{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  width: 300rpx;
+  height: 250rpx;
+}
+.v1{
+  
+  font-size: 14rpx;
+  margin-left:20rpx ;
+  width: 60rpx;
+  display: inline-block;
+  border: tomato solid 1px;
+}
+.v2{
+  font-size: 30rpx;
+  margin-left:20rpx ;
+  width: 594rpx;
+  height: 90rpx;
+  padding: 5rpx;
+}
+.typeAndNum{
+
+  float: left;
+}
+.address{
+  float: right;
+  margin-right: 5rpx;
+}
+.phone{
+  width: 60rpx;
+  height: 60rpx;
+  float: right;
+  margin-right: 40rpx;
+}
+.name{
+  float: left;
+  font-size: 40rpx;
+  font-weight: 800;
+}
+.v3{
+  font-size: 30rpx;
+  margin-left:20rpx ;
+  width: 594rpx;
+  height: 90rpx;
+  padding: 5rpx;
+}
+.money{
+  float: left;
+  font-size: 32rpx;
+  color: red;
+}
+.consult{
+  float: right;
+  margin-right: 15rpx;
+}
+.tupian{
+  height: 450rpx;
+}
+
+*/
+
+.one{
+  height: 350rpx;
+  clear: both;
+  border-bottom: Gainsboro solid 1px;
+  padding-left: 20rpx;
+}
+
+.fangwu{
+  width: 300rpx;
+  height: 260rpx;
+  margin: 40rpx 20rpx;
+  float: left;
+}
+
+.fangtu{
+  width: 350rpx;
+  height: 260rpx;
+}
+
+.name{
+  display: inline-block;
+  margin-top: 40rpx;
+  margin-bottom: 30rpx;
+  margin-left:70rpx;
+  font-size: 22px;
+  font-family: Microsoft Yahei;
+}
+
+.hezu{
+  font-family: Microsoft Yahei;
+  font-size: 14px;
+  color: darkgray;
+  display: inline-block;
+  margin-left:70rpx;
+  margin-bottom: 20rpx;
+}
+
+.img{
+  float: right;
+  margin-right: 40rpx;
+}
+.phone{
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.address{
+  display: inline-block;
+  margin-left: 70rpx;
+  font-size: 14px;
+  color: darkgray;
+  margin-bottom: 20rpx;
+  font-family: Microsoft Yahei;
+}
+
+.money{
+  display: inline-block;
+  margin-left: 70rpx;
+  color: red;
+  font-size: 24px;
+  font-family: Microsoft Yahei;
+}
+
+.ti{
+  display: inline-block;
+  color: rgba(182,182,182);
+  font-size: 26rpx;
+  margin-left: 200rpx;
+  margin-top: 30rpx;
+  padding-top: 20rpx;
+  margin-bottom: 30rpx;
+}
+
+.bao{
+  display: inline-block;
+  color: rgba(182,182,182);
+  font-size: 26rpx;
+  margin-left: 140rpx;
+  margin-top: 30rpx;
+  padding-top: 20rpx;
+}
+.bao{
+  display: inline-block;
+  color: rgba(182,182,182);
+  font-size: 26rpx;
+  margin-left: 200rpx;
+  margin-top: 30rpx;
+  padding-top: 20rpx;
+}
+.login{
+  margin-top: 30%;
+  margin-left: 38%;
+}
+.ten{
+  border-radius: 60rpx;
+  /* border: 1rpx solid  rgba(182,182,182); */
+  padding-left: 20rpx;
+}
+.ten view{
+  font-size:30rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  display: inline-block;
+  padding-left: 130rpx;
+  padding-right: 130rpx;  
+}

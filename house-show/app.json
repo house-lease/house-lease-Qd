@@ -1,6 +1,8 @@
 {
   "pages":[
     "pages/home/home",
+    "pages/viewMyHouse/viewMyHouse",
+    "pages/myHouse/myHouse",
     "pages/order/order",
     "pages/landlordLease/landlordLease",
     "pages/landlordOrder/landlordOrder",

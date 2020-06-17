@@ -130,18 +130,17 @@ login:function(){
         this.setData({
           user:app.globalData.userInfo
         })
-        if( this.data.user.id!=null){
-          this.getChatList();
-          let that= this;
-          this.data.setInter=setInterval(function get(){
-            that.getChatList()
-            if(app.globalData.userInfo.id==null){
-              clearInterval(that.data.setInter);
+        if( this.data.user!=null){
+          this.getChatList()
+          this.data.setInter=setInterval(get=>{
+            this.getChatList()
+            if(app.globalData.userInfo==null){
+              clearInterval(this.data.setInter);
             }
           },2000)
         }
       }, fail:res=>{
-        app.globalData.userInfo={}
+        app.globalData.userInfo=null
         this.data.user = null
         this.setData({
           user: null

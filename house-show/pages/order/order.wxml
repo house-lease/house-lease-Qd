@@ -1,9 +1,9 @@
 <!--我的订单页面-->
 <view class="ten">
-<view class="jiao"  bindtap="classify"  data-state="1">缴租中</view>
-<view  class="jiao1" data-state="0" bindtap="classify">已完成</view>
-<view   class="jiao2" bindtap="classify"  data-state="3">未支付</view>
-<view data-state="2" bindtap="classify">已取消</view>
+<view class="jiao" style="{{color1}}"  bindtap="classify"  data-state="1">缴租中</view>
+<view  class="jiao1"  style="{{color0}}"  data-state="0" bindtap="classify">已完成</view>
+<view   class="jiao2" style="{{color3}}" bindtap="classify"  data-state="3">未支付</view>
+<view data-state="2" style="{{color2}}" bindtap="classify">已取消</view>
 </view>
 <view  wx:if="{{records.length!=0}}" >
 <view id="order-form" wx:for="{{records}}" wx:for-index="idx" wx:for-item="content" wx:key="id">

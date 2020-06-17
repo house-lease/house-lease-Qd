@@ -1,0 +1,36 @@
+<!-- 自定义组件 -->
+<view class="ten">
+<view class="jiao" style="{{color0}}" bindtap="houseShow"  data-state="0">租赁中</view>
+<view data-state="1" style="{{color1}}" bindtap="houseShow">未租赁</view>
+</view>
+<view class="zong">
+<view wx:if="{{user.id!=null}}">
+	<view wx:if="{{myhouse.length!=0}}">
+		<view wx:for="{{myhouse}}" wx:for-index="key" wx:for-item="value" wx:key="id">
+      <view class="one" bindtap="look" data-id="{{value.id}}">
+        <view class="fangwu">
+        <image class="fangtu" src="{{value.houseImages[0].imageUrl}}"></image>
+        </view>
+        <view class="name">{{value.houseName}}</view>
+        <view class="hezu">{{value.houseLeaseName}} | {{value.houseTypeName}}</view>
+        <view class="img">
+						<image class="phone" src="/pages/image/dh.png"></image>
+				</view>
+          <view class="address">{{value.address}}</view>
+          <view class="money">{{value.price}}/月</view>
+      </view>
+		</view>
+    
+		<view class="ti">我们是有底线了~/(ㄒoㄒ)/~~</view>
+	</view>
+	<view class="bao" wx:else>
+		暂无浏览记录,快去看房吧(●ˇ∀ˇ●)
+	</view>
+  </view>
+  <view wx:else>
+<view class="bao">
+	暂无浏览记录,快去看房吧(●ˇ∀ˇ●)
+</view>
+	<button class="login"  bindtap="login" size='mini'  type="primary" hover-class="bt">登录/注册</button>
+</view>
+</view>

@@ -1,5 +1,5 @@
       <!--房屋详情页面-->
-
+<wxs src="../../utils/data.wxs" module="filters"/>
       <view>
       	<!-- 轮播图 -->
       	<view class="swiperContainer" bindtap="showImage">
@@ -32,12 +32,30 @@
       		<view class="xin">
       			<text >{{houses.houseLeaseName}} | {{houses.houseTypeName}} | {{houses.narrate}}</text>
       		</view>
-
-
       	</view>
       </view>
+
+    <view>
+    <view class="jianjie">租客信息</view>
+      <view class="me" wx:if="{{houses.tenants.length>0}}" wx:for="{{houses.tenants}}" wx:for-item="te" wx:key="id">
       <view>
-      	<!-- 分割线 -->
+      <text>姓名</text>:{{te.user.userName}} 
+      <view class="ban">
+       <text >搬离时间</text>:{{filters.formatDate(te.terminationTime)}}
+       <view class="im_1" bindtap="calling" data-phone="{{te.user.phone}}">
+      <image class="phoneImage_1" src="/pages/image/dh.png">咨询</image>
+      </view>
+      </view>
+      </view>
+      </view>
+      <view class="ruzhu" wx:if="{{houses.tenants.length<=0}}">
+        <text >暂无入住信息 </text>
+     </view>
+      </view>
+     
+
+	<!-- 分割线 -->
+      <view>
       	<view class="intro">
       		<view class="jianjie">房屋简介</view>
       		<view class="zhengZu">
@@ -116,74 +134,18 @@
       		</view>
       	</view>
       </view>
-
-
-      <!-- 房屋位置地图显示-->
-      <view class="location">
-      	<view class="divLine_">
-      		<view class="weizhi_" bindtap="weizhi_" style="{{color0}}"> 房屋位置</view>
-      		<view class="zhou" bindtap="zhou" style="{{color1}}">房屋周边</view>
-      	</view>
-      	<view class="map_container">
-      		<map hidden="{{qie}}" bindtap="daohang" class="map" id="map" longitude="{{houses.longitude}}" latitude="{{houses.latitude}}" scale="16" markers="{{markers}}"></map>
-      		<view class="xuan" hidden="{{qie1}}" >
-      			<view bindtap="xuan" data-name="餐饮" data-state="1"  style="{{c1}}">餐饮 </view>
-      			<view  bindtap="xuan"  data-name="学校" data-state="2" style="{{c2}}">学校 </view>
-      			<view bindtap="xuan"  data-name="娱乐" data-state="3" style="{{c3}}">娱乐 </view>
-      			<view bindtap="xuan"  data-name="金融" data-state="4" style="{{c4}}">金融</view>
-						<view bindtap="xuan"  data-name="交通" data-state="5" style="{{c5}}">交通</view>
-      		</view>
-      		<map hidden="{{qie1}}" class="map_" id="map" longitude="{{houses.longitude}}" latitude="{{houses.latitude}}" scale="16" markers="{{markerss}}" bindmarkertap="makertap"></map>
-      		<view hidden="{{qie1}}" class="map_text">
-      			<text class="h1">{{textData.name}}</text>
-      			<text class="h2">{{textData.desc}}</text>
-      		</view>
-      	</view>
-      </view>
-
-<!-- 房屋列表 -->
-<view  wx:if="{{nearby.length!=0}}" >
-<text>附近房源</text>
-<view wx:for="{{nearby}}" wx:key="id" wx:for-index="idx" wx:for-item="value">
-<view class="lists" bindtap="look" data-id="{{value.id}}">
-  <view class="tu">
-  <image src="{{value.houseImages[0].imageUrl}}"></image>
-  </view>
-  <view class="message">
-   <view class="houseName">{{value.houseName}}</view>
-   <view class="houseType_" >{{value.houseLeaseName}} | {{value.houseTypeName}}</view>
-   <view class="address">{{value.address}} </view>
-   <view class="price">{{value.price}}<text>/月</text></view>
-  </view>
-</view>
-</view>
-<view class="ti">我们是有底线了~/(ㄒoㄒ)/~~</view>
-</view>
-<view class="bao" wx:else>
-暂无收藏,快去收藏吧(●ˇ∀ˇ●)
-</view>
+  
       <!-- 底部-->
       <view class="bottom">
-      	<!-- 收藏-->
-      	<view bindtap="attention" class="shouCang" hidden="{{hi}}">
-      		<image src="/pages/image/guanzhu.png" />
-      		<text class="zi">收藏</text>
-      	</view>
-      	<view bindtap="cancel" class="shouCang" hidden="{{hi1}}">
-      		<image src="/pages/image/yiguanzhu.png" />
-      		<text class="zi" >已收藏</text>
-      	</view>
-      	<!-- 分享-->
-      	<view class="fenxiang" bindtap="onShareAppMessage">
-      		<image src="/pages/image/fx.png" />
-      		<text class="zi">分享</text>
-      	</view>
       	<!-- 咨询 -->
-      	<view class="zixun" bindtap="consult" data-id="{{houses.user}}">
-      		<button size="mini">咨询</button>
+      	<view class="zixun">
+      		<button size="mini">修改</button>
       	</view>
       	<!-- 付款-->
-      	<view bindtap="payment" class="fukuan" data-id="{{houses.user.id}}">
-      		<button size="mini">付款</button>
+      	<view bindtap="putaway"  class="fukuan" data-state="0"  wx:if="{{houses.state==1}}" >
+      		<button size="mini">上架</button>
+      	</view>
+        <view  bindtap="putaway" class="fukuan" data-state="1"  wx:if="{{houses.state==0}}">
+      		<button size="mini">下架</button>
       	</view>
       </view>

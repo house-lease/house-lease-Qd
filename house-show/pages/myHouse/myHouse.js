@@ -9,7 +9,10 @@ Page({
    */
   data: {
     user:{},
-    browse:[]
+    myhouse:[],
+    state:0,
+    color0:"",
+   color1:"",
   },
 
   // 跳转登录页面
@@ -59,28 +62,63 @@ login:function(){
    
   },
 
-  // 显示收藏房屋的方法
-  houseShow:function(){
+  // 显示我的房屋的方法
+  houseShow(e){
+    if(e!=null){
+      if(e.currentTarget.dataset.state!=null){
+        this.data.state = e.currentTarget.dataset.state
+    }
+    }
     wx.showLoading({
       title: '加载中',
       mask: true,
     })
-    var this_=this;
     this.setData({
       user:app.globalData.userInfo
     })
     // 定义一个函数：作用是查询所有的房屋信息，返回的结果是json格式
    wx.request({
-     url: liunxUrl+'house/browse/queryInfoByUserId', 
+     url: liunxUrl+'house/house/queryByUserId', 
      data: {
-       userId:this_.data.user.id
+       userId:this.data.user.id
      },
-     success(res) {
-       console.info(res.data);
-       this_.setData({
-         browse: res.data.data
-       });
-       console.info(this_.data.browse)
+     success:(res)=> {
+       if(this.data.state==0){
+        this.setData({
+          color0:"font-size: 35rpx;font-weight: 800",
+          color1:"",
+        })
+        console.info(res.data);
+        this.data.myhouse = res.data.data;
+        let my = [];
+        this.data.myhouse.forEach(item=>{
+           if(item.tenants.length>0){
+               my.push(item)
+           }
+        })
+        this.setData({
+          myhouse: my
+        });
+        console.info(this.data.myhouse)
+       }else{
+        this.setData({
+          color1:"font-size: 35rpx;font-weight: 800",
+          color0:" ",
+        })
+        console.info(res.data);
+        this.data.myhouse = res.data.data;
+        let my = [];
+        this.data.myhouse.forEach(item=>{
+           if(item.tenants.length<=0){
+               my.push(item)
+           }
+        })
+        this.setData({
+          myhouse: my
+        });
+        console.info(this.data.myhouse)
+       }
+       
        wx.hideLoading({
         
        })
@@ -90,8 +128,6 @@ login:function(){
 
   // 点击查询的方法
   look:function(e){
-    console.info(e);
-    var this_ = this;
     wx.request({
       url: liunxUrl+'house/house/queryByHouseId', 
       data: {
@@ -104,7 +140,7 @@ login:function(){
           key: 'house',
         })
         wx.navigateTo({
-          url: '/pages/particulars/particulars',
+          url: '/pages/viewMyHouse/viewMyHouse',
         })
         
       }

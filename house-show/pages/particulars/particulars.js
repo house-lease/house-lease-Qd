@@ -21,15 +21,22 @@ Page({
         current:0,//图片数量
         querykeywords:"",
         houses:{},
-        markers:{}
-        ,
+        markers:{},
         markerss: [],
         textData: {},
         city: '',
         collect:{},
         latitude:"",
         longitude:"",
-        nearby:[]
+        nearby:[],
+        color0:"font-size: 35rpx;font-weight: 800",
+        color1:"",
+        c1:"font-weight: 700",
+        c2:"",
+        c3:"",
+        c4:"",
+        c5:"",
+        
       },
 // 跳转付款页面
       payment(e){
@@ -131,18 +138,65 @@ Page({
       })
     },
     weizhi_(){
+      
       this.setData({
         qie:"",
-        qie1:"hidden"
+        qie1:"hidden",
+        color1:"",
+        color0:"font-size: 35rpx;font-weight: 800",
       })
     },
     zhou(){
       this.setData({
+        color0:"",
+        color1:"font-size: 35rpx;font-weight: 800",
         qie:"hidden",
         qie1:""
       })
     },
     xuan(e){
+      if(e.currentTarget.dataset.state==1){
+        this.setData({
+          c1:"font-weight: 800",
+          c2:"",
+          c3:"",
+          c4:"",
+          c5:"",
+        })
+      }else if(e.currentTarget.dataset.state==2){
+        this.setData({
+          c2:"font-weight: 800",
+          c1:"",
+          c3:"",
+          c4:"",
+          c5:"",
+        })
+      }else if(e.currentTarget.dataset.state==3){
+        this.setData({
+          c3:"font-weight: 800",
+          c2:"",
+          c1:"",
+          c4:"",
+          c5:"",
+        })
+      }else if(e.currentTarget.dataset.state==4){
+        this.setData({
+          c4:"font-weight: 800",
+          c2:"",
+          c3:"",
+          c1:"",
+          c5:"",
+        })
+      }else{
+        this.setData({
+          c5:"font-weight: 800",
+          c2:"",
+          c3:"",
+          c4:"",
+          c1:"",
+        })
+      }
+      
       this.rim(e.currentTarget.dataset.name);
     }
     ,
@@ -183,11 +237,9 @@ Page({
        })
       } 
     }else{
-      wx.showToast({
-          title: '未登录',
-          image:"/pages/image/jg.png",
-         duration:2000
-     })
+      wx.navigateTo({
+        url: '/pages/login/login',
+      })
     }
     },
   /**
@@ -367,6 +419,7 @@ address(){
    },
   //  获取周边
 rim(querykeywords){
+  
   querykeywords = querykeywords!=null?querykeywords:"餐饮"
   var that = this;
   wx.getStorage({

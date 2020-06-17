@@ -10,7 +10,9 @@ Page({
    */
   data: {
   records:[],
-  dealState:1
+  dealState:1,
+  color0:"",
+   color1:"",
   },
   
 // 点击查询方法
@@ -61,6 +63,22 @@ classify(e){
   getRecord(e){
     if(e!=null){
       this.data.dealState=e
+      if(e==0){
+        this.setData({
+          color0:"font-size: 35rpx;font-weight: 800",
+          color1:"",
+        })
+      }else if(e==1){
+        this.setData({
+          color1:"font-size: 35rpx;font-weight: 800",
+          color0:"",
+        })
+      }
+    }else{
+      this.setData({
+        color1:"font-size: 35rpx;font-weight: 800",
+        color0:"",
+      })
     }
     wx.showLoading({
       title: '加载中',
